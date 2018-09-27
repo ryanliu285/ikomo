@@ -2,10 +2,11 @@
 <html>
   <head>
     <script src = "Bot.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       var excelInfo;
       //var excelFile =
-      if(excelInfo = ExcelToJSON('./data/test.xlsx')!=undefined){
+      if(excelInfo = ExcelToJSON($.get('https://portal.veinternational.org/bank/609ffdd8142c4f97a96482d3ebbb252c/accountdetails/630550204/xl/?sd=09/26/2017&ed=09/26/2018&sa=1'))!=undefined){
         console.log(excelInfo);
       }else{
         console.log("failed to write xlsx to JSON")
