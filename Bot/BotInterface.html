@@ -2,15 +2,31 @@
 <html>
   <head>
     <script src = "Bot.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script id = "file" src = "./data/test.xlsx"></script>
     <script>
+      var transactionPass;
+      var name;
+      var credit;
+      var date;
+      var accountNo;
+      var description;
       var excelInfo;
-      var excelFile = $("#file")
-      if(excelInfo =ExcelToJSON(excelFile)){//excelInfo = ExcelToJSON($.get(''))!=undefined){
+      var excelFile = $("#file");
+      var workbook = XLSX.read(excelFile);
+      if(excelInfo =
+      XLSX.utils.sheet_to_json(workbook)){//excelInfo = ExcelToJSON($.get(''))!=undefined){
         console.log(excelInfo);
       }else{
         console.log("failed to write xlsx to JSON");
+      }
+      var jsInfo = JSON.parse(excelInfo);
+      if((jsInfo.Date==date)&&(jsInfo.name==name)&&(jsInfo.Credit==credit)
+    &&(jsInfo.(Account no) == accountNo)&&){
+
+      }else{
+
       }
     </script>
   </head>
