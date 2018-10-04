@@ -10,16 +10,16 @@
 
 <body>
 
-  <div class="container-fluid">
+  <div class="container-fluid" onclick = "closeSignUp" onclick = "closeLogin">
     <div class="row">
       <div class="col-md-10">
 
       </div>
       <div class="col-md-1">
-          <p> Sign Up </p>
+        <p onclick="openSignUp()"> Sign Up</p>
       </div>
-      <div class = "col-md-1">
-          <p> Login </p>
+      <div class="col-md-1">
+        <p onclick="openLogin()">Login</p>
       </div>
     </div>
     <div class="row">
@@ -37,6 +37,53 @@
 
   </div>
 
+  <div class="container" id="signUpL">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <h2>Sign Up for iKOMO!</h2>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+  </div>
+  <div class="container" id="LoginL">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <h2>Login to iKOMO!</h2>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <script type="text/javascript">
+    var signup = document.getElementById("signUpL");
+
+    function openSignUp() {
+      signup.style.display = "block";
+    }
+
+    function closeSignUp() {
+      signup.style.display = "none";
+    }
+  </script>
+  <script type="text/javascript">
+    var login = document.getElementById("LoginL");
+
+    function openLogin() {
+      login.style.display = "block";
+    }
+
+    function closeLogin() {
+      login.style.display = "none";
+    }
+  </script>
 </body>
 
 </html>

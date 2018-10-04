@@ -4,15 +4,17 @@
   margin-left: 1%;
   margin-top: 5%;
 }
-
+#signUpL {
+  display: none;
+}
+#LoginL{
+  display: none;
+}
 div {
   border: solid black 1px;
 }
 
 html { /* fade in on load */
-  margin-top: 25px;
-  font-size: 21px;
-  text-align: center;
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
