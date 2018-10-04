@@ -32,16 +32,3 @@ function getKomo( uint _komoId ) public view returns(Boolean shiny, string attri
   mult = _kom.mult;
   rarity = _kom.rarity;
 }
-
-describe("mint", () => {
-  it("creates token with specified outer and inner colors", async () => {
-    let instance = await GradientToken.deployed();
-    let owner = await instance.owner();
-
-    let token = await instance.mint("#ff00dd", "#ddddff");
-
-    let tokens = await instance.tokensOf(owner);
-    let gradients = await instance.getGradient(tokens[0]);
-    assert.deepEqual(gradients, ["#ff00dd", "#ddddff"]);
-  });
-});

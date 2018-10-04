@@ -1,5 +1,5 @@
 {
-  "contractName": "KomoCoin",
+  "contractName": "GradientToken",
   "abi": [
     {
       "constant": true,
@@ -479,12 +479,12 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract KomoCoin is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n",
-  "sourcePath": "C:\\Users\\ryanl\\desktop\\ikomo\\Crypto\\truffle\\contracts\\KomoCoin.sol",
+  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract GradientToken is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n",
+  "sourcePath": "C:\\Users\\ryanl\\Desktop\\ikomo\\Crypto\\Truffle\\contracts\\KomoCoin.sol",
   "ast": {
-    "absolutePath": "/C/Users/ryanl/desktop/ikomo/Crypto/truffle/contracts/KomoCoin.sol",
+    "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
     "exportedSymbols": {
-      "KomoCoin": [
+      "GradientToken": [
         14
       ]
     },
@@ -564,8 +564,8 @@
           }
         ],
         "contractDependencies": [
-          100,
           151,
+          100,
           331,
           358,
           378,
@@ -590,7 +590,7 @@
           151,
           100
         ],
-        "name": "KomoCoin",
+        "name": "GradientToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -687,9 +687,9 @@
     "src": "0:298:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/ryanl/desktop/ikomo/Crypto/truffle/contracts/KomoCoin.sol",
+    "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
     "exportedSymbols": {
-      "KomoCoin": [
+      "GradientToken": [
         14
       ]
     },
@@ -769,8 +769,8 @@
           }
         ],
         "contractDependencies": [
-          100,
           151,
+          100,
           331,
           358,
           378,
@@ -795,7 +795,7 @@
           151,
           100
         ],
-        "name": "KomoCoin",
+        "name": "GradientToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -897,5 +897,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-04T17:43:30.425Z"
+  "updatedAt": "2018-10-04T19:40:01.733Z"
 }

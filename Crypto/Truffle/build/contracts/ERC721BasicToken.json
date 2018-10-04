@@ -434,8 +434,8 @@
           }
         ],
         "contractDependencies": [
-          100,
           151,
+          100,
           507
         ],
         "contractKind": "contract",
@@ -7834,8 +7834,8 @@
           }
         ],
         "contractDependencies": [
-          100,
           151,
+          100,
           507
         ],
         "contractKind": "contract",
@@ -15124,5 +15124,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-04T17:43:30.428Z"
+  "updatedAt": "2018-10-04T19:40:01.749Z"
 }
