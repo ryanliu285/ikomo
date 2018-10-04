@@ -4,3 +4,6 @@ height: auto;
 margin-left: 1%;
 margin-top: 5%;
 }
+div {
+  border: solid black 2px;
+}
