@@ -11,7 +11,7 @@
 
 <body>
 
-  <div class="container-fluid" onclick = "closeSignUp" onclick = "closeLogin">
+  <div class="container-fluid" onclick="closeSignUp" onclick="closeLogin">
     <div class="row">
       <div class="col-md-10">
 
@@ -37,34 +37,37 @@
     </div>
 
   </div>
-  <div class = "container" id ="signUpL">
-      <div class = "row">
-        <div class = "col-md-3">
-        </div>
-        <div class = "col-md-6">
-          <form action = "register.php" method = "post" accept-charset="UTF-8">
-            <fieldset>
-              <legend>Sign Up for iKOMO! </legend>
-              <input type = "hidden" name = "submitted" id = "submitted" value = "1"/>
-              <br><label for "name"> Your Name*: </label>
-              <input type = "text" name = "name" id= "name" maxlength = "50"/></br>
-              <br><label for "email">Email Address*: </label>
-              <input type = "text" name = "email" id = "email" maxlength = "50"/></br>
-
-              <br><label for "username"> Your VEI username*: </label>
-              <input type = "text" name = "username" id = "username" maxlength = "50"/></br>
-              <br><label for "password"> Password*: </label>
-              <input type = "text" name = "password" id = "username" maxlength = "50"/></br>
-              <br><input type = "submit" name = "Submit" value = "Submit" /></br>
-            </fieldset>
-          </form>
-        </div>
-        <div class = "col-md-3">
-        </div>
+  <div class="container" id="signUpL">
+    <div class="row">
+      <div class="col-md-3">
+        <img src = "https://cryptokitties411.files.wordpress.com/2018/02/miss-canada.png?w=310&h=278">
       </div>
-   </div>
+      <div class="col-md-6">
+        <form action="register.php" method="post" accept-charset="UTF-8">
+          <fieldset>
+            <legend>
+              <center><h2>Sign Up for iKOMO!</h2></center>
+            </legend>
+            <input type="hidden" name="submitted" id="submitted" value="1" />
+            <br><label for "name"> Your Name*: </label>
+            <input type="text" name="name" id="name" maxlength="50" /></br>
+            <br><label for "email">Email Address*: </label>
+            <input type="text" name="email" id="email" maxlength="50" /></br>
+            <br><label for "username"> Your VEI username*: </label>
+            <input type="text" name="username" id="username" maxlength="50" /></br>
+            <br><label for "password"> Password*: </label>
+            <input type="text" name="password" id="username" maxlength="50" /></br>
+            <br><input type="submit" name="Submit" value="Submit" /></br>
+          </fieldset>
+        </form>
+      </div>
+      <div class="col-md-3">
+          <img src = "https://cryptokitties411.files.wordpress.com/2018/02/miss-canada.png?w=310&h=278">
+      </div>
+    </div>
+  </div>
 
- <!--<div class="container" id="signUpL">
+  <!--<div class="container" id="signUpL">
     <div class="row">
       <div class="col-md-2">
       </div>
@@ -99,7 +102,6 @@
     function closeSignUp() {
       signup.style.display = "none";
     }
-
   </script>
   <script type="text/javascript">
     var login = document.getElementById("LoginL");
@@ -107,10 +109,10 @@
     function openLogin() {
       login.style.display = "block";
     }
-    function closeLogin(){
-      login.style.display ="none";
-    }
 
+    function closeLogin() {
+      login.style.display = "none";
+    }
   </script>
 </body>
 
