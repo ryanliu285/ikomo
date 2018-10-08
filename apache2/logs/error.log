@@ -1,5 +1,11 @@
-[Sun Oct 07 22:40:40.063191 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Sun Oct 07 22:40:40.064188 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Sun Oct 07 22:40:40.064188 2018] [core:notice] [pid 4984:tid 972] AH00094: Command line: 'C:\\Users\\Brandon Lee\\Desktop\\ikomo/apache2/bin/httpd_usbwv8.exe -d C:/Users/Brandon Lee/Desktop/ikomo/apache2'
-[Sun Oct 07 22:40:40.161926 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00418: Parent: Created child process 23032
-[Sun Oct 07 22:40:42.338107 2018] [mpm_winnt:notice] [pid 23032:tid 900] AH00354: Child: Starting 64 worker threads.
+[Sun Oct 07 22:53:05.593101 2018] [mpm_winnt:notice] [pid 21608:tid 968] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Sun Oct 07 22:53:05.594098 2018] [mpm_winnt:notice] [pid 21608:tid 968] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Sun Oct 07 22:53:05.594098 2018] [core:notice] [pid 21608:tid 968] AH00094: Command line: 'C:\\Users\\Brandon Lee\\Desktop\\ikomo/apache2/bin/httpd_usbwv8.exe -d C:/Users/Brandon Lee/Desktop/ikomo/apache2'
+[Sun Oct 07 22:53:05.638978 2018] [mpm_winnt:notice] [pid 21608:tid 968] AH00418: Parent: Created child process 8648
+[Sun Oct 07 22:53:07.395282 2018] [mpm_winnt:notice] [pid 8648:tid 956] AH00354: Child: Starting 64 worker threads.
+[Sun Oct 07 22:53:19.860822 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\db_login.php on line 3, referer: http://localhost:8080/login.php
+[Sun Oct 07 22:53:21.899286 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_select_db(): No connection could be made because the target machine actively refused it.\r\n in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\db_login.php on line 5, referer: http://localhost:8080/login.php
+[Sun Oct 07 22:53:21.899286 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_select_db(): A link to the server could not be established in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\db_login.php on line 5, referer: http://localhost:8080/login.php
+[Sun Oct 07 22:53:23.928676 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_query(): No connection could be made because the target machine actively refused it.\r\n in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\login.php on line 15, referer: http://localhost:8080/login.php
+[Sun Oct 07 22:53:23.928676 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_query(): A link to the server could not be established in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\login.php on line 15, referer: http://localhost:8080/login.php
+[Sun Oct 07 22:53:23.929674 2018] [:error] [pid 8648:tid 1508] [client ::1:58599] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\root\\login.php on line 16, referer: http://localhost:8080/login.php

@@ -13,21 +13,11 @@
 
   <div class="container-fluid" onclick="closeSignUp" onclick="closeLogin">
     <div class="row">
-      <div class="col-md-10">
-
-      </div>
-      <div class="col-md-1">
-        <p onclick="openSignUp()"> Sign Up</p>
-      </div>
-      <div class="col-md-1">
-        <a href = "login.php">Login</a>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-md-4">
+        <h2>Welcome, ____</h2> <!-- write a function in order to say, welcome User -->
       </div>
       <div class="col-md-4">
-        <a href = "logout.php">LOGOUT</a>
+        <h2>Credit __ Ether</h2> <!-- write a function to determine amount of ether in account -->
       </div>
       <div class="col-md-4">
         <a href = "logout.php">LOGOUT</a>
