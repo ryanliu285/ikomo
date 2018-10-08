@@ -14,10 +14,10 @@
   <div class="container-fluid" onclick="closeSignUp" onclick="closeLogin">
     <div class="row">
       <div class="col-md-4">
-        <h2>Welcome, ____</h2> <!-- write a function in order to say, welcome User -->
+        <h2>Welcome, Brandon</h2> <!-- write a function in order to say, welcome User -->
       </div>
       <div class="col-md-4">
-        <h2>Credit __ Ether</h2> <!-- write a function to determine amount of ether in account -->
+        <h2>Credit 100 Ether</h2> <!-- write a function to determine amount of ether in account -->
       </div>
       <div class="col-md-4">
         <a href = "logout.php">LOGOUT</a>

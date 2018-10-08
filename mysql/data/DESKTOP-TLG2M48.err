@@ -472,3 +472,27 @@ Version: '5.6.13'  socket: ''  port: 3307  MySQL Community Server (GPL)
 2018-10-07 22:53:28 26236 [Note] Event Scheduler: Loaded 0 events
 2018-10-07 22:53:28 26236 [Note] C:\Users\Brandon Lee\Desktop\ikomo/mysql/bin/mysqld_usbwv8.exe: ready for connections.
 Version: '5.6.13'  socket: ''  port: 3307  MySQL Community Server (GPL)
+2018-10-07 23:43:10 24220 [Note] Plugin 'FEDERATED' is disabled.
+2018-10-07 23:43:10 24220 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-10-07 23:43:10 24220 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2018-10-07 23:43:10 24220 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-10-07 23:43:10 24220 [Note] InnoDB: Not using CPU crc32 instructions
+2018-10-07 23:43:10 24220 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2018-10-07 23:43:10 24220 [Note] InnoDB: Completed initialization of buffer pool
+2018-10-07 23:43:10 24220 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-10-07 23:43:10 24220 [Note] InnoDB: The log sequence numbers 1626134 and 1626134 in ibdata files do not match the log sequence number 1650779 in the ib_logfiles!
+2018-10-07 23:43:10 24220 [Note] InnoDB: Database was not shutdown normally!
+2018-10-07 23:43:10 24220 [Note] InnoDB: Starting crash recovery.
+2018-10-07 23:43:10 24220 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2018-10-07 23:43:10 24220 [Note] InnoDB: Restoring possible half-written data pages 
+2018-10-07 23:43:10 24220 [Note] InnoDB: from the doublewrite buffer...
+2018-10-07 23:43:10 24220 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-10-07 23:43:10 24220 [Note] InnoDB: Waiting for purge to start
+2018-10-07 23:43:10 24220 [Note] InnoDB: 5.6.13 started; log sequence number 1650779
+2018-10-07 23:43:10 24220 [Note] Server hostname (bind-address): '*'; port: 3307
+2018-10-07 23:43:10 24220 [Note] IPv6 is available.
+2018-10-07 23:43:10 24220 [Note]   - '::' resolves to '::';
+2018-10-07 23:43:10 24220 [Note] Server socket created on IP: '::'.
+2018-10-07 23:43:12 24220 [Note] Event Scheduler: Loaded 0 events
+2018-10-07 23:43:12 24220 [Note] C:\Users\Brandon Lee\Desktop\ikomo/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.13'  socket: ''  port: 3307  MySQL Community Server (GPL)
