@@ -1,5 +1,5 @@
-[Sun Oct 07 21:42:33.386103 2018] [mpm_winnt:notice] [pid 24892:tid 836] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Sun Oct 07 21:42:33.386103 2018] [mpm_winnt:notice] [pid 24892:tid 836] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Sun Oct 07 21:42:33.386103 2018] [core:notice] [pid 24892:tid 836] AH00094: Command line: 'C:\\Users\\Brandon Lee\\Desktop\\ikomo/apache2/bin/httpd_usbwv8.exe -d C:/Users/Brandon Lee/Desktop/ikomo/apache2'
-[Sun Oct 07 21:42:33.492817 2018] [mpm_winnt:notice] [pid 24892:tid 836] AH00418: Parent: Created child process 7012
-[Sun Oct 07 21:42:35.666006 2018] [mpm_winnt:notice] [pid 7012:tid 920] AH00354: Child: Starting 64 worker threads.
+[Sun Oct 07 22:40:40.063191 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Sun Oct 07 22:40:40.064188 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Sun Oct 07 22:40:40.064188 2018] [core:notice] [pid 4984:tid 972] AH00094: Command line: 'C:\\Users\\Brandon Lee\\Desktop\\ikomo/apache2/bin/httpd_usbwv8.exe -d C:/Users/Brandon Lee/Desktop/ikomo/apache2'
+[Sun Oct 07 22:40:40.161926 2018] [mpm_winnt:notice] [pid 4984:tid 972] AH00418: Parent: Created child process 23032
+[Sun Oct 07 22:40:42.338107 2018] [mpm_winnt:notice] [pid 23032:tid 900] AH00354: Child: Starting 64 worker threads.
