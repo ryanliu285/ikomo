@@ -3,6 +3,7 @@
   height: auto;
   margin-left: 1%;
   margin-top: 5%;
+
 }
 #signUpL {
   display: none;
@@ -11,7 +12,7 @@
   display: none;
 }
 div {
-  border: solid black 1px;
+  border: solid rgb(40, 203, 188) 1px;
 }
 
 html { /* fade in on load */

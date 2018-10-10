@@ -1,3 +1,4 @@
+<!-- add tutorials for each thing -->
 <!DOCTYPE html>
 
 <html>
