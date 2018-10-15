@@ -10,7 +10,7 @@
      <div class = "col-md-6">
        <center><h1>Signup</h1></center>
        <form action = "includes/signup.inc.php" method = "post">
-         <center><br><input type = "text" name = "uid" placeholder= "Username"></br>
+         <center><br><input type = "text" name = "uid" placeholder= "VEI Username"></br>
          <br><input type = "text" name = "mail" placeholder= "E-mail"></br>
          <br><input type = "password" name = "pwd" placeholder= "Password"></br>
          <br><input type = "password" name = "pwd-repeat" placeholder= "Repeat Password"></br>
