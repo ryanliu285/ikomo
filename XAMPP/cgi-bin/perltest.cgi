@@ -1,4 +1,4 @@
-#!"\xampp\perl\bin\perl.exe"
+#!"C:\Users\Brandon Lee\Desktop\ikomo\XAMPP\perl\bin\perl.exe"
 
 print "Content-type: text/html\n\n";
 print '<html>';

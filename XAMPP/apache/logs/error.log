@@ -1,0 +1,19 @@
+[Sun Oct 14 22:12:47.724999 2018] [ssl:warn] [pid 11620:tid 588] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:12:47.837698 2018] [ssl:warn] [pid 11620:tid 588] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:12:48.667988 2018] [mpm_winnt:notice] [pid 11620:tid 588] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Sun Oct 14 22:12:48.667988 2018] [mpm_winnt:notice] [pid 11620:tid 588] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Sun Oct 14 22:12:48.667988 2018] [core:notice] [pid 11620:tid 588] AH00094: Command line: 'apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Sun Oct 14 22:12:48.670979 2018] [mpm_winnt:notice] [pid 11620:tid 588] AH00418: Parent: Created child process 21392
+[Sun Oct 14 22:12:49.973186 2018] [ssl:warn] [pid 21392:tid 688] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:12:50.048494 2018] [ssl:warn] [pid 21392:tid 688] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:12:50.113321 2018] [mpm_winnt:notice] [pid 21392:tid 688] AH00354: Child: Starting 150 worker threads.
+[Sun Oct 14 22:13:11.556583 2018] [ssl:warn] [pid 2256:tid 664] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:13:11.657345 2018] [core:warn] [pid 2256:tid 664] AH00098: pid file C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Oct 14 22:13:11.665295 2018] [ssl:warn] [pid 2256:tid 664] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:13:11.734108 2018] [mpm_winnt:notice] [pid 2256:tid 664] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Sun Oct 14 22:13:11.734108 2018] [mpm_winnt:notice] [pid 2256:tid 664] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Sun Oct 14 22:13:11.734108 2018] [core:notice] [pid 2256:tid 664] AH00094: Command line: 'c:\\users\\brandon lee\\desktop\\ikomo\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Sun Oct 14 22:13:11.738099 2018] [mpm_winnt:notice] [pid 2256:tid 664] AH00418: Parent: Created child process 23040
+[Sun Oct 14 22:13:13.696303 2018] [ssl:warn] [pid 23040:tid 764] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:13:13.804014 2018] [ssl:warn] [pid 23040:tid 764] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Sun Oct 14 22:13:13.883800 2018] [mpm_winnt:notice] [pid 23040:tid 764] AH00354: Child: Starting 150 worker threads.

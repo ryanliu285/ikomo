@@ -25,3 +25,23 @@ Version: '10.1.8-MariaDB'  socket: ''  port: 3306  mariadb.org binary distributi
 2015-11-10 15:27:13 5152 [Note] InnoDB: Shutdown completed; log sequence number 1835037
 2015-11-10 15:27:13 5152 [Note] C:\xampp\mysql\bin\mysqld.exe: Shutdown complete
 
+2018-10-14 22:13:14 5724 InnoDB: Warning: Using innodb_additional_mem_pool_size is DEPRECATED. This option may be removed in future releases, together with the option innodb_use_sys_malloc and with the InnoDB's internal memory allocator.
+2018-10-14 22:13:14 22308 [Note] InnoDB: innodb_empty_free_list_algorithm has been changed to legacy because of small buffer pool size. In order to use backoff, increase buffer pool at least up to 20MB.
+
+2018-10-14 22:13:14 22308 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2018-10-14 22:13:14 22308 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-10-14 22:13:14 22308 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2018-10-14 22:13:14 22308 [Note] InnoDB: _mm_lfence() and _mm_sfence() are used for memory barrier
+2018-10-14 22:13:14 22308 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-10-14 22:13:14 22308 [Note] InnoDB: Using generic crc32 instructions
+2018-10-14 22:13:14 22308 [Note] InnoDB: Initializing buffer pool, size = 16.0M
+2018-10-14 22:13:14 22308 [Note] InnoDB: Completed initialization of buffer pool
+2018-10-14 22:13:14 22308 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-10-14 22:13:14 22308 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-10-14 22:13:14 22308 [Note] InnoDB: Waiting for purge to start
+2018-10-14 22:13:14 22308 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.39-83.1 started; log sequence number 1835037
+2018-10-14 22:13:14 24712 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2018-10-14 22:13:14 22308 [Note] Plugin 'FEEDBACK' is disabled.
+2018-10-14 22:13:14 22308 [Note] Server socket created on IP: '::'.
+2018-10-14 22:13:15 22308 [Note] c:\users\brandon lee\desktop\ikomo\xampp\mysql\bin\mysqld.exe: ready for connections.
+Version: '10.1.36-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution

@@ -83,7 +83,7 @@ sub AUTOLOAD {
 
 # tie returns the object, so the value returned to require will be true.
 tie %Config, 'Config', {
-    archlibexp => '\\xampp\\perl\\lib',
+    archlibexp => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\perl\\lib',
     archname => 'MSWin32-x86-multi-thread',
     cc => 'gcc',
     d_readlink => undef,
@@ -95,14 +95,14 @@ tie %Config, 'Config', {
     inc_version_list => '',
     intsize => '4',
     ldlibpthname => '',
-    libpth => '\\xampp\\c\\lib \\xampp\\c\\i686-w64-mingw32\\lib',
+    libpth => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\c\\lib \\xampp\\c\\i686-w64-mingw32\\lib',
     osname => 'MSWin32',
     osvers => '4.0',
     path_sep => ';',
-    privlibexp => '\\xampp\\perl\\lib',
-    scriptdir => '\\xampp\\perl\\bin',
-    sitearchexp => '\\xampp\\perl\\site\\lib',
-    sitelibexp => '\\xampp\\perl\\site\\lib',
+    privlibexp => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\perl\\lib',
+    scriptdir => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\perl\\bin',
+    sitearchexp => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\perl\\site\\lib',
+    sitelibexp => 'C:\\Users\\Brandon Lee\\Desktop\\ikomo\\XAMPP\\perl\\site\\lib',
     so => 'dll',
     useithreads => 'define',
     usevendorprefix => 'define',

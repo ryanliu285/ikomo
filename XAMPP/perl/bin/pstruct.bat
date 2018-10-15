@@ -40,7 +40,7 @@ goto endofperl
 @rem ';
 #!perl
 #line 43
-    eval 'exec \xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
+    eval 'exec C:\Users\Brandon Lee\Desktop\ikomo\XAMPP\perl\bin\perl.exe -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 #
 #
