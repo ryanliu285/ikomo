@@ -10,7 +10,7 @@ contract("KomoCoin", accounts => {
   });
 });
 
-describe("mint", () => {
+/*describe("mint", () => {
   it("creates token with specified outer and inner colors", async () => {
     let instance = await GradientToken.deployed();
     let owner = await instance.owner();
@@ -29,4 +29,4 @@ it("allows to mint only to owner", async () => {
 
   await instance.transferOwnership(other);
   await assertRevert(instance.mint("#ff00dd", "#ddddff"));
-}); 
+}); */

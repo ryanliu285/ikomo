@@ -8,12 +8,12 @@ contract KomoCoin is ERC721Token, Ownable {
   string public constant symbol = "KC";
 }
 
-//struct Komo {
-//  string outer;
-//  string inner;
-//}
+/*struct Komo {
+  string outer;
+  string inner;
+}
 
-/*Komo[] public komos;
+Komo[] public komos;
 
   function getKomo( uint _KomoId ) public view returns(string outer, string inner){
     Komo memory _kom = komos[_komoId];
@@ -27,4 +27,4 @@ contract KomoCoin is ERC721Token, Ownable {
     uint _komoId = komos.push(_komo) - 1;
 
     _mint(msg.sender, _komoId);
-  }*/
+    }*/

@@ -479,7 +479,7 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract KomoCoin is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n",
+  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract KomoCoin is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n\r\n/*struct Komo {\r\n  string outer;\r\n  string inner;\r\n}\r\n\r\nKomo[] public komos;\r\n\r\n  function getKomo( uint _KomoId ) public view returns(string outer, string inner){\r\n    Komo memory _kom = komos[_komoId];\r\n\r\n    outer = _kom.outer;\r\n    inner = _kom.inner;\r\n  }\r\n\r\n  function mint(string _outer, string _inner) public payable onlyOwner{\r\n    Komo memory _komo = Komo({ outer: _outer, inner: _inner });\r\n    uint _komoId = komos.push(_komo) - 1;\r\n\r\n    _mint(msg.sender, _komoId);\r\n    }*/\r\n",
   "sourcePath": "C:\\Users\\ryanl\\Desktop\\ikomo\\Crypto\\Truffle\\contracts\\KomoCoin.sol",
   "ast": {
     "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
@@ -684,7 +684,7 @@
         "src": "159:132:0"
       }
     ],
-    "src": "0:293:0"
+    "src": "0:784:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
@@ -889,7 +889,7 @@
         "src": "159:132:0"
       }
     ],
-    "src": "0:293:0"
+    "src": "0:784:0"
   },
   "compiler": {
     "name": "solc",
@@ -897,5 +897,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-05T17:52:31.100Z"
+  "updatedAt": "2018-10-15T17:35:19.832Z"
 }
