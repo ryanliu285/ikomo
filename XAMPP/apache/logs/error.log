@@ -79,3 +79,14 @@
 [Mon Oct 15 00:59:22.465701 2018] [php7:warn] [pid 21292:tid 1916] [client ::1:54855] PHP Warning:  mysqli_connect(): Error while reading greeting packet. PID=21292 in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\dbh.inc.php on line 8, referer: http://localhost:8080/signup.php
 [Mon Oct 15 00:59:22.465701 2018] [php7:warn] [pid 21292:tid 1916] [client ::1:54855] PHP Warning:  mysqli_connect(): (HY000/2006): MySQL server has gone away in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\dbh.inc.php on line 8, referer: http://localhost:8080/signup.php
 [Mon Oct 15 00:59:22.466701 2018] [php7:error] [pid 21292:tid 1916] [client ::1:54855] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\dbh.inc.php on line 8, referer: http://localhost:8080/signup.php
+[Mon Oct 15 09:16:59.645312 2018] [ssl:warn] [pid 12412:tid 224] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 09:16:59.757312 2018] [core:warn] [pid 12412:tid 224] AH00098: pid file C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 15 09:16:59.765314 2018] [ssl:warn] [pid 12412:tid 224] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 09:17:00.685344 2018] [mpm_winnt:notice] [pid 12412:tid 224] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Mon Oct 15 09:17:00.685344 2018] [mpm_winnt:notice] [pid 12412:tid 224] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Mon Oct 15 09:17:00.685344 2018] [core:notice] [pid 12412:tid 224] AH00094: Command line: 'c:\\users\\brandon lee\\desktop\\ikomo\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Mon Oct 15 09:17:00.689343 2018] [mpm_winnt:notice] [pid 12412:tid 224] AH00418: Parent: Created child process 19504
+[Mon Oct 15 09:17:02.877350 2018] [ssl:warn] [pid 19504:tid 208] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 09:17:03.025351 2018] [ssl:warn] [pid 19504:tid 208] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 09:17:03.141349 2018] [mpm_winnt:notice] [pid 19504:tid 208] AH00354: Child: Starting 150 worker threads.
+[Mon Oct 15 09:25:25.572041 2018] [php7:error] [pid 19504:tid 1952] [client ::1:56152] script 'C:/Users/Brandon Lee/Desktop/ikomo/Home/includes/login.inc.php' not found or unable to stat, referer: http://localhost:8080/signup.php?signup=success
