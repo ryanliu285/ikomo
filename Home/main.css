@@ -1,0 +1,28 @@
+main {
+  background-color: rgba(196, 196, 196, 0.6);
+}
+html {
+  background-color: rgba(196, 196, 196, 0.6);
+}
+.nav {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+}
+.navdiv {
+  margin-top: 14%;
+}
+.abt {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+}
+.navs {
+  position: absolute;
+  bottom: 20%;
+}
+.navl {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+}
