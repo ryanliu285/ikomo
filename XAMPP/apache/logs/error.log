@@ -113,3 +113,38 @@
 [Mon Oct 15 11:45:08.771947 2018] [php7:notice] [pid 30916:tid 1960] [client ::1:58173] PHP Notice:  Undefined variable: _post in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/signup.php?signup=success
 [Mon Oct 15 12:27:14.723078 2018] [php7:notice] [pid 30916:tid 1960] [client ::1:58464] PHP Notice:  Undefined variable: _post in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/signup.php?signup=success
 [Mon Oct 15 12:27:18.142814 2018] [php7:notice] [pid 30916:tid 1960] [client ::1:58464] PHP Notice:  Undefined variable: _post in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/index.php?error=nouser
+[Mon Oct 15 13:07:28.727207 2018] [ssl:warn] [pid 17820:tid 236] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 13:07:28.789042 2018] [core:warn] [pid 17820:tid 236] AH00098: pid file C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 15 13:07:28.794028 2018] [ssl:warn] [pid 17820:tid 236] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 13:07:29.551004 2018] [mpm_winnt:notice] [pid 17820:tid 236] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Mon Oct 15 13:07:29.551004 2018] [mpm_winnt:notice] [pid 17820:tid 236] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Mon Oct 15 13:07:29.551004 2018] [core:notice] [pid 17820:tid 236] AH00094: Command line: 'c:\\users\\brandon lee\\desktop\\ikomo\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Mon Oct 15 13:07:29.553995 2018] [mpm_winnt:notice] [pid 17820:tid 236] AH00418: Parent: Created child process 22824
+[Mon Oct 15 13:07:30.858018 2018] [ssl:warn] [pid 22824:tid 648] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 13:07:30.920850 2018] [ssl:warn] [pid 22824:tid 648] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 13:07:30.969719 2018] [mpm_winnt:notice] [pid 22824:tid 648] AH00354: Child: Starting 150 worker threads.
+[Mon Oct 15 13:07:34.468156 2018] [php7:error] [pid 22824:tid 1956] [client ::1:58854] script 'C:/Users/Brandon Lee/Desktop/ikomo/Home/includes/logout.inc.php' not found or unable to stat, referer: http://localhost:8080/
+[Mon Oct 15 13:31:11.347325 2018] [php7:notice] [pid 22824:tid 1956] [client ::1:59099] PHP Notice:  Undefined variable: _POSt in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/index.php
+[Mon Oct 15 13:31:16.108559 2018] [php7:notice] [pid 22824:tid 1956] [client ::1:59099] PHP Notice:  Undefined variable: _POSt in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/index.php?error=wrongpass
+[Mon Oct 15 13:31:51.877391 2018] [php7:notice] [pid 22824:tid 1952] [client ::1:59136] PHP Notice:  Undefined variable: _POSt in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\includes\\login.inc.php on line 8, referer: http://localhost:8080/index.php?error=wrongpass
+[Mon Oct 15 13:32:30.129392 2018] [php7:crit] [pid 22824:tid 1956] [client ::1:59140] PHP Parse error:  syntax error, unexpected '=', expecting ']' in C:\\Users\\Brandon Lee\\Desktop\\ikomo\\Home\\signup.php on line 32, referer: http://localhost:8080/index.php
+[Mon Oct 15 21:01:54.697191 2018] [ssl:warn] [pid 9928:tid 680] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 21:01:54.777976 2018] [core:warn] [pid 9928:tid 680] AH00098: pid file C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 15 21:01:54.784956 2018] [ssl:warn] [pid 9928:tid 680] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 21:01:55.582823 2018] [mpm_winnt:notice] [pid 9928:tid 680] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Mon Oct 15 21:01:55.582823 2018] [mpm_winnt:notice] [pid 9928:tid 680] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Mon Oct 15 21:01:55.582823 2018] [core:notice] [pid 9928:tid 680] AH00094: Command line: 'c:\\users\\brandon lee\\desktop\\ikomo\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Mon Oct 15 21:01:55.585815 2018] [mpm_winnt:notice] [pid 9928:tid 680] AH00418: Parent: Created child process 18916
+[Mon Oct 15 21:01:56.927228 2018] [ssl:warn] [pid 18916:tid 684] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 21:01:56.995046 2018] [ssl:warn] [pid 18916:tid 684] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Mon Oct 15 21:01:57.068849 2018] [mpm_winnt:notice] [pid 18916:tid 684] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 17 10:37:47.123853 2018] [ssl:warn] [pid 7480:tid 656] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Wed Oct 17 10:37:47.170730 2018] [core:warn] [pid 7480:tid 656] AH00098: pid file C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 17 10:37:47.170730 2018] [ssl:warn] [pid 7480:tid 656] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Wed Oct 17 10:37:47.248811 2018] [mpm_winnt:notice] [pid 7480:tid 656] AH00455: Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.10 configured -- resuming normal operations
+[Wed Oct 17 10:37:47.248811 2018] [mpm_winnt:notice] [pid 7480:tid 656] AH00456: Apache Lounge VC15 Server built: Aug 15 2018 11:10:17
+[Wed Oct 17 10:37:47.248811 2018] [core:notice] [pid 7480:tid 656] AH00094: Command line: 'c:\\users\\brandon lee\\desktop\\ikomo\\xampp\\apache\\bin\\httpd.exe -d C:/Users/Brandon Lee/Desktop/ikomo/XAMPP/apache'
+[Wed Oct 17 10:37:47.248811 2018] [mpm_winnt:notice] [pid 7480:tid 656] AH00418: Parent: Created child process 14796
+[Wed Oct 17 10:37:48.014256 2018] [ssl:warn] [pid 14796:tid 672] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Wed Oct 17 10:37:48.045499 2018] [ssl:warn] [pid 14796:tid 672] AH01909: www.example.com:4433:0 server certificate does NOT include an ID which matches the server name
+[Wed Oct 17 10:37:48.076741 2018] [mpm_winnt:notice] [pid 14796:tid 672] AH00354: Child: Starting 150 worker threads.

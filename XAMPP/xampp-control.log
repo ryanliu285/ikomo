@@ -813,3 +813,135 @@
 8:04:25 AM  [main] 	Deinitializing Modules
 8:04:25 AM  [main] 	Deinitializing Control Panel
 
+9:16:53 AM  [main] 	Initializing Control Panel
+9:16:53 AM  [main] 	Windows Version:  Enterprise  64-bit
+9:16:53 AM  [main] 	XAMPP Version: 7.2.10
+9:16:53 AM  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+9:16:53 AM  [main] 	You are not running with administrator rights! This will work for
+9:16:53 AM  [main] 	most application stuff but whenever you do something with services
+9:16:53 AM  [main] 	there will be a security dialogue or things will break! So think 
+9:16:53 AM  [main] 	about running this application with administrator rights!
+9:16:53 AM  [main] 	XAMPP Installation Directory: "c:\users\brandon lee\desktop\ikomo\xampp\"
+9:16:53 AM  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+9:16:53 AM  [main] 	Checking for prerequisites
+9:16:53 AM  [main] 	All prerequisites found
+9:16:53 AM  [main] 	Initializing Modules
+9:16:53 AM  [main] 	Starting Check-Timer
+9:16:53 AM  [main] 	Control Panel Ready
+9:16:56 AM  [Apache] 	Attempting to start Apache app...
+9:16:56 AM  [Apache] 	Status change detected: running
+9:16:56 AM  [mysql] 	Attempting to start MySQL app...
+9:16:57 AM  [mysql] 	Status change detected: running
+9:27:23 AM  [Apache] 	Attempting to stop Apache (PID: 12412)
+9:27:23 AM  [Apache] 	Attempting to stop Apache (PID: 19504)
+9:27:23 AM  [Apache] 	Status change detected: stopped
+9:27:24 AM  [mysql] 	Attempting to stop MySQL app...
+9:27:25 AM  [mysql] 	Status change detected: stopped
+10:24:19 AM  [Apache] 	Status change detected: running
+10:24:20 AM  [mysql] 	Status change detected: running
+12:30:46 PM  [Apache] 	Status change detected: stopped
+12:30:47 PM  [mysql] 	Status change detected: stopped
+1:07:24 PM  [Apache] 	Status change detected: running
+1:07:26 PM  [mysql] 	Status change detected: running
+1:59:35 PM  [mysql] 	Status change detected: stopped
+1:59:36 PM  [Apache] 	Status change detected: stopped
+9:01:50 PM  [Apache] 	Status change detected: running
+9:01:51 PM  [mysql] 	Status change detected: running
+9:32:29 PM  [Apache] 	Status change detected: stopped
+9:32:30 PM  [mysql] 	Status change detected: stopped
+8:24:46 AM  [main] 	Deinitializing Modules
+8:24:46 AM  [main] 	Deinitializing Control Panel
+
+1:07:21 PM  [main] 	Initializing Control Panel
+1:07:21 PM  [main] 	Windows Version:  Enterprise  64-bit
+1:07:21 PM  [main] 	XAMPP Version: 7.2.10
+1:07:21 PM  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+1:07:21 PM  [main] 	You are not running with administrator rights! This will work for
+1:07:21 PM  [main] 	most application stuff but whenever you do something with services
+1:07:21 PM  [main] 	there will be a security dialogue or things will break! So think 
+1:07:21 PM  [main] 	about running this application with administrator rights!
+1:07:21 PM  [main] 	XAMPP Installation Directory: "c:\users\brandon lee\desktop\ikomo\xampp\"
+1:07:21 PM  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+1:07:21 PM  [main] 	Checking for prerequisites
+1:07:22 PM  [main] 	All prerequisites found
+1:07:22 PM  [main] 	Initializing Modules
+1:07:22 PM  [main] 	Starting Check-Timer
+1:07:22 PM  [main] 	Control Panel Ready
+1:07:24 PM  [Apache] 	Attempting to start Apache app...
+1:07:24 PM  [Apache] 	Status change detected: running
+1:07:25 PM  [mysql] 	Attempting to start MySQL app...
+1:07:26 PM  [mysql] 	Status change detected: running
+1:59:35 PM  [mysql] 	Attempting to stop MySQL app...
+1:59:35 PM  [mysql] 	Status change detected: stopped
+1:59:36 PM  [Apache] 	Attempting to stop Apache (PID: 17820)
+1:59:36 PM  [Apache] 	Attempting to stop Apache (PID: 22824)
+1:59:36 PM  [Apache] 	Status change detected: stopped
+9:01:50 PM  [Apache] 	Status change detected: running
+9:01:51 PM  [mysql] 	Status change detected: running
+9:32:29 PM  [Apache] 	Status change detected: stopped
+9:32:30 PM  [mysql] 	Status change detected: stopped
+8:24:46 AM  [main] 	Deinitializing Modules
+8:24:46 AM  [main] 	Deinitializing Control Panel
+
+10:24:11 AM  [main] 	Initializing Control Panel
+10:24:11 AM  [main] 	Windows Version:  Enterprise  64-bit
+10:24:11 AM  [main] 	XAMPP Version: 7.2.10
+10:24:11 AM  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+10:24:11 AM  [main] 	You are not running with administrator rights! This will work for
+10:24:11 AM  [main] 	most application stuff but whenever you do something with services
+10:24:11 AM  [main] 	there will be a security dialogue or things will break! So think 
+10:24:11 AM  [main] 	about running this application with administrator rights!
+10:24:11 AM  [main] 	XAMPP Installation Directory: "c:\users\brandon lee\desktop\ikomo\xampp\"
+10:24:11 AM  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+10:24:11 AM  [main] 	Checking for prerequisites
+10:24:11 AM  [main] 	All prerequisites found
+10:24:11 AM  [main] 	Initializing Modules
+10:24:11 AM  [main] 	Starting Check-Timer
+10:24:11 AM  [main] 	Control Panel Ready
+10:24:18 AM  [Apache] 	Attempting to start Apache app...
+10:24:19 AM  [Apache] 	Status change detected: running
+10:24:19 AM  [mysql] 	Attempting to start MySQL app...
+10:24:19 AM  [mysql] 	Status change detected: running
+12:30:45 PM  [Apache] 	Attempting to stop Apache (PID: 29268)
+12:30:45 PM  [Apache] 	Attempting to stop Apache (PID: 30916)
+12:30:46 PM  [Apache] 	Status change detected: stopped
+12:30:46 PM  [mysql] 	Attempting to stop MySQL app...
+12:30:47 PM  [mysql] 	Status change detected: stopped
+1:07:24 PM  [Apache] 	Status change detected: running
+1:07:26 PM  [mysql] 	Status change detected: running
+1:59:35 PM  [mysql] 	Status change detected: stopped
+1:59:36 PM  [Apache] 	Status change detected: stopped
+9:01:50 PM  [Apache] 	Status change detected: running
+9:01:51 PM  [mysql] 	Status change detected: running
+9:32:29 PM  [Apache] 	Status change detected: stopped
+9:32:30 PM  [mysql] 	Status change detected: stopped
+8:24:46 AM  [main] 	Deinitializing Modules
+8:24:46 AM  [main] 	Deinitializing Control Panel
+
+9:01:47 PM  [main] 	Initializing Control Panel
+9:01:47 PM  [main] 	Windows Version:  Enterprise  64-bit
+9:01:47 PM  [main] 	XAMPP Version: 7.2.10
+9:01:47 PM  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+9:01:47 PM  [main] 	You are not running with administrator rights! This will work for
+9:01:47 PM  [main] 	most application stuff but whenever you do something with services
+9:01:47 PM  [main] 	there will be a security dialogue or things will break! So think 
+9:01:47 PM  [main] 	about running this application with administrator rights!
+9:01:47 PM  [main] 	XAMPP Installation Directory: "c:\users\brandon lee\desktop\ikomo\xampp\"
+9:01:47 PM  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+9:01:47 PM  [main] 	Checking for prerequisites
+9:01:48 PM  [main] 	All prerequisites found
+9:01:48 PM  [main] 	Initializing Modules
+9:01:48 PM  [main] 	Starting Check-Timer
+9:01:48 PM  [main] 	Control Panel Ready
+9:01:49 PM  [Apache] 	Attempting to start Apache app...
+9:01:50 PM  [Apache] 	Status change detected: running
+9:01:51 PM  [mysql] 	Attempting to start MySQL app...
+9:01:51 PM  [mysql] 	Status change detected: running
+9:32:28 PM  [Apache] 	Attempting to stop Apache (PID: 9928)
+9:32:28 PM  [Apache] 	Attempting to stop Apache (PID: 18916)
+9:32:29 PM  [Apache] 	Status change detected: stopped
+9:32:29 PM  [mysql] 	Attempting to stop MySQL app...
+9:32:30 PM  [mysql] 	Status change detected: stopped
+8:24:46 AM  [main] 	Deinitializing Modules
+8:24:46 AM  [main] 	Deinitializing Control Panel
+
