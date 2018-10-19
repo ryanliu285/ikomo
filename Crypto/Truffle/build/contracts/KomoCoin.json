@@ -479,7 +479,7 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract KomoCoin is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n\r\n/*struct Komo {\r\n  string outer;\r\n  string inner;\r\n}\r\n\r\nKomo[] public komos;\r\n\r\n  function getKomo( uint _KomoId ) public view returns(string outer, string inner){\r\n    Komo memory _kom = komos[_komoId];\r\n\r\n    outer = _kom.outer;\r\n    inner = _kom.inner;\r\n  }\r\n\r\n  function mint(string _outer, string _inner) public payable onlyOwner{\r\n    Komo memory _komo = Komo({ outer: _outer, inner: _inner });\r\n    uint _komoId = komos.push(_komo) - 1;\r\n\r\n    _mint(msg.sender, _komoId);\r\n    }*/\r\n",
+  "source": "pragma solidity ^0.4.17;\r\n\r\nimport 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';\r\nimport 'zeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract KomoCoin is ERC721Token, Ownable {\r\n  string public constant name = \"KomoCoin\";\r\n  string public constant symbol = \"KC\";\r\n}\r\n\r\n/*struct Komo {\r\n  string outer;\r\n  string inner;\r\n}*/\r\n/*\r\nKomo[] public komos;\r\n\r\n  function getKomo( uint _KomoId ) public view returns(string outer, string inner){\r\n    Komo memory _kom = komos[_komoId];\r\n\r\n    outer = _kom.outer;\r\n    inner = _kom.inner;\r\n  }\r\n\r\n  function mint(string _outer, string _inner) public payable onlyOwner{\r\n    Komo memory _komo = Komo({ outer: _outer, inner: _inner });\r\n    uint _komoId = komos.push(_komo) - 1;\r\n\r\n    _mint(msg.sender, _komoId);\r\n    }*/\r\n",
   "sourcePath": "C:\\Users\\ryanl\\Desktop\\ikomo\\Crypto\\Truffle\\contracts\\KomoCoin.sol",
   "ast": {
     "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
@@ -508,7 +508,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 15,
-        "sourceUnit": 1448,
+        "sourceUnit": 1391,
         "src": "28:66:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -519,7 +519,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 15,
-        "sourceUnit": 332,
+        "sourceUnit": 275,
         "src": "96:59:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -533,10 +533,10 @@
               "id": 4,
               "name": "ERC721Token",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1447,
+              "referencedDeclaration": 1390,
               "src": "180:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Token_$1447",
+                "typeIdentifier": "t_contract$_ERC721Token_$1390",
                 "typeString": "contract ERC721Token"
               }
             },
@@ -551,10 +551,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 331,
+              "referencedDeclaration": 274,
               "src": "193:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$331",
+                "typeIdentifier": "t_contract$_Ownable_$274",
                 "typeString": "contract Ownable"
               }
             },
@@ -564,15 +564,15 @@
           }
         ],
         "contractDependencies": [
-          100,
-          151,
-          331,
-          358,
-          378,
-          385,
-          507,
-          1055,
-          1447
+          43,
+          94,
+          274,
+          301,
+          321,
+          328,
+          450,
+          998,
+          1390
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -580,15 +580,15 @@
         "id": 14,
         "linearizedBaseContracts": [
           14,
-          331,
-          1447,
-          385,
-          378,
-          358,
-          1055,
-          507,
-          151,
-          100
+          274,
+          1390,
+          328,
+          321,
+          301,
+          998,
+          450,
+          94,
+          43
         ],
         "name": "KomoCoin",
         "nodeType": "ContractDefinition",
@@ -684,7 +684,7 @@
         "src": "159:132:0"
       }
     ],
-    "src": "0:784:0"
+    "src": "0:788:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/ryanl/Desktop/ikomo/Crypto/Truffle/contracts/KomoCoin.sol",
@@ -713,7 +713,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 15,
-        "sourceUnit": 1448,
+        "sourceUnit": 1391,
         "src": "28:66:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -724,7 +724,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 15,
-        "sourceUnit": 332,
+        "sourceUnit": 275,
         "src": "96:59:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -738,10 +738,10 @@
               "id": 4,
               "name": "ERC721Token",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1447,
+              "referencedDeclaration": 1390,
               "src": "180:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Token_$1447",
+                "typeIdentifier": "t_contract$_ERC721Token_$1390",
                 "typeString": "contract ERC721Token"
               }
             },
@@ -756,10 +756,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 331,
+              "referencedDeclaration": 274,
               "src": "193:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$331",
+                "typeIdentifier": "t_contract$_Ownable_$274",
                 "typeString": "contract Ownable"
               }
             },
@@ -769,15 +769,15 @@
           }
         ],
         "contractDependencies": [
-          100,
-          151,
-          331,
-          358,
-          378,
-          385,
-          507,
-          1055,
-          1447
+          43,
+          94,
+          274,
+          301,
+          321,
+          328,
+          450,
+          998,
+          1390
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -785,15 +785,15 @@
         "id": 14,
         "linearizedBaseContracts": [
           14,
-          331,
-          1447,
-          385,
-          378,
-          358,
-          1055,
-          507,
-          151,
-          100
+          274,
+          1390,
+          328,
+          321,
+          301,
+          998,
+          450,
+          94,
+          43
         ],
         "name": "KomoCoin",
         "nodeType": "ContractDefinition",
@@ -889,13 +889,20 @@
         "src": "159:132:0"
       }
     ],
-    "src": "0:784:0"
+    "src": "0:788:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xca392c28a09e03a6f41d03ebab376b1c5829e631",
+      "transactionHash": "0x5eec5c06598e7e1edd575add3fafdd88afc0e5dd0e70d809bca74686fedabc81"
+    }
+  },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-15T17:35:19.832Z"
+  "updatedAt": "2018-10-19T17:52:40.755Z"
 }

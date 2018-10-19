@@ -11,8 +11,8 @@ contract KomoCoin is ERC721Token, Ownable {
 /*struct Komo {
   string outer;
   string inner;
-}
-
+}*/
+/*
 Komo[] public komos;
 
   function getKomo( uint _KomoId ) public view returns(string outer, string inner){

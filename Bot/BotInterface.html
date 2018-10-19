@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src = "Bot.js"></script>
-    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script id = "file" src = "./data/test.xlsx"></script>
-    <script>
-      var transactionPass;
-      var name;
-      var credit;
-      var date;
-      var accountNo;
-      var description;
-      var excelInfo;
-      var excelFile = $("#file");
-      var workbook = XLSX.read(excelFile);
-      if(excelInfo =
-      XLSX.utils.sheet_to_json(workbook)){//excelInfo = ExcelToJSON($.get(''))!=undefined){
-        console.log(excelInfo);
-      }else{
-        console.log("failed to write xlsx to JSON");
-      }
-      var jsInfo = JSON.parse(excelInfo);
-      if((jsInfo.Date==date)&&(jsInfo.name==name)&&(jsInfo.Credit==credit)
-    &&(jsInfo.(Account no) == accountNo)&&){
 
-      }else{
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script lang="javascript" src="./SheetJS/dist/xlsx.full.min.js"></script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script type="file" id="excelfile" src="./data/test.xlsx"></script>
+  <script src="./Bot.js"></script>
+  <script>
+    var transactionPass;
+    var name;
+    var credit;
+    var date;
+    var accountNo;
+    var description;
+    var excelInfo;
+    /* in this example, send a base64 string to the server */
+    var wopts = {
+      bookType: 'xlsx',
+      bookSST: false,
+      type: 'base64'
+    };
 
-      }
-    </script>
-  </head>
-  <body>
-  </body>
+    var wbout = XLSX.write(workbook, wopts);
+
+    var req = new XMLHttpRequest();
+    req.open("POST", "/upload", true);
+    var formdata = new FormData();
+    formdata.append('file', 'test.xlsx'); // <-- server expects `file` to hold name
+    formdata.append('data', wbout); // <-- `data` holds the base64-encoded data
+    req.send(formdata);
+  </script>
+</head>
+
+<body>
+</body>
+
 </html>
