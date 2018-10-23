@@ -45,7 +45,7 @@
             echo '<form class = "navl" action = "includes/logout.inc.php" method = "post"><button type = "submit" name = "logout-submit">Logout</button></form>';
           }
           else {
-            echo '<form class = "nav" action = "includes/login.inc.php" method = "post"><input type = "text" name = "mailuid" placeholder = "Username/E-mail..."><input type = "password" name = "pwd" placeholder = "Password..."><button type = "submit" name = "login-submit">Login</button></form>';
+            echo '<form class = "nav" action = "includes/login.inc.php" method = "post"><input type = "text" name = "mailuid" placeholder = "Username..."><input type = "password" name = "pwd" placeholder = "Password..."><button type = "submit" name = "login-submit">Login</button></form>';
             echo '<a style= "" class = "xD" href = "signup.php">Signup!</a>';
           }
         ?>
