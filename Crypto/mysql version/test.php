@@ -27,22 +27,41 @@
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());
      }
+     $sql = "SELECT StringID FROM iKomo";
+     $result = $conn->query($sql);
 
-     //Insert iKomo
-     $sql = "INSERT INTO iKomo ".
-               "(StringID, UID, Rarity, Type) "."VALUES ".
-               "('$randomString','Temporary','$Rarity','$Type')";
-     if ($conn->query($sql) === TRUE) {
-        //Announce iKomo traits
-        echo "You got a iKomo of type ";
-        echo $Type;
-        echo " and rarity ";
-        echo $Rarity;
-        echo " with an ID of ";
-        echo $randomString;
+     if ($result->num_rows > 0) {
+
+       // output data of each row
+       while($row = $result->fetch_assoc()) {
+         if($randomString===($row["StringID"])){
+           echo "Error Generating STringID. Please try again";
+           exit();
+         }
+       }
+
+       //Insert iKomo
+
+       $sql = "INSERT INTO iKomo ".
+                 "(StringID, UID, Rarity, Type) "."VALUES ".
+                 "('$randomString','Temporary','$Rarity','$Type')";
+       if ($conn->query($sql) === TRUE) {
+          //Announce iKomo traits
+          echo "You got a iKomo of type ";
+          echo $Type;
+          echo " and rarity ";
+          echo $Rarity;
+          echo " with an ID of ";
+          echo $randomString;
+
+       } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+       }
+
      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+       echo 'Error';
      }
+
 
      $conn->close();
 
