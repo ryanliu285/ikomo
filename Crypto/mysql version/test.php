@@ -35,7 +35,7 @@
        // output data of each row
        while($row = $result->fetch_assoc()) {
          if($randomString===($row["StringID"])){
-           echo "Error Generating STringID. Please try again";
+           echo "Error Generating StringID. Please try again";
            exit();
          }
        }
