@@ -4,6 +4,9 @@ main {
 html {
   background-color: rgba(196, 196, 196, 0.6);
 }
+body, html {
+  height: 100%;
+}
 .nav {
   position: absolute;
   bottom: 20%;
@@ -29,4 +32,11 @@ html {
 .xD {
   position: absolute;
   top: 20%;
+}
+.bg {
+  background-image: url("img/sign-min.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
