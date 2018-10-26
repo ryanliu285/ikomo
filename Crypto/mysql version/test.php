@@ -15,7 +15,16 @@
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		 }
      $UID = "Temporary";
-     $Rarity = rand(1,4);
+     $x = 0;
+     if($x=rand(1,100)<=79){
+       $Rarity = 1;
+     }else if ($x<=94){
+       $Rarity = 2;
+     }else if ($x<=99){
+       $Rarity = 3;
+     }else{
+       $Rarity = 4;
+     }
      $Type = rand(1,4);
 
      //Connect to database
@@ -47,11 +56,27 @@
                  "('$randomString','Temporary','$Rarity','$Type')";
        if ($conn->query($sql) === TRUE) {
           //Announce iKomo traits
-          echo "You got a iKomo of type ";
-          echo $Type;
-          echo " and rarity ";
-          echo $Rarity;
-          echo " with an ID of ";
+          echo "You got a";
+          if($Type == 1){
+            echo " domestic iKomo ";
+          }else if ($Type == 2){
+            echo " aquatic iKomo ";
+          }else if ($Type == 3){
+            echo " wild iKomo ";
+          }else{
+            echo " mythic iKomo ";
+          }
+          echo " that is ";
+          if($Rarity==1){
+            echo "common ";
+          }else if ($Rarity == 2){
+            echo "rare ";
+          }else if ($Rarity == 3){
+            echo "epic ";
+          }else {
+            echo "legendary ";
+          }
+          echo "with an ID of ";
           echo $randomString;
 
        } else {
