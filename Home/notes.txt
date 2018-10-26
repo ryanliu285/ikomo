@@ -1,0 +1,24 @@
+check login system for the userUID
+
+  mySQL / PHP
+
+
+PULL owned iKOMOs
+
+  mySQL
+
+
+
+DISPLAY owned iKOMOs
+
+  mySQL - > JS
+
+
+
+EDIT owned iKOMOs
+
+
+
+
+
+PUSH on owned iKOMOs

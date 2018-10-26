@@ -30,7 +30,7 @@ if(isset($_POST['signup-submit'])){
   }
   else {
 
-    $sql = "SELECT uidUsers FROM users WHERE uidUsers =?";
+    $sql = "SELECT uidUsers FROM users WHERE uidUsers =?"; /* should be iKOMODB */
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
       header("Location: ../signup.php?error=sqlerror");
@@ -46,7 +46,7 @@ if(isset($_POST['signup-submit'])){
         exit();
       }
       else {
-        $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";  /* should be iKOMODB */
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
           header("Location: ../signup.php?error=sqlerror");
@@ -56,7 +56,7 @@ if(isset($_POST['signup-submit'])){
           $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
           mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
           mysqli_stmt_execute($stmt);
-          header("Location: ../signup.php?signup=success");
+          header("Location: ../signup.php?error=success");
           exit();
         }
       }
