@@ -29,7 +29,7 @@
             else if ($_GET["error"] == "usertaken"){
               echo '<center><p class = "signuperror">Username is already taken!!</p></center>';
             }
-            else if ($_GET["signup" == "success"]){
+            else if ($_GET["error"] == "success"){
               echo '<center><p class = "signupsucc">Signup Successful!</p></center>';
             }
           }

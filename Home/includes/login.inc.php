@@ -12,7 +12,7 @@ if(isset($_POST['login-submit'])){
       exit();
   }
   else {
-      $sql= "SELECT * FROM users WHERE uidUsers=?;";
+      $sql= "SELECT * FROM users WHERE uidUsers=?;"; /* should be iKOMODB*/
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)){
         header("Location: ../index.php?error=sqlerror");
