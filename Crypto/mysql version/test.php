@@ -56,13 +56,6 @@
                  "('$randomString','Temporary','$Rarity','$Type')";
        if ($conn->query($sql) === TRUE) {
           //Announce iKomo traits
-<<<<<<< HEAD
-          echo "You got a iKOMO of type ";
-          echo $Type;
-          echo " and rarity ";
-          echo $Rarity;
-          echo " with an ID of ";
-=======
           echo "You got a";
           if($Type == 1){
             echo " domestic iKomo ";
@@ -84,7 +77,6 @@
             echo "legendary ";
           }
           echo "with an ID of ";
->>>>>>> 393c1f2daf08991858a6a28d74604d2cc04a9e86
           echo $randomString;
 
        } else {
