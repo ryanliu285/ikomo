@@ -47,7 +47,7 @@
                  "('$randomString','Temporary','$Rarity','$Type')";
        if ($conn->query($sql) === TRUE) {
           //Announce iKomo traits
-          echo "You got a iKomo of type ";
+          echo "You got a iKOMO of type ";
           echo $Type;
           echo " and rarity ";
           echo $Rarity;
