@@ -1,7 +1,7 @@
 <html>
 
    <head>
-      <title>iKomo</title>
+      <title>iKOMO</title>
    </head>
 
    <body>
@@ -234,7 +234,7 @@
             echo " mythic ";
           }
           echo $Animal;
-          echo " iKomo that is ";
+          echo " iKOMO that is ";
           if($Rarity==1){
             echo "common ";
           }else if ($Rarity == 2){
