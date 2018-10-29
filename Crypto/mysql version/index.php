@@ -195,20 +195,20 @@
 
 
      //Connect to database
-     $dbhost = 'localhost';
-     $dbuser = 'root';
-     $dbpass = '';
-     $dbname = 'owners';
+     $dbhost = 'db759106289.hosting-data.io';
+     $dbuser = 'dbo759106289';
+     $dbpass = 'SPdidsway1st';
+     $dbname = 'db759106289';
      $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());
      }
-     $sql = "SELECT StringID FROM iKomo";
+     $sql = "SELECT StringID FROM owners";
      $result = $conn->query($sql);
 
      if ($result->num_rows >= 0) {
 
-       // output data of each row
+       // output data of each row and check stringID
        while($row = $result->fetch_assoc()) {
          if($randomString===($row["StringID"])){
            echo "Error Generating StringID. Please try again";
@@ -218,7 +218,7 @@
 
        //Insert iKomo
 
-       $sql = "INSERT INTO iKomo ".
+       $sql = "INSERT INTO owners ".
                  "(StringID, UID, Rarity, Type, Animal) "."VALUES ".
                  "('$randomString','Temporary','$Rarity','$Type','$Animal')";
        if ($conn->query($sql) === TRUE) {
