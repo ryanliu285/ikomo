@@ -6,7 +6,8 @@
 
    <body>
      <?php
-
+     //TODO: CHECK IF USER IS LOGGED IN AND IF THEY PAYED. OTHERWISE THEY CAN JUST GO
+     //DIRECTLY TO THE LINKN AND JUST PULL
      //Traits of Ikomo: String, owner(userID), rarity, type, health
 		 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		 $charactersLength = strlen($characters);
