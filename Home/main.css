@@ -7,6 +7,11 @@ body, html {
   bottom: 20%;
   right: 0;
 }
+.navform {
+  position: absolute;
+  top: 42%;
+  right: 0;
+}
 .navdiv {
   margin-top: 14%;
 }
@@ -26,7 +31,8 @@ body, html {
 }
 .xD {
   position: absolute;
-  top: 20%;
+  left: 10%;
+  top: 47%;
 }
 #bg {
   background-image: url("img/sign-min.jpg");
