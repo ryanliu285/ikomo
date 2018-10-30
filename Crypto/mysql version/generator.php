@@ -15,7 +15,9 @@
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		 }
      $UID = "Temporary";
-     if($x=rand(1,100)<=32){
+     $x = rand(1,100);
+     echo "<script>console.log( $x );</script>";
+     if($x<=32){
        $Rarity = 1;
      }else if ($x<=83){
        $Rarity = 2;
