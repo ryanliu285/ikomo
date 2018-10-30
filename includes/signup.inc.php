@@ -46,7 +46,7 @@ if(isset($_POST['signup-submit'])){
         exit();
       }
       else {
-        $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";  /* should be iKOMODB */
+        $sql = "INSERT INTO iKOMODB (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";  /* should be iKOMODB */
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
           header("Location: ../signup.php?error=sqlerror");
