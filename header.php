@@ -46,7 +46,7 @@
           }
           else {
             echo '<form class = "navform" action = "includes/login.inc.php" method = "post"><input type = "text" name = "mailuid" placeholder = "Username..."><input type = "password" name = "pwd" placeholder = "Password..."><button type = "submit" name = "login-submit">Login</button></form>';
-            echo '<a style= "" class = "xD" href = "signup.php">Signup!</a>';
+            echo '<a style= "fontfamily: Dimbo" class = "xD" href = "signup.php">Signup!</a>';
           }
         ?>
       </div>
