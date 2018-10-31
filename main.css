@@ -34,7 +34,7 @@ body, html {
   left: 10%;
   top: 47%;
 }
-#bg {
+.bg {
   background-image: url("img/sign-min.jpg");
   height: 10%;
   width auto;
