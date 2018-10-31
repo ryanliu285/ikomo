@@ -6,7 +6,9 @@
   <script lang="javascript" src="./SheetJS/dist/xlsx.full.min.js"></script>
   <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
   <script type="file" id="excelfile" src="./data/test.xlsx"></script>
-  <script src="./Bot.js"></script>
+  <!-- <script src="./Bot.js"></script>-->
+    <iframe src="https://portal.veinternational.org/login/" name="veiframe" />
+    <iframe src="framelogin.html" name="loginframe"/>
   <script>
     var transactionPass;
     var name;
@@ -15,21 +17,43 @@
     var accountNo;
     var description;
     var excelInfo;
-    /* in this example, send a base64 string to the server */
-    var wopts = {
-      bookType: 'xlsx',
-      bookSST: false,
-      type: 'base64'
-    };
 
-    var wbout = XLSX.write(workbook, wopts);
+    var excelJson;
 
+
+
+    var url = "http://oss.sheetjs.com/test_files/formula_stress_test.xlsx";
+
+    /* set up async GET request */
     var req = new XMLHttpRequest();
-    req.open("POST", "/upload", true);
-    var formdata = new FormData();
-    formdata.append('file', 'test.xlsx'); // <-- server expects `file` to hold name
-    formdata.append('data', wbout); // <-- `data` holds the base64-encoded data
-    req.send(formdata);
+    req.open("GET", url, true);
+    req.responseType = "arraybuffer";
+
+    req.onload = function(e) {
+    var data = new Uint8Array(req.response);
+    var workbook = XLSX.read(data, {type:"array"});
+    var wsheet = workbook.SheetNames[0];
+    console.log(workbook.SheetNames.length);
+    /* DO SOMETHING WITH workbook HERE */
+    excelJson = XLSX.utils.sheet_to_json(wsheet);
+    console.log(excelJson);
+    }
+    req.send();
+    /* in this example, send a base64 string to the server */
+    // var wopts = {
+    //   bookType: 'xlsx',
+    //   bookSST: false,
+    //   type: 'base64'
+    // };
+    //
+    // var wbout = XLSX.write(workbook, wopts);
+    //
+    // var req = new XMLHttpRequest();
+    // req.open("POST", "/upload", true);
+    // var formdata = new FormData();
+    // formdata.append('file', 'test.xlsx'); // <-- server expects `file` to hold name
+    // formdata.append('data', wbout); // <-- `data` holds the base64-encoded data
+    // req.send(formdata);
   </script>
 </head>
 
