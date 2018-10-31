@@ -34,6 +34,7 @@ if(isset($_POST['login-submit'])){
               $_SESSION['userUID'] = $row['uidUsers'];
 
               header("Location: ../index.php?login=success");
+              require("Location: ../Crypto/mysqlversion/generator.php");
               exit();
             }
             else {
