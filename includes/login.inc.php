@@ -33,7 +33,8 @@ if(isset($_POST['login-submit'])){
               $_SESSION['userID'] = $row['idUsers'];
               $_SESSION['userUID'] = $row['uidUsers'];
 
-              header("Location: ../index.php?login=success");
+              header("Location: ../Crypto/mysql version/generator.php");
+              //require "../Crypto/mysql version/generator.php";
               exit();
             }
             else {
@@ -47,7 +48,6 @@ if(isset($_POST['login-submit'])){
         }
       }
   }
-
 }
 else {
   header("Location: ../index.php");

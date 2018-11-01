@@ -20,7 +20,7 @@
       <div class = "row">
         <div class = "col-md-2">
           <a href = "#">
-            <img src = "img/ikologo.png" alt = "logo" width = "150px" height= "auto">
+            <img src = "img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
           </a>
         </div>
       <div class = "col-md-3">
@@ -46,7 +46,7 @@
           }
           else {
             echo '<form class = "navform" action = "includes/login.inc.php" method = "post"><input type = "text" name = "mailuid" placeholder = "Username..."><input type = "password" name = "pwd" placeholder = "Password..."><button type = "submit" name = "login-submit">Login</button></form>';
-            echo '<a style= "" class = "xD" href = "signup.php">Signup!</a>';
+            echo '<a style= "fontfamily: Dimbo" class = "xD" href = "signup.php">Signup!</a>';
           }
         ?>
       </div>

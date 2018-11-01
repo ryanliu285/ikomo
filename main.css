@@ -1,6 +1,11 @@
 
+@font-face {
+    font-family: Dimbo;
+    src: url(./Font/Dimbo Regular.ttf);
+}
 body, html {
   height: 100%;
+  font-family: Dimbo;
 }
 .nav {
   position: absolute;
@@ -41,4 +46,10 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.titleText{
+  font-size: 70px;
+}
+#mainWelcomeText{
+  text-align: center;
 }
