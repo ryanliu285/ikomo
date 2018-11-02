@@ -11,10 +11,21 @@
   <link rel = "stylesheet" type = "text/css" href = "main.css">
   <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <title>VEI iKOMO</title>
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <style>
+  #hoverlay {
+    width: 100%;
+    height: 200%;
+    background-color: #F9F4D2;
+    position: fixed;
+    z-index: 100;
+  }
+  </style>
 </head>
 
 <body>
+  <div id = "hoverlay">
+  </div>
   <header>
     <div class = "container-fluid">
       <div class = "row">
@@ -55,5 +66,28 @@
   </header>
 
 </body>
+<script>
+  function progress (){
+    var ol = document.getElementById('hoverlay');
+    var prg = document.getElementById('progress');
+    var percent = document.getElementById('percentCount');
+    var counter = 0;
+    var progress = 0;
+    var id = setInterval(frame,50);
+
+    function frame(){
+      if(progress >= 500 && counter >= 100){
+        clearInterval(id);
+        ol.style.display = "none";
+      }
+      else{
+        progress += 10;
+        counter +=2;
+      }
+    }
+  }
+
+  progress();
+</script>
 
 </html>
