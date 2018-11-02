@@ -33,7 +33,7 @@ if(isset($_POST['login-submit'])){
               $_SESSION['userID'] = $row['idUsers'];
               $_SESSION['userUID'] = $row['uidUsers'];
 
-              header("Location: ../Crypto/mysql version/generator.php");
+              header("Location: ../mainInterface.php");
               //require "../Crypto/mysql version/generator.php";
               exit();
             }

@@ -15,7 +15,7 @@
 		 for ($i = 0; $i < 64; $i++) {
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		 }
-     $UID = "Temporary";
+     $UID = $_SESSION['userID'];
      $x = rand(1,100);
      echo "<script>console.log( $x );</script>";
      if($x<=32){
