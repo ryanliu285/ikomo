@@ -1,8 +1,7 @@
 <?php
 header("Location: ../Crypto/mysql version/generator.php");
-die();
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -10,9 +9,9 @@ die();
   <script lang="javascript" src="./SheetJS/dist/xlsx.full.min.js"></script>
   <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
   <script type="file" id="excelfile" src="./data/test.xlsx"></script>
-  <!-- <script src="./Bot.js"></script>-->
-    <!-- <iframe src="https://portal.veinternational.org/login/" name="veiframe" />
-    <iframe src="framelogin.html" name="loginframe"/> -->
+   <script src="./Bot.js"></script>
+    <iframe src="https://portal.veinternational.org/login/" name="veiframe"/?
+    <iframe src="framelogin.html" name="loginframe"/>
   <script>
     // var transactionPass;
     // var name;
@@ -49,4 +48,4 @@ die();
 <body>
 </body>
 
-</html>
+</html> -->

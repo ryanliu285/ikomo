@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
    <head>
@@ -16,6 +19,7 @@
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		 }
      $UID = $_SESSION['userID'];
+     echo "<script>console.log( {$_SESSION['userID']} );</script>";
      $x = rand(1,100);
      echo "<script>console.log( $x );</script>";
      if($x<=32){
@@ -223,7 +227,7 @@
 
        $sql = "INSERT INTO owners ".
                  "(StringID, UID, Rarity, Type, Animal) "."VALUES ".
-                 "('$randomString','Temporary','$Rarity','$Type','$Animal')";
+                 "('$randomString',$UID,'$Rarity','$Type','$Animal')";
        if ($conn->query($sql) === TRUE) {
           //Announce iKomo traits
           echo "You got a";
