@@ -12,13 +12,13 @@ require 'header.php';
         height: 200%;
         background-color: #F9F4D2;
         position: fixed;
-        z-index: 100;
+        z-index: 101;
       }
       .percent-count {
         width: 450px;
         height: 50px;
-        margin: 100px auto;
-        font-size: 50px;
+        margin: 10px auto;
+        font-size: 40px;
         text-align: center;
         color: #71DDE2;
       }
@@ -27,13 +27,21 @@ require 'header.php';
         height: 26px;
         background-color: #71DDE2;
         border-radius: 13px;
-        margin: 50px auto;
+        margin: 10px auto;
       }
       .progress {
         width: 25px;
         height: 20px;
         border-radius: 10px;
         background-color: #34ABB7;
+      }
+      #loading {
+        height: 200px;
+        width: 100%;
+      }
+      #loadimage {
+        display: block;
+        margin: 10px auto;
       }
       /*.loadingimage {
         width: 100%;
@@ -53,6 +61,9 @@ require 'header.php';
   <br>
   <body class = "bg">
     <div id = "overlay">
+        <div id = "loading">
+          <img id = "loadimage" height = "200px" width = "auto" src = "img/loading.png">
+        </div>
         <div class = "progress-bar">
           <div class = "progress" id = "progress"></div>
         </div>
@@ -76,16 +87,19 @@ require 'header.php';
 <script>
   function progress (){
     var ol = document.getElementById('overlay');
+    var hol = document.getElementById('hoverlay');
     var prg = document.getElementById('progress');
     var percent = document.getElementById('percentCount');
     var counter = 0;
     var progress = 0;
     var id = setInterval(frame,50);
+    hol.style.display = "block";
 
     function frame(){
       if(progress >= 500 && counter >= 100){
         clearInterval(id);
         ol.style.display = "none";
+        hol.style.display = "none";
       }
       else{
         progress += 10;

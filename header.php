@@ -18,6 +18,7 @@
     height: 200%;
     background-color: #F9F4D2;
     position: fixed;
+    display: none;
     z-index: 100;
   }
   </style>
@@ -66,28 +67,5 @@
   </header>
 
 </body>
-<script>
-  function progress (){
-    var ol = document.getElementById('hoverlay');
-    var prg = document.getElementById('progress');
-    var percent = document.getElementById('percentCount');
-    var counter = 0;
-    var progress = 0;
-    var id = setInterval(frame,50);
-
-    function frame(){
-      if(progress >= 500 && counter >= 100){
-        clearInterval(id);
-        ol.style.display = "none";
-      }
-      else{
-        progress += 10;
-        counter +=2;
-      }
-    }
-  }
-
-  progress();
-</script>
 
 </html>
