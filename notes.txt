@@ -1,24 +1,21 @@
-check login system for the userUID
+Brandon Jobs:
 
-  mySQL / PHP
+- Fix alignment
+- Loading screen
+- Update logo colors
+- Start implementing Shay designs
+- Apply Dimbo font
 
+Ral Jobs:
 
-PULL owned iKOMOs
+- New HTML page for draw owned iKOMOS
+- Buy button
+- Verification with VEI 
+- Set up currency 
+- Ethereum based KOMOcoins
+- Game
 
-  mySQL
+AFTER: 
 
+- Setup marketplace
 
-
-DISPLAY owned iKOMOs
-
-  mySQL - > JS
-
-
-
-EDIT owned iKOMOs
-
-
-
-
-
-PUSH on owned iKOMOs
