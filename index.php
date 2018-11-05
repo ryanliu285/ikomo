@@ -82,6 +82,35 @@ require 'header.php';
 
         </div>
       </div>
+      <br>
+      <br>
+      <br>
+      <div class = "row">
+        <div class = 'col-md-4'>
+        </div>
+        <div class = 'col-md-8'>
+            <button onclick = "checkLogin()">iKOMO Shop</button>
+        </div>
+        <script>
+            <?php
+              function checkLogin(){
+                if(isset($_SESSION ['userID']){
+                  exit();
+                }else {
+                  toggleVisible();
+                }
+              }
+            ?>
+          function toggleVisible() {
+            var x = document.getElementById("pleaseLogIn");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
+      </div>
     </div>
   </body>
 <script>
