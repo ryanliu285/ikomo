@@ -69,6 +69,7 @@ require 'header.php';
         </div>
     </div>
     <div class = "container-fluid">
+      <br>
       <div class = "row">
         <div class = "col-md-1">
 
