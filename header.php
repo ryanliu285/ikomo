@@ -32,7 +32,7 @@
       <div class = "row">
         <div class = "col-md-2">
           <a href = "#">
-            <img src = "img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
+            <img src = "./img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
           </a>
         </div>
       <div class = "col-md-3">

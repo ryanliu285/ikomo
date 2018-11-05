@@ -77,7 +77,7 @@ require 'header.php';
 
         </div>
         <div id = "mainWelcomeText" class = "col-md-10">
-            <img id = "mainScreenLogo" src = "./img/logo.jpg" class = "slideInUp" height ="176px" width = "402px">
+            <img id = "mainScreenLogo" src = "./img/ikologo.png" class = "slideInUp" height ="176px" width = "402px">
         </div>
         <div class = "col-md-1">
 
