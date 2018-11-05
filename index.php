@@ -5,6 +5,7 @@ require 'header.php';
  <html>
   <head>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <style>
       #overlay {
@@ -76,7 +77,7 @@ require 'header.php';
 
         </div>
         <div id = "mainWelcomeText" class = "col-md-10">
-            <p class = "titleText"></p>
+            <img id = "mainScreenLogo" src = "./img/logo.jpg" class = "slideInUp" height ="176px" width = "402px">
         </div>
         <div class = "col-md-1">
 
@@ -111,6 +112,7 @@ require 'header.php';
   }
 
   progress();
+  document.getElementById('mainScreenLogo').style.display = block;
 </script>
 
  </html>
