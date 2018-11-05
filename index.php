@@ -121,7 +121,7 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
-        var str = '<div id = "mainWelcomeText" class = "animated slideInUp"><img id = "mainScreenLogo" src = "./img/logo.png" height ="146px" width = "402px"></div>';
+        var str = '<div id = "mainWelcomeText" class = "animated slideInUp"><img id = "mainScreenLogo" src = "./img/ikologo.png" height ="146px" width = "402px"></div>';
         var Obj = document.getElementById('mainWelcomeText');
         Obj.outerHTML=str;
       }
