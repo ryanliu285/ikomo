@@ -57,9 +57,6 @@ require 'header.php';
     </style>
     <title>VEI iKOMO</title>
   </head>
-  <br>
-  <br>
-  <br>
   <body class = "bg">
     <div id = "overlay">
         <div id = "loading">
@@ -115,7 +112,6 @@ require 'header.php';
       }
     }
   }
-
   progress();
 </script>
 
