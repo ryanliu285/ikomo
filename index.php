@@ -112,7 +112,10 @@ require 'header.php';
   }
 
   progress();
-  document.getElementById('mainScreenLogo').style.display = block;
+  setTimeout(function(){
+    var element = document.getElementById("div_to_animate");
+    element.classList.add("animateClass");
+  }, 2000);
 </script>
 
  </html>
