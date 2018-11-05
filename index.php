@@ -76,8 +76,10 @@ require 'header.php';
         <div class = "col-md-1">
 
         </div>
-        <div id = "mainWelcomeText" class = "col-md-10">
-            <img id = "mainScreenLogo" src = "./img/logo.jpg" class = "slideInUp" height ="176px" width = "402px">
+        <div class = "col-md-10">
+          <div id = "mainWelcomeText">
+              <img id = "mainScreenLogo" src = "./img/logo.png" height ="146px" width = "402px">
+          </div>
         </div>
         <div class = "col-md-1">
 
@@ -101,6 +103,9 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
+        var str = '<div id = "mainWelcomeText" class = "animated slideInUp"><img id = "mainScreenLogo" src = "./img/logo.png" height ="146px" width = "402px"></div>';
+        var Obj = document.getElementById('mainWelcomeText');
+        Obj.outerHTML=str;
       }
       else{
         progress += 10;
@@ -112,10 +117,6 @@ require 'header.php';
   }
 
   progress();
-  setTimeout(function(){
-    var element = document.getElementById("div_to_animate");
-    element.classList.add("animateClass");
-  }, 2000);
 </script>
 
  </html>
