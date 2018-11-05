@@ -57,9 +57,6 @@ require 'header.php';
     </style>
     <title>VEI iKOMO</title>
   </head>
-  <br>
-  <br>
-  <br>
   <body class = "bg">
     <div id = "overlay">
         <div id = "loading">
@@ -76,8 +73,15 @@ require 'header.php';
         <div class = "col-md-1">
 
         </div>
+<<<<<<< HEAD
         <div id = "mainWelcomeText" class = "col-md-10">
             <img id = "mainScreenLogo" src = "./img/ikologo.png" class = "slideInUp" height ="176px" width = "402px">
+=======
+        <div class = "col-md-10">
+          <div id = "mainWelcomeText">
+              <img id = "mainScreenLogo" src = "./img/logo.png" height ="146px" width = "402px">
+          </div>
+>>>>>>> 4fe5b9973ce7168fe9d9268d3265cbd91d2f5297
         </div>
         <div class = "col-md-1">
 
@@ -101,6 +105,9 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
+        var str = '<div id = "mainWelcomeText" class = "animated slideInUp"><img id = "mainScreenLogo" src = "./img/logo.png" height ="146px" width = "402px"></div>';
+        var Obj = document.getElementById('mainWelcomeText');
+        Obj.outerHTML=str;
       }
       else{
         progress += 10;
@@ -110,9 +117,7 @@ require 'header.php';
       }
     }
   }
-
   progress();
-  document.getElementById('mainScreenLogo').style.display = block;
 </script>
 
  </html>
