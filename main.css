@@ -1,11 +1,18 @@
 
 @font-face {
-    font-family: Dimbo;
+    font-family: "Dimbo";
     src: url(./Font/Dimbo Regular.ttf);
+}
+a {
+  text-decoration: none;
+  font-family: "Dimbo";
+}
+a:hover {
+  cursor: pointer;
 }
 body, html {
   height: 100%;
-  font-family: Dimbo;
+  font-family: "Dimbo";
 }
 .nav {
   position: absolute;
