@@ -1,7 +1,7 @@
 Brandon Jobs:
 
 - Fix alignment
-- Loading screen
+- Loading screen ✓
 - Update logo colors
 - Start implementing Shay designs
 - Apply Dimbo font
