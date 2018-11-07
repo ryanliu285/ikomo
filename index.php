@@ -69,6 +69,7 @@ require 'header.php';
         <div id = "percentCount" class = "percent-count">
         </div>
     </div>
+    </div>
     <div class = "container-fluid">
       <br>
       <div class = "row">
