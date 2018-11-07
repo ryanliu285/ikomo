@@ -6,6 +6,7 @@
   <head>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>VEI iKOMO</title>
   </head>
   <br>
@@ -19,7 +20,25 @@
         </div>
         <div id = "mainWelcomeText" class = "col-md-10">
             <p class = "titleText">Welcome!</p>
-            <a href = "../Bot/BotInterface.php"><button id = "buyButton">Buy iKOMO!</button></a>
+            <a onclick="logincheck()"><button id = "buyButton">Buy KOMOcoins!</button></a>
+            <script>
+            var x;
+            function logincheck(){
+              console.log("Check started");
+              $.ajax({
+                type: "GET",
+                url: "logincheck.php",
+                data: {  }
+              }).done(function( msg ) {
+                x = msg;
+                console.log("Check ended");
+                append();
+              });
+            }
+            function append(){
+              $("#mainWelcomeText").append(x);
+            }
+            </script>
         </div>
         <div class = "col-md-1">
 
