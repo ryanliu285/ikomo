@@ -16,13 +16,14 @@ body, html {
 }
 .nav {
   position: absolute;
-  bottom: 20%;
+  bottom: 0;
   right: 0;
+  font-size: 18px;
 }
 .navform {
   position: absolute;
-  top: 42%;
-  right: 0;
+  top: 2%;
+  left: 25%;
 }
 .navdiv {
   margin-top: 14%;

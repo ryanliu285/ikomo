@@ -21,6 +21,10 @@
     display: none;
     z-index: 100;
   }
+  #headimg{
+    margin-left: 5%;
+    margin-top: 5%;
+  }
   </style>
 </head>
 
@@ -32,7 +36,7 @@
       <div class = "row">
         <div class = "col-md-2">
           <a href = "#">
-            <img src = "./img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
+            <img id = "headimg" src = "./img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
           </a>
         </div>
       <div class = "col-md-3">
@@ -44,7 +48,7 @@
         <a class = "nav" href = "#">Portfolio</a>
       </div>
       <div class = "col-md-3">
-      <a class = "abt" href = "#">About</a>
+      <a class = "nav" href = "#">About</a>
     </div>
     <div class = "col-md-3">
     <a class = "nav" href = "#">Contact Us</a>
@@ -57,8 +61,7 @@
             echo '<form class = "navl" action = "includes/logout.inc.php" method = "post"><button type = "submit" name = "logout-submit">Logout</button></form>';
           }
           else {
-            echo '<form class = "navform" action = "includes/login.inc.php" method = "post"><input type = "text" name = "mailuid" placeholder = "Username..."><input type = "password" name = "pwd" placeholder = "Password..."><button type = "submit" name = "login-submit">Login</button></form>';
-            echo '<a style= "fontfamily: Dimbo" class = "xD" href = "signup.php">Signup!</a>';
+
           }
         ?>
       </div>
