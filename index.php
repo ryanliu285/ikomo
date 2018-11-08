@@ -186,16 +186,13 @@ require 'header.php';
                   <img height = "100px" width = "auto" src = "./img/ikologo.png">
               </div>
               <div class = "signup col-md-6">
-                  <br>
-                  <iframe width ="250" height = "150" src  = "https://www.youtube.com/watch?v=Y6bFv3uIuQg">
-                  </iframe>
               </div>
           </div>
           <div class = "row">
               <div class = "col-md-3">
               </div>
               <div class = "col-md-6 signup">
-                <center><h1>Signup</h1></center>
+                <center><h2>Signup</h2></center>
                 <?php
                    if(isset($_GET['error'])){
                      if($_GET['error'] == "emptyfields"){
@@ -222,11 +219,16 @@ require 'header.php';
                    }
                  ?>
                 <form action = "includes/signup.inc.php" method = "post">
-                  <center><br><input type = "text" name = "uid" placeholder= "VEI Username"></br>
-                  <br><input type = "text" name = "mail" placeholder= "E-mail"></br>
-                  <br><input type = "password" name = "pwd" placeholder= "Password"></br>
-                  <br><input type = "password" name = "pwd-repeat" placeholder= "Repeat Password"></br>
-                  <br><button type = "submit" name = "signup-submit">Finish Sign Up!</button></br></center>
+                  <center><input class = "inputx" type = "text" name = "uid" placeholder= "VEI Username">
+                  <br>
+                  <input class = "inputx" type = "text" name = "mail" placeholder= "E-mail">
+                  <br>
+                  <input class = "inputx" type = "password" name = "pwd" placeholder= "Password">
+                  <br>
+                  <input class = "inputx" type = "password" name = "pwd-repeat" placeholder= "Repeat Password">
+                  <br>
+                  <button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button>
+                </center>
                 </form>
               </div>
               <div class = "col-md-3">
