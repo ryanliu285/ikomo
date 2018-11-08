@@ -88,7 +88,7 @@ require 'header.php';
       }
       h2 {
         font-family: "Dimbo";
-        font-size: 40px;
+        font-size: 50px;
       }
       #footer {
         font-family: "Dimbo";
@@ -107,7 +107,7 @@ require 'header.php';
       #signupoverlay {
         margin: auto;
         width: 50%;
-        height: 500px;
+        height: 550px;
         z-index: 99;
         background-color: rgba(235, 255, 253, 0.97);
         display: block;
@@ -115,6 +115,16 @@ require 'header.php';
         border: solid;
         border-width: 10px;
         border-color: rgba(136, 211, 229, 0.92);
+      }
+      .signuperror {
+        color: rgb(210, 22, 25);
+        font-family: "Dimbo";
+        font-size: 16px;
+      }
+      .signupsucc {
+        color: rgb(22, 152, 47);
+        font-family: "Dimbo";
+        font-size: 16px;
       }
     </style>
     <title>VEI iKOMO</title>
@@ -163,11 +173,15 @@ require 'header.php';
                 <form action = "includes/signup.inc.php" method = "post">
                   <center><input class = "inputx" type = "text" name = "uid" placeholder= "VEI Username">
                   <br>
+                  <br>
                   <input class = "inputx" type = "text" name = "mail" placeholder= "E-mail">
+                  <br>
                   <br>
                   <input class = "inputx" type = "password" name = "pwd" placeholder= "Password">
                   <br>
+                  <br>
                   <input class = "inputx" type = "password" name = "pwd-repeat" placeholder= "Repeat Password">
+                  <br>
                   <br>
                   <button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button>
                 </center>
