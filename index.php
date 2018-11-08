@@ -104,6 +104,18 @@ require 'header.php';
       #disclaimer {
         margin-top: 20px;
       }
+      #signupoverlay {
+        margin: auto;
+        width: 50%;
+        height: 500px;
+        z-index: 99;
+        background-color: rgba(235, 255, 253, 0.97);
+        display: none;
+        border-radius: 15px;
+        border: solid;
+        border-width: 10px;
+        border-color: rgba(136, 211, 229, 0.92);
+      }
     </style>
     <title>VEI iKOMO</title>
   </head>
@@ -152,7 +164,7 @@ require 'header.php';
                         <br>
                         <br>
                         <br>
-                        <button id = "signupanim" formaction = "signup.php" class = "buttonx" id = "signButton">Signup!</button>
+                        <a id = "signupanim" class = "buttonx" >Signup!</a>
                         <button formaction = "about.php" class = "buttonx">Learn More!</button>
                       </form>
                   </div>
@@ -166,7 +178,7 @@ require 'header.php';
         </div>';
       }
     ?>
-    <!-- <div id = "accountoverlay" class = "animated slideInUp delay-5s">
+    <div id = "signupoverlay">
       <div class =  "container-fluid">
           <div class = "row">
               <div class = "signup col-md-6">
@@ -180,31 +192,63 @@ require 'header.php';
               </div>
           </div>
           <div class = "row">
-              <div class = "col-md-6">
-                  <form class = "signup" action = "includes/login.inc.php" method = "post">
-                    <br>
-                    <input class = "inputx" type = "text" name = "mailuid" placeholder = "VEI username">
-                    <br>
-                    <br>
-                    <input class = "inputx" type = "password" name = "pwd" placeholder = "password">
-                    <br>
-                    <br>
-                    <button class = "buttonx" type = "submit" name = "login-submit">Login</button>
-                    <br>
-                    <br>
-                    <br>
-                    <button formaction = "signup.php" class = "buttonx" id = "signButton">Signup!</button>
-                    <button formaction = "about.php" class = "buttonx">Learn More!</button>
-                  </form>
+              <div class = "col-md-3">
               </div>
               <div class = "col-md-6 signup">
-                <br>
-                <h2>What is iKOMO?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit labortis nisl.</p>
+                <center><h1>Signup</h1></center>
+                <?php
+                   if(isset($_GET['error'])){
+                     if($_GET['error'] == "emptyfields"){
+                         echo '<center><p class = "signuperror">Fill in all fields!</p></center>';
+                     }
+                     else if ($_GET["error"] == "invalidmailuid"){
+                       echo '<center><p class = "signuperror">Invalid Username and E-mail!</p></center>';
+                     }
+                     else if ($_GET["error"] == "invaliduid"){
+                       echo '<center><p class = "signuperror">Invalid Username!</p></center>';
+                     }
+                     else if ($_GET["error"] == "invalidmail"){
+                       echo '<center><p class = "signuperror">Invalid E-mail!</p></center>';
+                     }
+                     else if ($_GET["error"] == "passwordcheck"){
+                       echo '<center><p class = "signuperror">Your passwords do not match!</p></center>';
+                     }
+                     else if ($_GET["error"] == "usertaken"){
+                       echo '<center><p class = "signuperror">Username is already taken!!</p></center>';
+                     }
+                     else if ($_GET["error"] == "success"){
+                       echo '<center><p class = "signupsucc">Signup Successful!</p></center>';
+                     }
+                   }
+                 ?>
+                <form action = "includes/signup.inc.php" method = "post">
+                  <center><br><input type = "text" name = "uid" placeholder= "VEI Username"></br>
+                  <br><input type = "text" name = "mail" placeholder= "E-mail"></br>
+                  <br><input type = "password" name = "pwd" placeholder= "Password"></br>
+                  <br><input type = "password" name = "pwd-repeat" placeholder= "Repeat Password"></br>
+                  <br><button type = "submit" name = "signup-submit">Finish Sign Up!</button></br></center>
+                </form>
+              </div>
+              <div class = "col-md-3">
+              </div>
               </div>
           </div>
       </div>
-    </div> -->
+      <script>
+      var sol = document.getElementById('signupoverlay');
+      var aol = document.getElementById('accountoverlay');
+        $("#signupanim").click(function() {
+          $("#accountoverlay").removeClass('animated slideInUp');
+          $("#accountoverlay").addClass('animated slideOutLeft');
+          setTimeout(function(){
+            aol.style.display = "none";
+          }, 1000);
+          setTimeout(function(){
+            $("#signupoverlay").addClass('animated slideInRight');
+            sol.style.display = "block";
+          }, 1000);
+        });
+      </script>
     <div class = "container-fluid">
       <br>
       <div class = "row">
@@ -263,7 +307,6 @@ require 'header.php';
         </div>
     </div>
   </footer>
-
 <script>
   function progress (){
     var ol = document.getElementById('overlay');
