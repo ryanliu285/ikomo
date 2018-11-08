@@ -90,6 +90,20 @@ require 'header.php';
         font-family: "Dimbo";
         font-size: 40px;
       }
+      #footer {
+        font-family: "Dimbo";
+        font-size: 25px;
+        background-color: rgb(234, 254, 252);
+        border-top-color: rgb(89, 154, 165);
+        border-top-width: 5px;
+      }
+      #vei {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      #disclaimer {
+        margin-top: 20px;
+      }
     </style>
     <title>VEI iKOMO</title>
   </head>
@@ -106,7 +120,53 @@ require 'header.php';
     </div>
     <br>
     <br>
-     <div id = "accountoverlay">
+    <?php
+      if (isset($_SESSION['userID'])){
+        echo '<p>Logged in!</p>';
+      }
+      else {
+        echo '<div id = "accountoverlay" >
+          <div class =  "container-fluid">
+              <div class = "row">
+                  <div class = "signup col-md-6">
+                      <br>
+                      <img height = "100px" width = "auto" src = "./img/ikologo.png">
+                  </div>
+                  <div class = "signup col-md-6">
+                      <br>
+                      <iframe width ="250" height = "150" src  = "https://www.youtube.com/watch?v=Y6bFv3uIuQg">
+                      </iframe>
+                  </div>
+              </div>
+              <div class = "row">
+                  <div class = "col-md-6">
+                      <form class = "signup" action = "includes/login.inc.php" method = "post">
+                        <br>
+                        <input class = "inputx" type = "text" name = "mailuid" placeholder = "VEI username">
+                        <br>
+                        <br>
+                        <input class = "inputx" type = "password" name = "pwd" placeholder = "password">
+                        <br>
+                        <br>
+                        <button class = "buttonx" type = "submit" name = "login-submit">Login</button>
+                        <br>
+                        <br>
+                        <br>
+                        <button id = "signupanim" formaction = "signup.php" class = "buttonx" id = "signButton">Signup!</button>
+                        <button formaction = "about.php" class = "buttonx">Learn More!</button>
+                      </form>
+                  </div>
+                  <div class = "col-md-6 signup">
+                    <br>
+                    <h2>What is iKOMO?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit labortis nisl.</p>
+                  </div>
+              </div>
+          </div>
+        </div>';
+      }
+    ?>
+    <!-- <div id = "accountoverlay" class = "animated slideInUp delay-5s">
       <div class =  "container-fluid">
           <div class = "row">
               <div class = "signup col-md-6">
@@ -123,7 +183,7 @@ require 'header.php';
               <div class = "col-md-6">
                   <form class = "signup" action = "includes/login.inc.php" method = "post">
                     <br>
-                    <input class = "inputx" type = "text" name = "mailuid" placeholder = "username">
+                    <input class = "inputx" type = "text" name = "mailuid" placeholder = "VEI username">
                     <br>
                     <br>
                     <input class = "inputx" type = "password" name = "pwd" placeholder = "password">
@@ -144,8 +204,7 @@ require 'header.php';
               </div>
           </div>
       </div>
-    </div>
-  </div>
+    </div> -->
     <div class = "container-fluid">
       <br>
       <div class = "row">
@@ -184,6 +243,26 @@ require 'header.php';
       </div>
     </div>
   </body>
+  <footer id = "footer">
+    <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col-md-3">
+            <img id = "vei" height = "75px" width = "auto" src = "img/vei.png">
+          </div>
+          <div class = "col-md-9">
+            <p id = "disclaimer">Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2017-2018 -– VEI iKOMO!)</p>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-6">
+
+          </div>
+          <div class = "col-md-6">
+
+          </div>
+        </div>
+    </div>
+  </footer>
 
 <script>
   function progress (){
@@ -201,9 +280,7 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
-        var str = '<div id = "mainWelcomeText" class = "animated slideInUp"><img id = "mainScreenLogo" src = "./img/ikologo.png" height ="146px" width = "402px"></div>';
-        var Obj = document.getElementById('mainWelcomeText');
-        Obj.outerHTML=str;
+        $("#accountoverlay").addClass('animated slideInUp');
       }
       else{
         progress += 10;
