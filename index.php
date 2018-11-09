@@ -130,6 +130,7 @@ require 'header.php';
     <title>VEI iKOMO</title>
   </head>
   <body class = "bg">
+    <!-- Loading screen -->
     <div id = "overlay">
         <div id = "loading">
           <img id = "loadimage" height = "200px" width = "auto" src = "img/loading.png">
@@ -142,10 +143,12 @@ require 'header.php';
     </div>
     <br>
     <br>
+    <!-- Check if user is logged in -->
     <?php
       if (isset($_SESSION['userID'])){
         echo '<p>Logged in!</p>';
       }
+      /* If not logged in, display login screen. */
       else {
         echo '<div id = "accountoverlay" >
           <div class =  "container-fluid">
@@ -188,6 +191,7 @@ require 'header.php';
         </div>';
       }
     ?>
+    <!-- Sign up Overlay-->
     <div id = "signupoverlay">
       <div class =  "container-fluid">
           <div class = "row">
@@ -203,6 +207,7 @@ require 'header.php';
               </div>
               <div class = "col-md-6 signup">
                 <center><h2>Signup</h2></center>
+                <!--ERROR HANDLING for Sign Up -->
                 <?php
                    if(isset($_GET['error'])){
                      if($_GET['error'] == "emptyfields"){
@@ -228,6 +233,7 @@ require 'header.php';
                      }
                    }
                  ?>
+                <!-- Sign up form -->
                 <form action = "includes/signup.inc.php" method = "post">
                   <center><input class = "inputx" type = "text" name = "uid" placeholder= "VEI Username">
                   <br>
@@ -250,17 +256,18 @@ require 'header.php';
               </div>
           </div>
       </div>
+      <!--This script handles animations between login and sign up page divs. -->
       <script>
       var sol = document.getElementById('signupoverlay');
       var aol = document.getElementById('accountoverlay');
         $("#signupanim").click(function() {
-          $("#accountoverlay").removeClass('animated slideInUp');
-          $("#accountoverlay").addClass('animated slideOutLeft');
+          $("#accountoverlay").removeClass('animated bounceInUp');
+          $("#accountoverlay").addClass('animated bounceOutLeft');
           setTimeout(function(){
             aol.style.display = "none";
           }, 1000);
           setTimeout(function(){
-            $("#signupoverlay").addClass('animated slideInRight');
+            $("#signupoverlay").addClass('animated bounceInRight');
             sol.style.display = "block";
           }, 1000);
         });
@@ -339,7 +346,7 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
-        $("#accountoverlay").addClass('animated slideInUp');
+        $("#accountoverlay").addClass('animated bounceInUp');
       }
       else{
         progress += 10;
