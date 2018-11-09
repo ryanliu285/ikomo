@@ -146,7 +146,6 @@ require 'header.php';
     <!-- Check if user is logged in -->
     <?php
       if (isset($_SESSION['userID'])){
-        echo '<p>Logged in!</p>';
       }
       /* If not logged in, display login screen. */
       else {
@@ -294,7 +293,7 @@ require 'header.php';
         <div class = 'col-md-4'>
         </div>
         <div class = 'col-md-8'>
-            <button onclick = "window.location.href = './mainInterface.php'">iKOMO Shop</button>
+            <button id = "shopButton" onclick = "window.location.href = './mainInterface.php'">iKOMO Shop</button>
         </div>
         <script>
 
@@ -347,6 +346,7 @@ require 'header.php';
         ol.style.display = "none";
         hol.style.display = "none";
         $("#accountoverlay").addClass('animated bounceInUp');
+        $("#shopButton").addClass("animated bounceInUp");
       }
       else{
         progress += 10;
