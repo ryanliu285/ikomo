@@ -97,13 +97,6 @@ require 'header.php';
         border-top-color: rgb(89, 154, 165);
         border-top-width: 5px;
       }
-      #vei {
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-      #disclaimer {
-        margin-top: 20px;
-      }
       #signupoverlay {
         margin: auto;
         width: 50%;
@@ -177,7 +170,7 @@ require 'header.php';
                         <br>
                         <br>
                         <a id = "signupanim" class = "buttonx" >Signup!</a>
-                        <a id = "aboutanim" href = "about.php" class = "buttonx">Learn More!</button>
+                        <a id = "aboutanim" href = "about.php" class = "buttonx">Learn More!</a>
                       </form>
                   </div>
                   <div class = "col-md-6 signup">
@@ -289,12 +282,6 @@ require 'header.php';
       <br>
       <br>
       <br>
-      <div class = "row">
-        <div class = 'col-md-4'>
-        </div>
-        <div class = 'col-md-8'>
-            <button id = "shopButton" onclick = "window.location.href = './mainInterface.php'">iKOMO Shop</button>
-        </div>
         <script>
 
           // function toggleVisible() {
@@ -309,26 +296,6 @@ require 'header.php';
       </div>
     </div>
   </body>
-  <!--<footer id = "footer">
-    <div class = "container-fluid">
-        <div class = "row">
-          <div class = "col-md-3">
-            <img id = "vei" height = "75px" width = "auto" src = "img/vei.png">
-          </div>
-          <div class = "col-md-9">
-            <p id = "disclaimer">Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2017-2018 -– VEI iKOMO!)</p>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-md-6">
-
-          </div>
-          <div class = "col-md-6">
-
-          </div>
-        </div>
-    </div>
-  </footer> -->
 <script>
   function progress (){
     var ol = document.getElementById('overlay');
