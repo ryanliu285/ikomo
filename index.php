@@ -177,7 +177,7 @@ require 'header.php';
                         <br>
                         <br>
                         <a id = "signupanim" class = "buttonx" >Signup!</a>
-                        <button formaction = "about.php" class = "buttonx">Learn More!</button>
+                        <a id = "aboutanim" href = "about.php" class = "buttonx">Learn More!</button>
                       </form>
                   </div>
                   <div class = "col-md-6 signup">
