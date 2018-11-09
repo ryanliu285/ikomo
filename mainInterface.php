@@ -21,9 +21,11 @@
         <div id = "mainWelcomeText" class = "col-md-10">
             <p class = "titleText">Welcome!</p>
             <a onclick="logincheck()"><button id = "buyButton">Buy KOMOcoins!</button></a>
+            <a onclick="window.location.href = ''"><button id = "buyButton2">Buy iKOMO!</button></a>
             <script>
             var x;
             function logincheck(){
+              $("#buyButton").prop("disabled",true);
               console.log("Check started");
               $.ajax({
                 type: "GET",
