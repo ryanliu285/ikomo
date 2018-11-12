@@ -63,7 +63,7 @@
           <a class = "nav" href = "marketplace.php">Marketplace</a>
         </div>
         <div class = "col-md-3">
-        <a class = "nav" href = "profile.php">Portfolio</a>
+        <a class = "nav" href = "profile.php">Profile</a>
       </div>
       <div class = "col-md-3">
       <a class = "nav" href = "#">About</a>
