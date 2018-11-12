@@ -1,11 +1,18 @@
-
+* {
+  text-decoration: none;
+}
 @font-face {
     font-family: "Dimbo";
     src: url(./Font/Dimbo.ttf);
 }
+p {
+  font-family: "Dimbo";
+  font-size: 20px;
+}
 a {
   text-decoration: none;
   font-family: "Dimbo";
+  color: #919595;
 }
 a:hover {
   cursor: pointer;
@@ -15,6 +22,7 @@ body, html {
   font-family: "Dimbo";
 }
 .nav {
+  text-decoration: none;
   position: absolute;
   bottom: 0;
   right: 0;

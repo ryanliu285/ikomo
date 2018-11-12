@@ -32,6 +32,7 @@ if(isset($_POST['login-submit'])){
               session_start();
               $_SESSION['userID'] = $row['idUsers'];
               $_SESSION['userUID'] = $row['uidUsers'];
+              $_SESSION['userAMT'] = $row['KOMOcoins'];
               header("Location: ../index.php");
               //require "../Crypto/mysql version/generator.php";
               exit();

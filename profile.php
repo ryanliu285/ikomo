@@ -8,7 +8,8 @@ session_start();
   </head>
   <body>
     <?php
-      /* SELECT * FROM 'owners' WHERE '"$_SESSION['userID']"' */
+    /* ????? */
+    $query = 'SELECT "Animal" FROM "owners" WHERE ""$_SESSION["userID"]""';
      ?>
   </body>
 </html>
