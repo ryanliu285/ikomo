@@ -152,6 +152,7 @@ require 'header.php';
     <!-- Check if user is logged in -->
     <?php
       if (isset($_SESSION['userID'])){
+
       }
       /* If not logged in, display login screen. */
       else {
