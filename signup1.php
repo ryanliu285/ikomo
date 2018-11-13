@@ -76,6 +76,9 @@ require 'header.php';
         border-bottom-width: 2px;
         border-bottom-style: solid;
       }
+      .buttonx:hover{
+        cursor: pointer;
+      }
       .inputx {
         background-color: rgba(0,0,0,0);
         border: none;
@@ -133,11 +136,11 @@ require 'header.php';
     <div id = "signupoverlay">
       <div class =  "container-fluid">
           <div class = "row">
-              <div class = "signup col-md-6">
+              <div class = "signup col-md-4">
                   <br>
-                  <img height = "100px" width = "auto" src = "./img/ikologo.png">
+                  <img height = "50px" width = "auto" src = "./img/ikologo.png">
               </div>
-              <div class = "signup col-md-6">
+              <div class = "signup col-md-8">
               </div>
           </div>
           <div class = "row">
@@ -184,6 +187,11 @@ require 'header.php';
                   <br>
                   <br>
                   <button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button>
+                  <br>
+                  <br>
+                  <a href = "index.php">
+                  <button class = "buttonx">Return to login.</button>
+                </a>
                 </center>
                 </form>
               </div>

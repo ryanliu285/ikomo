@@ -43,7 +43,7 @@ require 'header.php';
         </div>
         <div class = col-md-8>
           <br>
-          <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2018-2019 iKOMO)</p></center>
+          <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
         </div>
         <div class = "col-md-2">
 

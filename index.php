@@ -73,7 +73,7 @@ require 'header.php';
         text-align: center;
         border: none;
         border-bottom-color: rgba(89, 154, 165, 0.92);
-        border-bottom-width: 2px;
+        border-bottom-width: 3px;
         border-bottom-style: solid;
       }
       .buttonx:hover {
@@ -124,13 +124,13 @@ require 'header.php';
       }
       #aboutanim {
         padding: 3px;
-        text-decoration: none;
       }
       #signupanim {
         padding: 3px;
       }
+
       #returnanim{
-        padding: 3px;
+        padding: 4px;
       }
       #footer {
         position: fixed;
@@ -148,6 +148,9 @@ require 'header.php';
       }
       #disclaimtxt{
         color: white;
+      }
+      .signtxt{
+        font-size: 14px;
       }
     </style>
     <title>VEI iKOMO</title>
@@ -218,18 +221,21 @@ require 'header.php';
     <div id = "signupoverlay">
       <div class =  "container-fluid">
           <div class = "row">
-              <div class = "signup col-md-6">
+              <div class = "signup col-md-4">
                   <br>
-                  <img height = "100px" width = "auto" src = "./img/ikologo.png">
+                  <img height = "50px" width = "auto" src = "./img/ikologo.png">
               </div>
-              <div class = "signup col-md-6">
+              <div class = "signup col-md-8">
               </div>
           </div>
           <div class = "row">
               <div class = "col-md-3">
               </div>
               <div class = "col-md-6 signup">
-                <center><h2>Signup</h2></center>
+                <center>
+                  <h2>Signup</h2>
+                  <p class = "signtxt">Please make sure to use your VEI username. You won't be able to claim your iKOMOs if you don't!</p>
+                </center>
                 <!--ERROR HANDLING for Sign Up -->
                 <?php
                    if(isset($_GET['error'])){
@@ -270,10 +276,9 @@ require 'header.php';
                   <input class = "inputx" type = "password" name = "pwd-repeat" placeholder= "Repeat Password">
                   <br>
                   <br>
-                  <button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button>
+                  <center><button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button></center>
                   <br>
-                  <br>
-                  <a id = "returnanim" class = "buttonx">Return to login.</a>
+                  <center><a id = "returnanim" class = "buttonx">Return to login</a></center>
                 </center>
                 </form>
               </div>
@@ -287,6 +292,7 @@ require 'header.php';
       var sol = document.getElementById('signupoverlay');
       var aol = document.getElementById('accountoverlay');
         $("#signupanim").click(function() {
+          $("#signupoverlay").removeClass('animated bounceOutLeft');
           $("#accountoverlay").removeClass('animated bounceInUp');
           $("#accountoverlay").addClass('animated bounceOutLeft');
           setTimeout(function(){
@@ -361,7 +367,7 @@ require 'header.php';
           </div>
           <div class = col-md-8>
             <br>
-            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2018-2019 iKOMO)</p></center>
+            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
           </div>
           <div class = "col-md-2">
 
