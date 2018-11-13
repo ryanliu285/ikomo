@@ -139,7 +139,7 @@ require 'header.php';
     <!-- Loading screen -->
     <div id = "overlay">
         <div id = "loading">
-          <img id = "loadimage" height = "200px" width = "auto" src = "img/load.gif">
+          <img id = "loadimage" height = "200px" width = "auto" src = "img/loadopt.gif">
         </div>
         <div class = "progress-bar">
           <div class = "progress" id = "progress"></div>

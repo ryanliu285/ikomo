@@ -57,7 +57,7 @@ $id = $_SESSION['userID'];
     </style>
   </head>
   <body>
-    <center><h2>Your iKOMOs</h2></center>
+    <center><h2>Your iKOMO Collection</h2></center>
     <div class = "container-fluid">
       <div class = "row">
         <?php
