@@ -10,14 +10,17 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if(! $conn ) {
    die('Could not connect: ' . mysql_error());
 }
-$sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = "10"';
+$sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$id.'';
 $coins = 0;
-$result = $conn->query($sql);
-if ($result->num_rows >= 0) {
-      $coins = $row["KOMOcoins"]+=100;
+if(!(mysqli_query($conn, $sql))){
+  echo "failed";
 }
+$result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
+$coins = $result+=100;
 echo $coins;
-  $sql = 'UPDATE iKOMODB WHERE idUsers = '.$id.''.
-            "(KOMOcoins) "."VALUES ".
-            "('$coins')";
+$sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
+$result = mysqli_query($conn,$sql);
+mysqli_close($conn);
+echo "<script>window.location.href='./mainInterface.php';</script>";
+exit();
 ?>

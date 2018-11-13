@@ -9,8 +9,6 @@ session_start();
 
    <body>
      <?php
-     //TODO: CHECK IF USER IS LOGGED IN AND IF THEY PAYED. OTHERWISE THEY CAN JUST GO
-     //DIRECTLY TO THE LINKN AND JUST PULL
      //Traits of Ikomo: String, owner(userID), rarity, type, health
 		 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		 $charactersLength = strlen($characters);
@@ -300,9 +298,14 @@ session_start();
        echo 'Error';
      }
 
+     $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$UID.'';
+     $coins = 0;
+     $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
+     $coins = $result-=100;
+     $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
+     $result = mysqli_query($conn,$sql);
 
      $conn->close();
-
      ?>
    </body>
 
