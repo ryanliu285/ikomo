@@ -22,7 +22,7 @@
         <div id = "mainWelcomeText" class = "col-md-10">
             <p class = "titleText">Welcome!</p>
             <a onclick="logincheck()"><button id = "buyButton">Buy KOMOcoins!</button></a>
-            <a onclick="window.location.href = ''"><button id = "buyButton2">Buy iKOMO!</button></a>
+            <a onclick="balancecheck()"><button id = "buyButton2">Buy iKOMO!</button></a>
             <script>
             var x;
             function logincheck(){
@@ -40,6 +40,18 @@
             }
             function append(){
               $("#mainWelcomeText").append(x);
+            }
+            function balancecheck(){
+              console.log("Check started");
+              $.ajax({
+                type: "GET",
+                url: "balancecheck.php",
+                data: {  }
+              }).done(function( msg ) {
+                x = msg;
+                console.log("Check ended");
+                append();
+              });
             }
             </script>
         </div>
