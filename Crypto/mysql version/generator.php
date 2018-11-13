@@ -115,7 +115,7 @@ session_start();
            $Type == 1;
            $Animal = "Chick";
          }
-          if($x == 9){
+          else if($x == 9){
             $Type == 2;
             $Animal = "Crab";
           } else if ($x == 10){
@@ -140,7 +140,7 @@ session_start();
             $Type == 2;
             $Animal = "Phytoplankton";
           }
-          if($x == 17){
+          else if($x == 17){
             $Type == 3;
             $Animal = "Brown Bear";
           } else if ($x == 18){
@@ -190,7 +190,7 @@ session_start();
              $Type == 1;
              $Animal = "Pomski";
            }
-            if($x == 4){
+            else if($x == 4){
               $Type == 2;
               $Animal = "Great White Shark";
             } else if ($x == 5){

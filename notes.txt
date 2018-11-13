@@ -1,9 +1,9 @@
 Brandon Jobs:
 
-- Fix alignment
+- Fix alignment ✓
 - Loading screen ✓
 - Update logo colors ✓
-- Start implementing Shay designs
+- Start implementing Shay designs ✓
 - Apply Dimbo font ✓
 
 Ral Jobs:
@@ -12,7 +12,7 @@ Ral Jobs:
 - Buy button
 - Verification with VEI ✓
 - Set up currency
-- Ethereum based KOMOcoins 
+- Ethereum based KOMOcoins
 - Game
 
 AFTER:

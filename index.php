@@ -76,6 +76,9 @@ require 'header.php';
         border-bottom-width: 2px;
         border-bottom-style: solid;
       }
+      .buttonx:hover {
+        cursor: pointer;
+      }
       .inputx {
         background-color: rgba(0,0,0,0);
         border: none;
@@ -96,13 +99,6 @@ require 'header.php';
         background-color: rgb(234, 254, 252);
         border-top-color: rgb(89, 154, 165);
         border-top-width: 5px;
-      }
-      #vei {
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-      #disclaimer {
-        margin-top: 20px;
       }
       #signupoverlay {
         margin: auto;
@@ -126,6 +122,16 @@ require 'header.php';
         font-family: "Dimbo";
         font-size: 16px;
       }
+      #aboutanim {
+        padding: 3px;
+        text-decoration: none;
+      }
+      #signupanim {
+        padding: 3px;
+      }
+      #returnanim{
+        padding: 3px;
+      }
     </style>
     <title>VEI iKOMO</title>
   </head>
@@ -133,7 +139,7 @@ require 'header.php';
     <!-- Loading screen -->
     <div id = "overlay">
         <div id = "loading">
-          <img id = "loadimage" height = "200px" width = "auto" src = "img/loading.png">
+          <img id = "loadimage" height = "200px" width = "auto" src = "img/load.gif">
         </div>
         <div class = "progress-bar">
           <div class = "progress" id = "progress"></div>
@@ -146,6 +152,7 @@ require 'header.php';
     <!-- Check if user is logged in -->
     <?php
       if (isset($_SESSION['userID'])){
+
       }
       /* If not logged in, display login screen. */
       else {
@@ -158,8 +165,7 @@ require 'header.php';
                   </div>
                   <div class = "signup col-md-6">
                       <br>
-                      <iframe width ="250" height = "150" src  = "https://www.youtube.com/watch?v=Y6bFv3uIuQg">
-                      </iframe>
+                      <img height = "175px" width = "auto" src = "./img/shibwelcome.png">
                   </div>
               </div>
               <div class = "row">
@@ -176,14 +182,14 @@ require 'header.php';
                         <br>
                         <br>
                         <br>
+                        <a id = "aboutanim" class = "buttonx">Learn More!</a>
                         <a id = "signupanim" class = "buttonx" >Signup!</a>
-                        <button formaction = "about.php" class = "buttonx">Learn More!</button>
                       </form>
                   </div>
                   <div class = "col-md-6 signup">
                     <br>
                     <h2>What is iKOMO?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit labortis nisl.</p>
+                    <p>At iKOMO, we focus on combining the nostalgic feeling of gaming with the cutting edge technology available today. Using blockchain technology you can collect, trade, and play with your new digital companions!</p>
                   </div>
               </div>
           </div>
@@ -247,6 +253,9 @@ require 'header.php';
                   <br>
                   <br>
                   <button class = "buttonx" type = "submit" name = "signup-submit">Finish Sign Up!</button>
+                  <br>
+                  <br>
+                  <a id = "returnanim" class = "buttonx">Return to login.</a>
                 </center>
                 </form>
               </div>
@@ -271,6 +280,27 @@ require 'header.php';
           }, 1000);
         });
       </script>
+      <script>
+      var sol = document.getElementById('signupoverlay');
+      var aol = document.getElementById('accountoverlay');
+        $("#returnanim").click(function(){
+          $("#signupoverlay").removeClass('animated bounceInRight');
+          $("#signupoverlay").addClass('animated bounceOutLeft');
+          setTimeout(function(){
+            sol.style.display = "none";
+          }, 1000);
+          setTimeout(function(){
+            $("#accountoverlay").removeClass('animated bounceOutLeft');
+            $("#accountoverlay").addClass('animated bounceInRight');
+            aol.style.display = "block";
+          }, 1000);
+        });
+      </script>
+      <script>
+        $("#aboutanim").click(function(){
+
+        });
+      </script>
     <div class = "container-fluid">
       <br>
       <div class = "row">
@@ -289,12 +319,6 @@ require 'header.php';
       <br>
       <br>
       <br>
-      <div class = "row">
-        <div class = 'col-md-4'>
-        </div>
-        <div class = 'col-md-8'>
-            <button id = "shopButton" onclick = "window.location.href = './mainInterface.php'">iKOMO Shop</button>
-        </div>
         <script>
 
           // function toggleVisible() {
@@ -309,26 +333,6 @@ require 'header.php';
       </div>
     </div>
   </body>
-  <!--<footer id = "footer">
-    <div class = "container-fluid">
-        <div class = "row">
-          <div class = "col-md-3">
-            <img id = "vei" height = "75px" width = "auto" src = "img/vei.png">
-          </div>
-          <div class = "col-md-9">
-            <p id = "disclaimer">Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2017-2018 -– VEI iKOMO!)</p>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-md-6">
-
-          </div>
-          <div class = "col-md-6">
-
-          </div>
-        </div>
-    </div>
-  </footer> -->
 <script>
   function progress (){
     var ol = document.getElementById('overlay');
@@ -347,6 +351,8 @@ require 'header.php';
         hol.style.display = "none";
         $("#accountoverlay").addClass('animated bounceInUp');
         $("#shopButton").addClass("animated bounceInUp");
+        $("#usernameanim").addClass("animated bounceInUp");
+        $("#shopanim").addClass("animated bounceInUp");
       }
       else{
         progress += 10;
