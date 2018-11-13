@@ -28,15 +28,31 @@ $id = $_SESSION['userID'];
     }
     .commonimg {
       background-color: rgb(193, 200, 161);
+      border-radius: 15px;
+      border-color: rgb(171, 185, 110);
+      border-width: 10px;
+      border-style: solid;
     }
     .rareimg {
-      background-color: rgb(61, 79, 186);
+      background-color: rgb(49, 144, 224);
+      border-radius: 15px;
+      border-color: rgb(37, 109, 170);
+      border-width: 10px;
+      border-style: solid;
     }
     .epicimg {
       background-color: rgb(211, 146, 224);
+      border-radius: 15px;
+      border-color: rgb(191, 60, 217);
+      border-width: 10px;
+      border-style: solid;
     }
     .legendaryimg {
       background-color: rgb(215, 189, 74);
+      border-radius: 15px;
+      border-color: rgb(198, 164, 18);
+      border-width: 10px;
+      border-style: solid;
     }
     </style>
   </head>
