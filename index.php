@@ -379,7 +379,10 @@ require 'header.php';
       var fol = document.getElementById('footer');
 
       $("#closedisclaimer").click(function(){
-        fol.style.display = "none";
+        $("#footer").addClass('animated bounceOutDown');
+        setTimeout(function(){
+          fol.style.display = "none";
+        }, 2000);
       });
     </script>
   </body>

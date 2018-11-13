@@ -300,11 +300,14 @@ $id = $_SESSION['userID'];
       </div>
     </div>
     <script>
-      var fol = document.getElementById('footer');
+    var fol = document.getElementById('footer');
 
-      $("#closedisclaimer").click(function(){
+    $("#closedisclaimer").click(function(){
+      $("#footer").addClass('animated bounceOutDown');
+      setTimeout(function(){
         fol.style.display = "none";
-      });
+      }, 2000);
+    });
     </script>
   </body>
 </html>

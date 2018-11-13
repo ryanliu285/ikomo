@@ -52,5 +52,14 @@ require 'header.php';
     </div>
   </div>
 </body>
+<script>
+var fol = document.getElementById('footer');
 
+$("#closedisclaimer").click(function(){
+  $("#footer").addClass('animated bounceOutDown');
+  setTimeout(function(){
+    fol.style.display = "none";
+  }, 2000);
+});
+</script>
 </html>
