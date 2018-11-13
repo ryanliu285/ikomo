@@ -1,5 +1,22 @@
 <?php
     session_start();
+    if(isset($_SESSION['userID'])){
+    $id = $_SESSION["userID"];
+    $dbhost = 'db759106289.hosting-data.io';
+    $dbuser = 'dbo759106289';
+    $dbpass = 'SPdidsway1st';
+    $dbname = 'db759106289';
+    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+    if(! $conn ) {
+       die('Could not connect: ' . mysql_error());
+    }
+    $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$id.'';
+    if(!(mysqli_query($conn, $sql))){
+      echo "failed";
+    }
+    $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
+    $_SESSION['userAMT'] = $result;
+  }
  ?>
 <!DOCTYPE html>
 <html>

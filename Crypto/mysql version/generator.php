@@ -255,12 +255,11 @@ session_start();
        while($row = $result->fetch_assoc()) {
          if($randomString===($row["StringID"])){
            echo "Error Generating StringID. Please try again";
-           exit();
+           die();
          }
        }
 
        //Insert iKomo
-
        $sql = "INSERT INTO owners ".
                  "(StringID, UID, Rarity, Type, Animal) "."VALUES ".
                  "('$randomString',$UID,'$Rarity','$Type','$Animal')";
@@ -297,11 +296,12 @@ session_start();
      } else {
        echo 'Error';
      }
-
+     echo "asdf";
      $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$UID.'';
      $coins = 0;
      $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
      $coins = $result-=100;
+     echo $coins;
      $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
      $result = mysqli_query($conn,$sql);
 
