@@ -132,6 +132,7 @@ require 'header.php';
       #returnanim{
         padding: 3px;
       }
+
     </style>
     <title>VEI iKOMO</title>
   </head>

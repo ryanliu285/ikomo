@@ -40,7 +40,7 @@
   }
   .username {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Dimbo";
   }
   </style>
@@ -93,10 +93,10 @@
         if(isset($_SESSION['userID'])){
           $amt = "Balance: ";
           $coin = " KOMOcoins";
-          $ether = ($_SESSION["userAMT"] / 100) * 25;
+          $dollar = ($_SESSION["userAMT"] / 100) * 25;
           $paran = " ($";
           $paran2 = ")";
-          echo '<p id = "shopanim" class = "username">'.$amt.$_SESSION["userAMT"].$coin.$paran.$ether.$paran2;'</p>';
+          echo '<p id = "shopanim" class = "username">'.$amt.$_SESSION["userAMT"].$coin.$paran.$dollar.$paran2;'</p>';
         }
         else {
 

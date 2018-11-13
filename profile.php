@@ -34,9 +34,9 @@ $id = $_SESSION['userID'];
       border-style: solid;
     }
     .rareimg {
-      background-color: rgb(49, 144, 224);
+      background-color: rgb(68, 181, 200);
       border-radius: 15px;
-      border-color: rgb(37, 109, 170);
+      border-color: rgb(38, 152, 171);
       border-width: 10px;
       border-style: solid;
     }
@@ -58,6 +58,7 @@ $id = $_SESSION['userID'];
   </head>
   <body>
     <center><h2>Your iKOMO Collection</h2></center>
+    <br>
     <div class = "container-fluid">
       <div class = "row">
         <?php
