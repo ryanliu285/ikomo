@@ -71,6 +71,22 @@ $id = $_SESSION['userID'];
     #disclaimtxt{
       color: white;
     }
+    #noowned {
+      color: rgb(210, 42, 25);
+      font-size: 30px;
+    }
+    .buttonx {
+      background-color: rgba(106, 196, 206, 0.92);
+      font-size: 18px;
+      font-family: "Dimbo";
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      border-bottom-color: rgba(89, 154, 165, 0.92);
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      padding: 3px;
+    }
     body {
 
     }
@@ -274,7 +290,8 @@ $id = $_SESSION['userID'];
           }
         }
         else {
-          echo "<p>No owned iKOMOS!</p>";
+          echo '<div class = "col-md-12">
+            <br><br><center><p id = "noowned">No owned iKOMOS!</p><br><br><a href = "mainInterface.php" class = "buttonx">Click here to buy some!</a></center></div>';
         }
         mysqli_close($conn);
          ?>

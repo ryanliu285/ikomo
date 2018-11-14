@@ -77,16 +77,16 @@
       <div class = "col-md-3">
         <div class = "row navdiv">
           <div class = "col-md-3">
-          <a class = "nav" href = "marketplace.php">Marketplace</a>
+          <a class = "nav" href = "index.php">Home</a>
         </div>
         <div class = "col-md-3">
         <a class = "nav" href = "profile.php">Profile</a>
       </div>
       <div class = "col-md-3">
-      <a class = "nav" href = "#">About</a>
+      <a class = "nav" href = "about.php">About</a>
     </div>
     <div class = "col-md-3">
-    <a class = "nav" href = "#">Contact Us</a>
+    <a class = "nav" href = "contact.php">Contact</a>
   </div>
   </div>
       </div>

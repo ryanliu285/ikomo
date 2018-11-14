@@ -152,6 +152,33 @@ require 'header.php';
       .signtxt{
         font-size: 14px;
       }
+      #mkp{
+        margin-top: 145%;
+        float: right;
+      }
+      #arc{
+        float: left;
+        margin-top: 145%;
+      }
+      #hme {
+        margin-top: 105%;
+        float: left;
+        position: relative;
+        right: 45%;
+      }
+      #str{
+        margin-top: 105%;
+        float: right;
+        position: relative;
+        left: 39%;
+      }
+      .bigbt{
+
+        padding: 5px;
+      }
+      #loggedin {
+        display: none;
+      }
     </style>
     <title>VEI iKOMO</title>
   </head>
@@ -172,8 +199,32 @@ require 'header.php';
     <br>
     <!-- Check if user is logged in -->
     <?php
+      /* if logged in, display buttons */
       if (isset($_SESSION['userID'])){
-
+        echo '<div id = "loggedin" class = "test container-fluid">
+                          <div class = "test row">
+                            <div class = "test col-md-3">
+                              <a href = "marketplace.php" id = "mkp" class = "bigbt buttonx">Marketplace</a>
+                            </div>
+                            <div class = "col-md-6 test">
+                              <div class = "container-fluid test">
+                              <div class = "row test">
+                                <div class = "col-md-6 test">
+                                    <a href = "profile.php" id = "str" class = "bigbt buttonx topb">Home</a>
+                                </div>
+                                  <div class = "col-md-6 test">
+                                    <a href = "mainInterface.php" id = "hme" class = "bigbt buttonx topb">Store</a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                            <div class = "col-md-3 test">
+                            <div id = "topblocker1 test">
+                            </div>
+                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade</a>
+                            </div>
+                          </div>
+                        </div>';
       }
       /* If not logged in, display login screen. */
       else {
@@ -287,6 +338,7 @@ require 'header.php';
               </div>
           </div>
       </div>
+
       <!--This script handles animations between login and sign up page divs. -->
       <script>
       var sol = document.getElementById('signupoverlay');
@@ -379,10 +431,7 @@ require 'header.php';
       var fol = document.getElementById('footer');
 
       $("#closedisclaimer").click(function(){
-        $("#footer").addClass('animated bounceOutDown');
-        setTimeout(function(){
           fol.style.display = "none";
-        }, 2000);
       });
     </script>
   </body>
@@ -391,6 +440,7 @@ require 'header.php';
     var ol = document.getElementById('overlay');
     var hol = document.getElementById('hoverlay');
     var sol = document.getElementById("accountoverlay");
+    var lol = document.getElementById('loggedin');
     var prg = document.getElementById('progress');
     var percent = document.getElementById('percentCount');
     var counter = 0;
@@ -402,6 +452,7 @@ require 'header.php';
         clearInterval(id);
         ol.style.display = "none";
         hol.style.display = "none";
+        lol.style.display = "block";
         $("#accountoverlay").addClass('animated bounceInUp');
         $("#shopButton").addClass("animated bounceInUp");
         $("#usernameanim").addClass("animated bounceInUp");

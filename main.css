@@ -24,8 +24,7 @@ body, html {
 .nav {
   text-decoration: none;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  float: left;
   font-size: 18px;
 }
 .navform {
