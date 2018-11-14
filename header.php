@@ -60,6 +60,14 @@
     font-size: 20px;
     font-family: "Dimbo";
   }
+  #usernameanim{
+    bottom: 0;
+    left: 0;
+  }
+  #shopanim {
+    bottom: 0;
+    left: 0;
+  }
   </style>
 </head>
 
@@ -80,7 +88,7 @@
           <a class = "nav" href = "index.php">Home</a>
         </div>
         <div class = "col-md-3">
-        <a class = "nav" href = "profile.php">Profile</a>
+        <a class = "nav" href = "tutorial.php">Tutorials</a>
       </div>
       <div class = "col-md-3">
       <a class = "nav" href = "about.php">About</a>
@@ -98,7 +106,7 @@
           if(isset($_SESSION['userID'])){
             $hello = "Hello ";
             $ex = "!";
-            echo '<p id = "usernameanim" class = "username">'.$hello.$_SESSION["userUID"].$ex;'</p>';
+            echo '<br><p id = "usernameanim" class = "username">'.$hello.$_SESSION["userUID"].$ex;'</p>';
 
           } else {
 
@@ -113,7 +121,7 @@
           $dollar = ($_SESSION["userAMT"] / 100) * 25;
           $paran = " ($";
           $paran2 = ")";
-          echo '<p id = "shopanim" class = "username">'.$amt.$_SESSION["userAMT"].$coin.$paran.$dollar.$paran2;'</p>';
+          echo '<br><p id = "shopanim" class = "username">'.$amt.$_SESSION["userAMT"].$coin.$paran.$dollar.$paran2;'</p>';
         }
         else {
 
@@ -123,7 +131,7 @@
       <div class = "col-md-1">
         <?php
           if(isset($_SESSION['userID'])){
-          echo '<form class = "navl" action = "includes/logout.inc.php" method = "post"><button class = "buttonx" type = "submit" name = "logout-submit">Logout</button></form>';
+          echo '<br><form class = "navl" action = "includes/logout.inc.php" method = "post"><button class = "buttonx" type = "submit" name = "logout-submit">Logout</button></form>';
         }
         else {
 

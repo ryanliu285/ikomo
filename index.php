@@ -171,10 +171,15 @@ require 'header.php';
         float: right;
         position: relative;
         left: 39%;
+        z-index: 99;
       }
       .bigbt{
-
-        padding: 5px;
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        padding: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
       }
       #loggedin {
         display: none;
@@ -210,9 +215,10 @@ require 'header.php';
                               <div class = "container-fluid test">
                               <div class = "row test">
                                 <div class = "col-md-6 test">
-                                    <a href = "profile.php" id = "str" class = "bigbt buttonx topb">Home</a>
+                                    <a href = "profile.php" id = "str" class = "bigbt buttonx topb">Collection</a>
                                 </div>
                                   <div class = "col-md-6 test">
+
                                     <a href = "mainInterface.php" id = "hme" class = "bigbt buttonx topb">Store</a>
                                   </div>
                               </div>
