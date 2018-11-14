@@ -13,7 +13,7 @@ if(! $conn ) {
 $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$id.'';
 $coins = 0;
 if(!(mysqli_query($conn, $sql))){
-  echo "failed";
+  echo "Failed, please send a screenshot of this error to ikomo.vei@gmail.com";
 }
 $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
 $coins = $result+=100;
