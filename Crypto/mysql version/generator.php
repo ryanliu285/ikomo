@@ -272,29 +272,26 @@ session_start();
                  "('$randomString',$UID,'$Rarity','$Type','$Animal')";
        if ($conn->query($sql) === TRUE) {
           //Announce iKomo traits
-          echo "You got a";
           if($Type = 1){
-            echo " domestic ";
+            $_SESSION["type"] = "domestic";
           }else if ($Type = 2){
-            echo " aquatic ";
+            $_SESSION["type"] = "aquatic";
           }else if ($Type = 3){
-            echo " wild ";
+            $_SESSION["type"] = "wild";
           }else{
-            echo " mythic ";
+            $_SESSION["type"] = "mythic";
           }
-          echo $Animal;
-          echo " iKOMO that is ";
+          $_SESSION["animal"] = $Animal;
           if($Rarity==1){
-            echo "common ";
+            $_SESSION["rarity"] = "common ";
           }else if ($Rarity == 2){
-            echo "rare ";
+            $_SESSION["rarity"] = "rare";
           }else if ($Rarity == 3){
-            echo "epic ";
+            $_SESSION["rarity"] =  "epic";
           }else {
-            echo "legendary ";
+            $_SESSION["rarity"] = "legendary";
           }
-          echo "with an ID of ";
-          echo $randomString;
+          $_SESSION["randomString"] =  $randomString;
 
        } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
@@ -305,6 +302,9 @@ session_start();
      }
 
      $conn->close();
+
+     echo "<script> window.location.href = '../../result.php'</script>";
+     exit();
      ?>
    </body>
 
