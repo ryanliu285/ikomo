@@ -6,6 +6,7 @@ $dbhost = 'db759106289.hosting-data.io';
 $dbuser = 'dbo759106289';
 $dbpass = 'SPdidsway1st';
 $dbname = 'db759106289';
+$buyAMT = $_SESSION["buyAMT"];
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if(! $conn ) {
    die('Could not connect: ' . mysql_error());
@@ -16,11 +17,12 @@ if(!(mysqli_query($conn, $sql))){
   echo "Failed, please send a screenshot of this error to ikomo.vei@gmail.com";
 }
 $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
-$coins = $result+=100;
+$coins = $result+=$buyAMT;
 echo $coins;
 $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
 $result = mysqli_query($conn,$sql);
 mysqli_close($conn);
-echo "<script>window.location.href='./mainInterface.php';</script>";
+unset($_SESSION['buyAMT']);
+echo "<script>window.location.href='./buycoins.php';</script>";
 exit();
 ?>

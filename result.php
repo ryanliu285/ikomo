@@ -2,6 +2,7 @@
 session_start();
 $rarity = $_SESSION["rarity"];
 $animal = $_SESSION["animal"];
+$rarity = preg_replace('/\s+/', '', $rarity);
 echo "You got a " . $rarity . " " . $animal . "!";
 $animal = preg_replace('/\s+/', '', $animal);
 $url = strtolower($animal) . ".png";

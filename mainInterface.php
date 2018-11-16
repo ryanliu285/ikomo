@@ -39,7 +39,7 @@
         </div>
         <div id = "mainWelcomeText" class = "col-md-10">
             <p class = "titleText">Welcome!</p>
-            <a onclick="logincheck()"><button id = "buyButton">Buy KOMOcoins!</button></a>
+            <a onclick="window.location.href = './buycoins.php'"><button id = "buyButton">Buy KOMOcoins!</button></a>
             <a onclick="balancecheck()"><button id = "buyButton2">Buy iKOMO!</button></a>
             <script>
             var x;
