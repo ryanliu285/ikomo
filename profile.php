@@ -275,7 +275,7 @@ $id = $_SESSION['userID'];
             }
             /* Legendary iKOMOs*/
             if($row["Animal"] == "Shiba Inu"){
-              echo '<div class = "col-md-4"><center><img class = "legendaryimg" height = "300px" width = "auto" src = "./img/ikomos/shibainu.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Shiba Inu | Domestic</p></center><center><p class = "legendarytxt">Legendary</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "legendaryimg" height = "300px" width = "auto" src = "./img/ikomos/shiba.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Shiba Inu | Domestic</p></center><center><p class = "legendarytxt">Legendary</p></center><br><br></div>';
             }
             if($row["Animal"] == "Orca"){
               echo '<div class = "col-md-4"><center><img class = "legendaryimg" height = "300px" width = "auto" src = "./img/ikomos/orca.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Orca | Aquatic</p></center><center><p class = "legendarytxt">Legendary</p></center><br><br></div>';
