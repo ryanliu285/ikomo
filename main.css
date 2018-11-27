@@ -21,6 +21,10 @@ body, html {
   height: 100%;
   font-family: "Dimbo";
 }
+.headbg {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 30px;
+}
 .bgstore {
   background-image: url("./img/store-min.png");
   height: 10%;

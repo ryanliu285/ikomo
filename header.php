@@ -74,7 +74,7 @@
 <body>
   <div id = "hoverlay">
   </div>
-  <header>
+  <header class = "headbg">
     <div class = "container-fluid">
       <div class = "row">
         <div class = "col-md-2">
@@ -127,7 +127,7 @@
 
         }
       ?>
-      </div>
+    </div>
       <div class = "col-md-1">
         <?php
           if(isset($_SESSION['userID'])){

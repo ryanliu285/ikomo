@@ -1,6 +1,6 @@
 <?php
 require 'header.php';
-require 'dbh.inc.php';
+require './includes/dbh.inc.php';
 session_start();
 $id = $_SESSION['userID'];
 ?>
