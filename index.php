@@ -93,13 +93,6 @@ require 'header.php';
         font-family: "Dimbo";
         font-size: 50px;
       }
-      #footer {
-        font-family: "Dimbo";
-        font-size: 25px;
-        background-color: rgb(234, 254, 252);
-        border-top-color: rgb(89, 154, 165);
-        border-top-width: 5px;
-      }
       #signupoverlay {
         margin: auto;
         width: 50%;
@@ -131,14 +124,6 @@ require 'header.php';
 
       #returnanim{
         padding: 4px;
-      }
-      #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 75px;
-        background-color: rgba(0, 0, 0, 0.5);
       }
       #closedisclaimer{
         color: white;
