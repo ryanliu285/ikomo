@@ -12,6 +12,14 @@ require 'header.php';
   <div id = mainWelcomeText>
     <h1>Marketplace</h1>
   </div>
+  <div id = "searchsort" class ="row">
+    <div class = "col-md-6" style = "text-align:center;">
+      <input type="text" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+    </div>
+    <div class = "col-md-6">
+      <h1 style = "float:right;">+ Create Listing &nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    </div>
+  </div>
   <div id = "footer">
     <div class = "container-fluid">
       <div class = "row">

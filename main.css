@@ -97,3 +97,48 @@ background-color: rgb(234, 254, 252);
   height: 75px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+h2 {
+  font-family: "Dimbo";
+  font-size: 50px;
+}
+.commontxt {
+  color: rgb(193, 200, 161);
+}
+
+.raretxt {
+  color: rgb(61, 79, 186);
+}
+.epictxt {
+  color: rgb(211, 146, 224);
+}
+.legendarytxt {
+  color: rgb(215, 189, 74);
+}
+.commonimg {
+  background-color: rgb(193, 200, 161);
+  border-radius: 15px;
+  border-color: rgb(171, 185, 110);
+  border-width: 10px;
+  border-style: solid;
+}
+.rareimg {
+  background-color: rgb(68, 181, 200);
+  border-radius: 15px;
+  border-color: rgb(38, 152, 171);
+  border-width: 10px;
+  border-style: solid;
+}
+.epicimg {
+  background-color: rgb(211, 146, 224);
+  border-radius: 15px;
+  border-color: rgb(191, 60, 217);
+  border-width: 10px;
+  border-style: solid;
+}
+.legendaryimg {
+  background-color: rgb(215, 189, 74);
+  border-radius: 15px;
+  border-color: rgb(198, 164, 18);
+  border-width: 10px;
+  border-style: solid;
+}
