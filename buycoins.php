@@ -31,7 +31,7 @@
   <br>
   <br>
   <br>
-  <body class = "bg">
+  <body class = "bgstore">
     <div class = "container-fluid">
       <div class = "row">
         <div class = "col-md-1">
@@ -78,7 +78,6 @@
         }
         </script>
         <div id = "mainWelcomeText" class = "col-md-10">
-            <p class = "titleText">Welcome!</p>
             <a onclick="komo100()"><button id = "buyButton100">Pouch of KOMOcoins (100)</button></a>
             <a onclick="komo500()"><button id = "buyButton500">Sack of KOMOCoins (500)</button></a>
             <a onclick="komo1000()"><button id = "buyButton1000">Chest of KOMOCoins (1000)</button></a>

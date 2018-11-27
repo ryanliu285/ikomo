@@ -21,6 +21,14 @@ body, html {
   height: 100%;
   font-family: "Dimbo";
 }
+.bgstore {
+  background-image: url("./img/store-min.png");
+  height: 10%;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .nav {
   text-decoration: none;
   position: absolute;
@@ -55,9 +63,9 @@ body, html {
   top: 47%;
 }
 .bg {
-  background-image: url("img/layout.png");
+  background-image: url("./img/layout.png");
   height: 10%;
-  width auto;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
