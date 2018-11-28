@@ -188,7 +188,7 @@
     }
     .bigbt{
       background-color: #F7E188;
-      font-size: 18px;
+      font-size: 24px;
       font-family: "Dimbo";
       text-decoration: none;
       text-align: center;
@@ -196,9 +196,37 @@
       border-bottom-color:  #daba38;
       border-bottom-width: 3px;
       border-bottom-style: solid;
+      margin-top: 60%;
+    }
+    .bigbt:hover {
+      cursor: pointer;
     }
     #loggedin {
       display: none;
+    }
+    #buyButton {
+      float:left;
+    }
+    #buyButton2 {
+      float:right;
+    }
+    #iKOMOoverlay{
+      display: none;
+      z-index: 100000;
+      height: 300px;
+      width: auto;
+      position: absolute;
+      margin-top: 5%;
+      margin-left: 70%;
+    }
+    #COINoverlay{
+      display: none;
+      z-index: 100000;
+      height: 175px;
+      width: auto;
+      position: absolute;
+      margin-top: 12%;
+      margin-left: 80%;
     }
     </style>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
@@ -212,11 +240,29 @@
   <body class = "bgstore">
     <div class = "container-fluid">
       <div class = "row">
-        <div class = "col-md-1">
+        <div class = "col-md-3">
         </div>
-        <div id = "mainWelcomeText" class = "col-md-10">
+        <div id = "mainWelcomeText" class = "col-md-5">
+          <img id = "iKOMOoverlay" src = "./img/ikomos/bunny.png"/>
+          <img id = "COINoverlay" src = "./img/ikocoin.png"/>
             <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins!</button></a>
             <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO!</button></a>
+            <script>
+            var ikool = document.getElementById('iKOMOoverlay');
+            var cool = document.getElementById('COINoverlay');
+              $("#buyButton").mouseover(function(){
+                cool.style.display = "block";
+              });
+              $("#buyButton").mouseout(function(){
+                cool.style.display = "none";
+              });
+              $("#buyButton2").mouseover(function(){
+                ikool.style.display = "block";
+              });
+              $("#buyButton2").mouseout(function(){
+                ikool.style.display = "none";
+              });
+            </script>
             <script>
             var x;
             function logincheck(){
@@ -249,7 +295,7 @@
             }
             </script>
         </div>
-        <div class = "col-md-1">
+        <div class = "col-md-4">
 
         </div>
       </div>
