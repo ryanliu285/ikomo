@@ -7,6 +7,7 @@ require 'header.php';
   <head>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
     <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <style>
       .signup {
@@ -137,6 +138,42 @@ require 'header.php';
       .signtxt{
         font-size: 14px;
       }
+      #loggedin {
+        display: none;
+      }
+
+    @media only screen and (min-width: 992px) {
+      #mkp{
+        margin-top: 130%;
+        float: right;
+      }
+      #arc{
+        float: left;
+        margin-top: 130%;
+      }
+      #hme {
+        margin-top: 90%;
+        float: left;
+        position: relative;
+        right: 45%;
+      }
+      #str{
+        margin-top: 90%;
+        float: right;
+        position: relative;
+        left: 39%;
+        z-index: 99;
+      }
+      .bigbt{
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        padding: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+}
+    @media only screen and (min-width: 1537px) {
       #mkp{
         margin-top: 145%;
         float: right;
@@ -159,16 +196,14 @@ require 'header.php';
         z-index: 99;
       }
       .bigbt{
-        font-size: 24px;
+        font-size: 34px;
         color: black;
         text-decoration: none;
         padding: 3px;
         padding-left: 5px;
         padding-right: 5px;
       }
-      #loggedin {
-        display: none;
-      }
+    }
     </style>
     <title>VEI iKOMO</title>
   </head>
@@ -212,7 +247,7 @@ require 'header.php';
                             <div class = "col-md-3 test">
                             <div id = "topblocker1 test">
                             </div>
-                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade</a>
+                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade🔒</a>
                             </div>
                           </div>
                         </div>';
@@ -386,17 +421,6 @@ require 'header.php';
       <br>
       <br>
       <br>
-        <script>
-
-          // function toggleVisible() {
-          //   var x = document.getElementById("pleaseLogIn");
-          //   if (x.style.display === "none") {
-          //     x.style.display = "block";
-          //   } else {
-          //     x.style.display = "none";
-          //   }
-          // }
-        </script>
       </div>
     </div>
     <div id = "footer">

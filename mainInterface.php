@@ -5,6 +5,131 @@
  <html>
   <head>
     <style>
+    /*macbook is 1318px */
+    @media only screen and (min-width: 768px) {
+
+
+
+    }
+
+    @media only screen and (min-width: 992px) {
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 75px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      #closedisclaimer{
+        color: white;
+      }
+      #closedisclaimer:hover{
+        cursor: pointer;
+      }
+      #disclaimtxt{
+        color: white;
+      }
+      #login {
+        float: left;
+        width: 100px;
+      }
+      .buttonx{
+        background-color: rgba(106, 196, 206, 0.92);
+        font-size: 18px;
+        font-family: "Dimbo";
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-bottom-color: rgba(89, 154, 165, 0.92);
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+      }
+      .buttonx:hover {
+        cursor: pointer;
+      }
+      .inputx {
+        background-color: rgba(0,0,0,0);
+        border: none;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(89, 154, 165, 0.92);
+        font-family: "Dimbo";
+        width: 250px;
+        font-size: 18px;
+      }
+      h2 {
+        font-family: "Dimbo";
+        font-size: 50px;
+      }
+      #footer {
+        font-family: "Dimbo";
+        font-size: 25px;
+        background-color: rgb(234, 254, 252);
+        border-top-color: rgb(89, 154, 165);
+        border-top-width: 5px;
+      }
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 75px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      #closedisclaimer{
+        color: white;
+      }
+      #closedisclaimer:hover{
+        cursor: pointer;
+      }
+      #disclaimtxt{
+        color: white;
+      }
+      .bigbt{
+        background-color: #F7E188;
+        font-size: 24px;
+        font-family: "Dimbo";
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-bottom-color:  #daba38;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        margin-top: 70%;
+      }
+      .bigbt:hover {
+        cursor: pointer;
+      }
+      #loggedin {
+        display: none;
+      }
+      #buyButton {
+        float:left;
+      }
+      #buyButton2 {
+        float:right;
+      }
+      #iKOMOoverlay{
+        display: none;
+        z-index: 100000;
+        height: 300px;
+        width: auto;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 75%;
+      }
+      #COINoverlay{
+        display: none;
+        z-index: 100000;
+        height: 175px;
+        width: auto;
+        position: absolute;
+        margin-top: 12%;
+        margin-left: 80%;
+      }
+    }
+  @media only screen and (min-width: 1537px) {
     #footer {
       position: fixed;
       left: 0;
@@ -21,58 +146,6 @@
     }
     #disclaimtxt{
       color: white;
-    }
-    .signup {
-      text-align: center;
-    }
-    #overlay {
-      width: 100%;
-      height: 200%;
-      background-color: #F9F4D2;
-      position: fixed;
-      z-index: 101;
-    }
-    .percent-count {
-      width: 450px;
-      height: 50px;
-      margin: 10px auto;
-      font-size: 40px;
-      text-align: center;
-      color: #71DDE2;
-    }
-    .progress-bar {
-      width: 506px;
-      height: 26px;
-      background-color: #71DDE2;
-      border-radius: 13px;
-      margin: 10px auto;
-    }
-    .progress {
-      width: 25px;
-      height: 20px;
-      border-radius: 10px;
-      background-color: #34ABB7;
-    }
-    #loading {
-      height: 200px;
-      width: 100%;
-    }
-    #loadimage {
-      display: block;
-      margin: 10px auto;
-    }
-    #accountoverlay {
-      margin: auto;
-      width: 50%;
-      height: 500px;
-      z-index: 99;
-      background-color: rgba(235, 255, 253, 0.97);
-      display: block;
-      border-radius: 15px;
-      border: solid;
-      border-width: 10px;
-      border-color: rgba(136, 211, 229, 0.92);
-
     }
     #login {
       float: left;
@@ -113,38 +186,6 @@
       border-top-color: rgb(89, 154, 165);
       border-top-width: 5px;
     }
-    #signupoverlay {
-      margin: auto;
-      width: 50%;
-      height: 550px;
-      z-index: 99;
-      background-color: rgba(235, 255, 253, 0.97);
-      display: none;
-      border-radius: 15px;
-      border: solid;
-      border-width: 10px;
-      border-color: rgba(136, 211, 229, 0.92);
-    }
-    .signuperror {
-      color: rgb(210, 22, 25);
-      font-family: "Dimbo";
-      font-size: 16px;
-    }
-    .signupsucc {
-      color: rgb(22, 152, 47);
-      font-family: "Dimbo";
-      font-size: 16px;
-    }
-    #aboutanim {
-      padding: 3px;
-    }
-    #signupanim {
-      padding: 3px;
-    }
-
-    #returnanim{
-      padding: 4px;
-    }
     #footer {
       position: fixed;
       left: 0;
@@ -162,30 +203,6 @@
     #disclaimtxt{
       color: white;
     }
-    .signtxt{
-      font-size: 14px;
-    }
-    #mkp{
-      margin-top: 145%;
-      float: right;
-    }
-    #arc{
-      float: left;
-      margin-top: 145%;
-    }
-    #hme {
-      margin-top: 105%;
-      float: left;
-      position: relative;
-      right: 45%;
-    }
-    #str{
-      margin-top: 105%;
-      float: right;
-      position: relative;
-      left: 39%;
-      z-index: 99;
-    }
     .bigbt{
       background-color: #F7E188;
       font-size: 24px;
@@ -196,7 +213,7 @@
       border-bottom-color:  #daba38;
       border-bottom-width: 3px;
       border-bottom-style: solid;
-      margin-top: 60%;
+      margin-top: 70%;
     }
     .bigbt:hover {
       cursor: pointer;
@@ -216,8 +233,8 @@
       height: 300px;
       width: auto;
       position: absolute;
-      margin-top: 5%;
-      margin-left: 70%;
+      margin-top: 25%;
+      margin-left: 77%;
     }
     #COINoverlay{
       display: none;
@@ -225,9 +242,12 @@
       height: 175px;
       width: auto;
       position: absolute;
-      margin-top: 12%;
-      margin-left: 80%;
+      margin-top: 32%;
+      margin-left: 82%;
     }
+  }
+  }
+
     </style>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
