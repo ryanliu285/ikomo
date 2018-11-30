@@ -1,20 +1,23 @@
-Brandon Jobs:
+NEW Brandon Jobs:
+- About page and contact page
+- Adaptive web design
 
+NEW Ral Jobs:
+- Setup marketplace
+
+AFTER:
+
+- Game
+
+
+DONE:
+- Buy button✓
+- Verification with VEI ✓
+- Set up currency✓
+- Ethereum based KOMOcoins✓
 - Fix alignment ✓
 - Loading screen ✓
 - Update logo colors ✓
 - Start implementing Shay designs ✓
 - Apply Dimbo font ✓
-
-Ral Jobs:
-
-- New HTML page for draw owned iKOMOS
-- Buy button
-- Verification with VEI ✓
-- Set up currency
-- Ethereum based KOMOcoins
-- Game
-
-AFTER:
-
-- Setup marketplace
+- New HTML page for draw owned iKOMOS ✓
