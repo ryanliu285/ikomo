@@ -1,0 +1,19 @@
+Most Common Screen Resolutions (Desktop)
+1366x768
+25.53%
+1920x1080  IS WORKING
+20.03%
+1440x900   
+7.02%
+1536x864   IS WORKING
+5.56%
+1600x900
+5.2%
+1280x800
+4.2%
+
+IF images / buttons are sized BY PERCENT of screen
+1920x1080, 1366x768, 16000x900, 1536x864 should use the same css.
+1280x800 and 1440x900 should use same css.
+
+
