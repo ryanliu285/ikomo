@@ -116,7 +116,7 @@
         height: 300px;
         width: auto;
         position: absolute;
-        margin-top: 5%;
+        margin-top: 6%;
         margin-left: 75%;
       }
       #COINoverlay{
@@ -125,7 +125,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 12%;
+        margin-top: 13%;
         margin-left: 80%;
       }
     }

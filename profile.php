@@ -113,7 +113,7 @@ $id = $_SESSION['userID'];
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/lizard.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Lizard | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
             }
             if($row["Animal"] == "Blue Snail"){
-              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/snail.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Blue Snail | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/snail.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Snail | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
             }
             if($row["Animal"] == "Shrimp"){
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/shrimp.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Shrimp | Aquatic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';

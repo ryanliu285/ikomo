@@ -45,7 +45,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 8%;
+        margin-top: 9%;
         margin-left: 67%;
       }
       #SACKoverlay{
@@ -54,7 +54,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 8%;
+        margin-top: 9%;
         margin-left: 67%;
       }
       #CHESToverlay{
@@ -63,7 +63,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 10%;
+        margin-top: 11%;
         margin-left: 67%;
       }
       #BARRELoverlay{
@@ -72,7 +72,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 8%;
+        margin-top: 9%;
         margin-left: 67%;
       }
       #TRUCKoverlay{
@@ -81,7 +81,7 @@
         height: 175px;
         width: auto;
         position: absolute;
-        margin-top: 10%;
+        margin-top: 11%;
         margin-left: 67%;
       }
       .centerpls {
