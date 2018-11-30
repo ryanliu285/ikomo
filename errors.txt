@@ -1,6 +1,8 @@
 KNOWN ERRORS
 - Some computers receive an sqli query error when trying to add coins 
-- Multiple purchases result in only one addpoint running 
-- Return to iKOMO can only handle 100 komoCoins 
+- Multiple purchases result in only one addpoint running  
+- Return to iKOMO can only handle 100 komoCoins FIXED
 - Loading screen loads every time home is accessed 
-- Generator.php should redirct to another page 
+- When website is not full size margins mess up
+  -> Macbooks screens are too small right now
+- Generator.php should redirct to another page FIXED

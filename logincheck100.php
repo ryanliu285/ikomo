@@ -113,11 +113,6 @@ if(isset($_SESSION ['userID'])){
       font-family: "Dimbo";
       font-size: 16px;
     }
-    .signupsucc {
-      color: rgb(22, 152, 47);
-      font-family: "Dimbo";
-      font-size: 16px;
-    }
   </style>
   <div id = "signupoverlay">
       <div class =  "container-fluid">
@@ -126,7 +121,6 @@ if(isset($_SESSION ['userID'])){
               </div>
               <div class = "col-md-10 signup">
                 <center><h2>Instructions</h2></center>
-                <!--ERROR HANDLING for Sign Up -->
                 <h3>When buying KOMOcoins, please click the "return" button at the bottom after the checkout completes!<h3>
                 <!--TODO: Add image that shows what it looks like-->
                 <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/pouch-of-komocoins-100-ik100/"><button>Continue</button></a>
