@@ -100,12 +100,13 @@ if(isset($_SESSION ['userID'])){
     }
     #signupoverlay {
       margin: auto;
+      padding: auto;
       position: absolute;
       z-index: 9999999999999;
       background-color: rgba(235, 255, 253, 0.97);
       border-radius: 15px;
       border: solid;
-      border-width: 10px;
+      border-width: 5px;
       border-color: rgba(136, 211, 229, 0.92);
     }
     .signuperror {
