@@ -1,5 +1,6 @@
 <?php
 require 'header.php';
+$_SESSION['change'] = 1;
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,10 +105,15 @@ require 'header.php';
   </div>
   <!--TODO: Display stuff based on search bar-->
   <script>
+  inputChange("");
   var x;
   function append(){
-    $("#searchsort").nextAll().remove();
     $("#searchsort").append(x);
+    for(i=0; i<=oldsession; i++){
+      if($('#' + oldsession).remove()){
+        console.log("removed");
+      }
+    }
   }
     function inputChange(value){
       console.log(value);
