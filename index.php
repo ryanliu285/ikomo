@@ -134,6 +134,7 @@ require 'header.php';
       }
       #disclaimtxt{
         color: white;
+        padding-top: 5px;
       }
       .signtxt{
         font-size: 14px;
@@ -247,7 +248,7 @@ require 'header.php';
                             <div class = "col-md-3 test">
                             <div id = "topblocker1 test">
                             </div>
-                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade🔒</a>
+                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade</a>
                             </div>
                           </div>
                         </div>';
@@ -269,8 +270,7 @@ require 'header.php';
               <div class = "row">
                   <div class = "col-md-6">
                       <form class = "signup" action = "includes/login.inc.php" method = "post">
-                        <br>
-                        <input class = "inputx" type = "text" name = "mailuid" placeholder = "VEI username">
+                        <input class = "inputx" type = "text" name = "mailuid" placeholder = "username">
                         <br>
                         <br>
                         <input class = "inputx" type = "password" name = "pwd" placeholder = "password">
@@ -311,7 +311,7 @@ require 'header.php';
               <div class = "col-md-6 signup">
                 <center>
                   <h2>Signup</h2>
-                  <p class = "signtxt">Please make sure to use your VEI username. You won't be able to claim your iKOMOs if you don't!</p>
+                  <p class = "signtxt">Due to certain restrictions with the VEI network, users must make an account to achieve full functionality.</p>
                 </center>
                 <!--ERROR HANDLING for Sign Up -->
                 <?php
@@ -341,7 +341,8 @@ require 'header.php';
                  ?>
                 <!-- Sign up form -->
                 <form action = "includes/signup.inc.php" method = "post">
-                  <center><input class = "inputx" type = "text" name = "uid" placeholder= "VEI Username">
+
+                  <center><input class = "inputx" type = "text" name = "uid" placeholder= "Username">
                   <br>
                   <br>
                   <input class = "inputx" type = "text" name = "mail" placeholder= "E-mail">
@@ -433,11 +434,10 @@ require 'header.php';
 
           </div>
           <div class = col-md-8>
-            <br>
-            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
+            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO). <br/> This site also uses cookies to ensure the best experience on our website.</p></center>
           </div>
           <div class = "col-md-2">
-
+            <img id = "disclaimerimg" height = "70px" width = "auto" src = "./img/VE_mark_type.png"/>
           </div>
         </div>
       </div>
@@ -463,23 +463,24 @@ require 'header.php';
     var id = setInterval(frame,50);
     hol.style.display = "block";
     function frame(){
-      if(progress >= 500 && counter >= 100){
-        clearInterval(id);
-        ol.style.display = "none";
-        hol.style.display = "none";
-        lol.style.display = "block";
-        $("#accountoverlay").addClass('animated bounceInUp');
-        $("#shopButton").addClass("animated bounceInUp");
-        $("#usernameanim").addClass("animated bounceInUp");
-        $("#shopanim").addClass("animated bounceInUp");
+        if(progress >= 500 && counter >= 100){
+          clearInterval(id);
+          ol.style.display = "none";
+          hol.style.display = "none";
+          lol.style.display = "block";
+          $("#accountoverlay").addClass('animated bounceInUp');
+          $("#shopButton").addClass("animated bounceInUp");
+          $("#usernameanim").addClass("animated bounceInUp");
+          $("#shopanim").addClass("animated bounceInUp");
+        }
+        else{
+          progress += 10;
+          counter +=2;
+          prg.style.width = progress + 'px';
+          percent.innerHTML = counter + '%';
+        }
       }
-      else{
-        progress += 10;
-        counter +=2;
-        prg.style.width = progress + 'px';
-        percent.innerHTML = counter + '%';
-      }
-    }
+
   }
   progress();
 </script>

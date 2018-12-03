@@ -5,7 +5,174 @@
  <html>
   <head>
     <style>
-    @media only screen and (min-width: 992px) {
+
+    @media only screen and (width: 1600px) {
+    #footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    #closedisclaimer{
+      color: white;
+    }
+    #closedisclaimer:hover{
+      cursor: pointer;
+    }
+    #disclaimtxt{
+      color: white;
+    }
+    .bigbt{
+      background-color: #F7E188;
+      font-size: 18px;
+      font-family: "Dimbo";
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      border-bottom-color:  #daba38;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      margin-top: 40%;
+    }
+    .bigbt:hover {
+      cursor: pointer;
+      background-color: #daba38;
+    }
+    #POUCHoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 15%;
+      margin-left: 67%;
+    }
+    #SACKoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 15%;
+      margin-left: 67%;
+    }
+    #CHESToverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 17%;
+      margin-left: 67%;
+    }
+    #BARRELoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 15%;
+      margin-left: 67%;
+    }
+    #TRUCKoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 17%;
+      margin-left: 67%;
+    }
+    .centerpls {
+      text-align: center;
+    }
+  }
+    @media only screen and (width: 1366px) {
+    #footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    #closedisclaimer{
+      color: white;
+    }
+    #closedisclaimer:hover{
+      cursor: pointer;
+    }
+    #disclaimtxt{
+      color: white;
+    }
+    .bigbt{
+      background-color: #F7E188;
+      font-size: 18px;
+      font-family: "Dimbo";
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      border-bottom-color:  #daba38;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      margin-top: 30%;
+    }
+    .bigbt:hover {
+      cursor: pointer;
+      background-color: #daba38;
+    }
+    #POUCHoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 8%;
+      margin-left: 68%;
+    }
+    #SACKoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 8%;
+      margin-left: 68%;
+    }
+    #CHESToverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 10%;
+      margin-left: 67%;
+    }
+    #BARRELoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 8%;
+      margin-left: 67%;
+    }
+    #TRUCKoverlay{
+      display: none;
+      z-index: 100000;
+      height: 23.1vh;
+      width: auto;
+      position: absolute;
+      margin-top: 10%;
+      margin-left: 67%;
+    }
+    .centerpls {
+      text-align: center;
+    }
+  }
+    @media only screen and (width: 1536px) {
       #footer {
         position: fixed;
         left: 0;
@@ -42,7 +209,7 @@
       #POUCHoverlay{
         display: none;
         z-index: 100000;
-        height: 175px;
+        height: 24.2546296vh;
         width: auto;
         position: absolute;
         margin-top: 9%;
@@ -51,7 +218,7 @@
       #SACKoverlay{
         display: none;
         z-index: 100000;
-        height: 175px;
+        height: 24.2546296vh;
         width: auto;
         position: absolute;
         margin-top: 9%;
@@ -60,7 +227,7 @@
       #CHESToverlay{
         display: none;
         z-index: 100000;
-        height: 175px;
+        height: 24.2546296vh;
         width: auto;
         position: absolute;
         margin-top: 11%;
@@ -69,7 +236,7 @@
       #BARRELoverlay{
         display: none;
         z-index: 100000;
-        height: 175px;
+        height: 24.2546296vh;
         width: auto;
         position: absolute;
         margin-top: 9%;
@@ -78,7 +245,7 @@
       #TRUCKoverlay{
         display: none;
         z-index: 100000;
-        height: 175px;
+        height: 24.2546296vh;
         width: auto;
         position: absolute;
         margin-top: 11%;
@@ -125,47 +292,47 @@
     #POUCHoverlay{
       display: none;
       z-index: 100000;
-      height: 250px;
+      height: 23.1vh;
       width: auto;
       position: absolute;
-      margin-top: 13%;
-      margin-left: 66%;
+      margin-top: 15%;
+      margin-left: 67%;
     }
     #SACKoverlay{
       display: none;
       z-index: 100000;
-      height: 250px;
+      height: 23.1vh;
       width: auto;
       position: absolute;
-      margin-top: 13%;
-      margin-left: 66%;
+      margin-top: 15%;
+      margin-left: 67%;
     }
     #CHESToverlay{
       display: none;
       z-index: 100000;
-      height: 250px;
+      height: 23.1vh;
       width: auto;
       position: absolute;
-      margin-top: 15%;
-      margin-left: 66%;
+      margin-top: 17%;
+      margin-left: 67%;
     }
     #BARRELoverlay{
       display: none;
       z-index: 100000;
-      height: 250px;
+      height: 23.1vh;
       width: auto;
       position: absolute;
-      margin-top: 13%;
-      margin-left: 66%;
+      margin-top: 15%;
+      margin-left: 67%;
     }
     #TRUCKoverlay{
       display: none;
       z-index: 100000;
-      height: 250px;
+      height: 23.1vh;
       width: auto;
       position: absolute;
-      margin-top: 15%;
-      margin-left: 66%;
+      margin-top: 17%;
+      margin-left: 67%;
     }
     .centerpls {
       text-align: center;

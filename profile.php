@@ -103,11 +103,11 @@ $id = $_SESSION['userID'];
         if (mysqli_num_rows($result) > 0){
           while ($row = mysqli_fetch_assoc($result)){
             /* COMMON iKOMOs*/
-            if($row["Animal"] == "Mouse"){
-              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/mouse.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Mouse | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
-            }
             if($row["Animal"] == "Bunny"){
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/bunny.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Bunny | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
+            }
+            if($row["Animal"] == "Mouse"){
+              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/mouseIK.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Mouse | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
             }
             if($row["Animal"] == "Lizard"){
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/lizard.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Lizard | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';

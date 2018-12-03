@@ -320,25 +320,6 @@
         </div>
       </div>
     </div>
-    <div id = "footer">
-      <div class = "container-fluid">
-        <div class = "row">
-          <div class = "col-md-1">
-            <p id = "closedisclaimer">X</p>
-          </div>
-          <div class = "col-md-1">
-
-          </div>
-          <div class = col-md-8>
-            <br>
-            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
-          </div>
-          <div class = "col-md-2">
-
-          </div>
-        </div>
-      </div>
-    </div>
   <script>
   var fol = document.getElementById('footer');
 
