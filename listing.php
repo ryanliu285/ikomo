@@ -1,288 +1,170 @@
 <?php
-session_start();
+require 'header.php';
+$_SESSION['change'] = 1;
 ?>
+<!DOCTYPE html>
 <html>
+  <head>
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel = "stylesheet" type = "text/css" href = "main.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    h2 {
+      font-family: "Dimbo";
+      font-size: 50px;
+    }
+    .commontxt {
+      color: rgb(193, 200, 161);
+    }
 
-   <head>
-      <title>iKOMO</title>
-   </head>
-
-   <body>
-     <?php
-     //Traits of Ikomo: String, owner(userID), rarity, type, health
-		 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		 $charactersLength = strlen($characters);
-		 $randomString = '';
-		 for ($i = 0; $i < 64; $i++) {
-			 $randomString .= $characters[rand(0, $charactersLength - 1)];
-		 }
-     $UID = $_SESSION['userID'];
-     echo "<script>console.log( {$_SESSION['userID']} );</script>";
-     $x = rand(1,100);
-     echo "<script>console.log( $x );</script>";
-     if($x<=32){
-       $Rarity = 1;
-     }else if ($x<=83){
-       $Rarity = 2;
-     }else if ($x<=98){
-       $Rarity = 3;
-     }else{
-       $Rarity = 4;
-     }
-     $Animal = "";
-     $Type = rand(1,4);
-     if($Rarity == 1){
-       $x = rand(1,16);
-         if($x == 1){
-           $Type = 1;
-           $Animal = "Mouse";
-         } else if ($x == 2){
-           $Type = 1;
-           $Animal = "Bunny";
-         } else if ($x == 3){
-           $Type = 2;
-           $Animal = "Lizard";
-         } else if ($x == 4){
-           $Type = 1;
-           $Animal = "Blue Snail";
-         }
-          else if($x == 5){
-            $Type = 2;
-            $Animal = "Shrimp";
-          } else if ($x == 6){
-            $Type = 2;
-            $Animal = "Squid";
-          } else if ($x == 7){
-            $Type = 2;
-            $Animal = "Sea Urchin";
-          } else if ($x == 8){
-            $Type = 2;
-            $Animal = "Jellyfish";
-          }
-          else if($x == 9){
-            $Type = 3;
-            $Animal = "Frog";
-          } else if ($x == 10){
-            $Type = 3;
-            $Animal = "Duck";
-          } else if ($x == 11){
-            $Type = 3;
-            $Animal = "Deer";
-          } else if ($x == 12){
-            $Type = 3;
-            $Animal = "Pigeon";
-          }
-          else if($x == 13){
-            $Type = 4;
-            $Animal = "Slime";
-          } else if ($x == 14){
-            $Type = 2;
-            $Animal = "Goldfish";
-          } else if ($x == 15){
-            $Type = 1;
-            $Animal = "Turkey";
-          } else{
-            $Type = 4;
-            $Animal = "Jackalope";
-          }
+    .raretxt {
+      color: rgb(61, 79, 186);
+    }
+    .epictxt {
+      color: rgb(211, 146, 224);
+    }
+    .legendarytxt {
+      color: rgb(215, 189, 74);
+    }
+    .commonimg {
+      background-color: rgb(193, 200, 161);
+      border-radius: 15px;
+      border-color: rgb(171, 185, 110);
+      border-width: 10px;
+      border-style: solid;
+    }
+    .rareimg {
+      background-color: rgb(68, 181, 200);
+      border-radius: 15px;
+      border-color: rgb(38, 152, 171);
+      border-width: 10px;
+      border-style: solid;
+    }
+    .epicimg {
+      background-color: rgb(211, 146, 224);
+      border-radius: 15px;
+      border-color: rgb(191, 60, 217);
+      border-width: 10px;
+      border-style: solid;
+    }
+    .legendaryimg {
+      background-color: rgb(215, 189, 74);
+      border-radius: 15px;
+      border-color: rgb(198, 164, 18);
+      border-width: 10px;
+      border-style: solid;
+    }
+    #footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    #closedisclaimer{
+      color: white;
+    }
+    #closedisclaimer:hover{
+      cursor: pointer;
+    }
+    #disclaimtxt{
+      color: white;
+    }
+    #noowned {
+      color: rgb(210, 42, 25);
+      font-size: 30px;
+    }
+    .buttonx {
+      background-color: rgba(106, 196, 206, 0.92);
+      font-size: 18px;
+      font-family: "Dimbo";
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      border-bottom-color: rgba(89, 154, 165, 0.92);
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      padding: 3px;
+    }
+    #price{
+      background-image: url('./img/price.png');
+      background-repeat: none;
+      width: 75px;
+      background-size:75px;
+    }
+    /* #search {TODO: search icon
+    background-image: url('./img/search.png');
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+#search:active { background-image: none; text-indent: 0px;} */
+    </style>
+  </head>
+<body class = "marketbg">
+  <div id = mainWelcomeText>
+    <h1>Marketplace</h1>
+  </div>
+  <div id = "searchsort" class ="row">
+    <div class = "col-md-6" style = "text-align:center;">
+        <input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+    </div>
+  </div>
+  <!--TODO: Display stuff based on search bar-->
+  <script>
+  inputChange("");
+  var x;
+  function append(){
+    $("#searchsort").append(x);
+    for(i=0; i<=oldsession; i++){
+      if($('#' + oldsession).remove()){
+        console.log("removed");
+      }
+    }
+  }
+    function inputChange(value){
+      console.log(value);
+      $.ajax({
+        type: "POST",
+        url: "onChange.php",
+        data: {'data': value},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
         }
-     else if ($Rarity == 2){
-       $x = rand(1,28);
-         if($x == 1){
-           $Type = 1;
-           $Animal = "Snake";
-         } else if ($x == 2){
-           $Type = 1;
-           $Animal = "Ferret";
-         } else if ($x == 3){
-           $Type = 1;
-           $Animal = "Parrot";
-         } else if ($x == 4){
-           $Type = 1;
-           $Animal = "Cow";
-         }else if($x == 5){
-           $Type = 1;
-           $Animal = "Sheep";
-         } else if ($x == 6){
-           $Type = 1;
-           $Animal = "Pig";
-         } else if ($x == 7){
-           $Type = 1;
-           $Animal = "Calico Cat";
-         } else if ($x == 8){
-           $Type = 1;
-           $Animal = "Chick";
-         }
-          else if($x == 9){
-            $Type = 2;
-            $Animal = "Crab";
-          } else if ($x == 10){
-            $Type = 2;
-            $Animal = "Turtle";
-          } else if ($x == 11){
-            $Type = 2;
-            $Animal = "Manta Ray";
-          } else if ($x == 12){
-            $Type = 2;
-            $Animal = "Sea Horse";
-          }else if($x == 13){
-            $Type = 2;
-            $Animal = "Otter";
-          } else if ($x == 14){
-            $Type = 2;
-            $Animal = "Starfish";
-          } else if ($x == 15){
-            $Type = 2;
-            $Animal = "Clownfish";
-          } else if ($x == 16){
-            $Type = 2;
-            $Animal = "Phytoplankton";
-          }
-          else if($x == 17){
-            $Type = 3;
-            $Animal = "Brown Bear";
-          } else if ($x == 18){
-            $Type = 3;
-            $Animal = "Porcupine";
-          } else if ($x == 19){
-            $Type = 3;
-            $Animal = "Skunk";
-          } else if ($x == 20){
-            $Type = 3;
-            $Animal = "Fox";
-          }else if($x == 21){
-            $Type = 3;
-            $Animal = "Elephant";
-          } else if ($x == 22){
-            $Type = 3;
-            $Animal = "Bull";
-          } else if ($x == 23){
-            $Type = 3;
-            $Animal = "Monkey";
-          } else if ($x == 24){
-            $Type = 3;
-            $Animal = "Moose";
-          }
-          else if($x == 25){
-            $Type = 3;
-            $Animal = "Zebra";
-          } else if ($x == 26){
-            $Type = 3;
-            $Animal = "Wolf";
-          } else if ($x == 27){
-            $Type = 1;
-            $Animal = "Munchkin Cat";
-          } else{
-            $Type = 3;
-            $Animal = "Flying Squirrel";
-          }
-      }else if ($Rarity == 3){
-         $x = rand(1,12);
-           if($x == 1){
-             $Type = 1;
-             $Animal = "Husky";
-           } else if ($x == 2){
-             $Type = 1;
-             $Animal = "Llama";
-           } else if($x == 3){
-             $Type = 1;
-             $Animal = "Pomski";
-           }
-            else if($x == 4){
-              $Type = 2;
-              $Animal = "Great White Shark";
-            } else if ($x == 5){
-              $Type = 2;
-              $Animal = "Octopus";
-            } else if ($x == 6){
-              $Type = 2;
-              $Animal = "Penguin";
-            }
-            else if($x == 7){
-              $Type = 3;
-              $Animal = "Lion";
-            } else if ($x == 8){
-              $Type = 3;
-              $Animal = "Tiger";
-            } else if ($x == 9){
-              $Type = 3;
-              $Animal = "Giraffe";
-            }
-            else if($x == 10){
-              $Type = 3;
-              $Animal = "Koala";
-            } else if ($x == 11){
-              $Type = 4;
-              $Animal = "Phoenix";
-            } else{
-              $Type = 4;
-              $Animal = "Unicorn";
-            }
+    });
+    }
+  </script>
+  <div id = "footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-md-1">
+          <p id = "closedisclaimer">X</p>
+        </div>
+        <div class = "col-md-1">
 
-         }else{
-           $x = rand(1,4);
-           if($x == 1){
-             $Type = 1;
-            $Animal = "Shiba Inu";
-          }else if ($x == 2){
-            $Type = 2;
-            $Animal = "Orca";
-          }else if ($x == 3){
-            $Type = 3;
-            $Animal = "Panda";
-          }else{
-            $Type = 4;
-            $Animal = "Dragon";
-          }
-           }
+        </div>
+        <div class = col-md-8>
+          <br>
+          <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
+        </div>
+        <div class = "col-md-2">
 
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+var fol = document.getElementById('footer');
 
-     //Connect to database
-     $dbhost = 'db759106289.hosting-data.io';
-     $dbuser = 'dbo759106289';
-     $dbpass = 'SPdidsway1st';
-     $dbname = 'db759106289';
-     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-     if(! $conn ) {
-        die('Could not connect: ' . mysql_error());
-     }
-
-       //Insert iKomo
-       $sql = "INSERT INTO marketplace ".
-                 "(StringID, UID, Rarity, Type, Animal, Price) "."VALUES ".
-                 "('$randomString',$UID,'$Rarity','$Type','$Animal','400')";
-       if ($conn->query($sql) === TRUE) {
-          //Announce iKomo traits
-          if($Type = 1){
-            $_SESSION["type"] = "domestic";
-          }else if ($Type = 2){
-            $_SESSION["type"] = "aquatic";
-          }else if ($Type = 3){
-            $_SESSION["type"] = "wild";
-          }else{
-            $_SESSION["type"] = "mythic";
-          }
-          $_SESSION["animal"] = $Animal;
-          if($Rarity==1){
-            $_SESSION["rarity"] = "common ";
-          }else if ($Rarity == 2){
-            $_SESSION["rarity"] = "rare";
-          }else if ($Rarity == 3){
-            $_SESSION["rarity"] =  "epic";
-          }else {
-            $_SESSION["rarity"] = "legendary";
-          }
-          $_SESSION["randomString"] =  $randomString;
-
-       } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-       }
-
-     $conn->close();
-
-     echo "<script> window.location.href = '../../result.php'</script>";
-     exit();
-     ?>
-   </body>
-
+$("#closedisclaimer").click(function(){
+  $("#footer").addClass('animated bounceOutDown');
+  setTimeout(function(){
+    fol.style.display = "none";
+  }, 2000);
+});
+</script>
 </html>

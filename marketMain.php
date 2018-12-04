@@ -1,5 +1,6 @@
 <?php
 require 'header.php';
+$_SESSION['change'] = 1;
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,6 +88,18 @@ require 'header.php';
       border-bottom-style: solid;
       padding: 3px;
     }
+    #price{
+      background-image: url('./img/price.png');
+      background-repeat: none;
+      width: 75px;
+      background-size:75px;
+    }
+    /* #search {TODO: search icon
+    background-image: url('./img/search.png');
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+#search:active { background-image: none; text-indent: 0px;} */
     </style>
   </head>
 <body class = "marketbg">
@@ -104,10 +117,15 @@ require 'header.php';
   </div>
   <!--TODO: Display stuff based on search bar-->
   <script>
+  inputChange("");
   var x;
   function append(){
-    $("#searchsort").nextAll().remove();
     $("#searchsort").append(x);
+    for(i=0; i<=oldsession; i++){
+      if($('#' + oldsession).remove()){
+        console.log("removed");
+      }
+    }
   }
     function inputChange(value){
       console.log(value);

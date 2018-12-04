@@ -245,7 +245,7 @@ require 'header.php';
         echo '<div id = "loggedin" class = "test container-fluid">
                           <div class = "test row">
                             <div class = "test col-md-3">
-                              <a href = "marketplace.php" id = "mkp" class = "bigbt buttonx">Marketplace</a>
+                              <a href = "marketMain.php" id = "mkp" class = "bigbt buttonx">Marketplace</a>
                             </div>
                             <div class = "col-md-6 test">
                               <div class = "container-fluid test">
