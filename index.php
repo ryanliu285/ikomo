@@ -94,7 +94,22 @@ require 'header.php';
         font-family: "Dimbo";
         font-size: 50px;
       }
+      .learnmore {
+        font-size: 25px;
+      }
       #signupoverlay {
+        margin: auto;
+        width: 50%;
+        height: 550px;
+        z-index: 99;
+        background-color: rgba(235, 255, 253, 0.97);
+        display: none;
+        border-radius: 15px;
+        border: solid;
+        border-width: 10px;
+        border-color: rgba(136, 211, 229, 0.92);
+      }
+      #learnmoreoverlay {
         margin: auto;
         width: 50%;
         height: 550px;
@@ -365,11 +380,56 @@ require 'header.php';
               </div>
           </div>
       </div>
+      <!-- Learn More Overlay-->
+      <div id = "learnmoreoverlay">
+        <div class = "container-fluid">
+          <div class = "row">
+            <div class= "col-md-1">
 
+            </div>
+            <div class = "col-md-10">
+              <center>
+                <h2>More About iKOMO!</h2>
+                <br>
+                <img height = "50px" src = ""/> <a href = "about.php" class = "learnmore">About Page</a>
+                <br>
+                <br>
+                <img height = "50px" src = ""/><a href = "" class = "learnmore">Facebook</a>
+                <br>
+                <br>
+                <img height = "50px" src = "./img/snap.png"/> <a href = "" class = "learnmore">Snapchat</a>
+                <br>
+                <br>
+                <img height = "50px" src = "./img/insta.png"/> <a href = "" class = "learnmore">Instagram</a>
+                <br>
+                <br>
+                <a id = "returnanim2" class = "buttonx">Return to login</a>
+            </center>
+            </div>
+            <div class = "col-md-1">
+
+            </div>
+          </div>
+        </div>
+        </div>
       <!--This script handles animations between login and sign up page divs. -->
       <script>
       var sol = document.getElementById('signupoverlay');
+      var lmol = document.getElementById('learnmoreoverlay');
       var aol = document.getElementById('accountoverlay');
+        $("#aboutanim").click(function(){
+          $("#learnmoreoverlay").removeClass('animated bounceOutLeft');
+          $("#accountoverlay").removeClass('animated bounceOutLeft')
+          $("#accountoverlay").addClass('animated bounceOutLeft');
+          setTimeout(function(){
+            aol.style.display = "none";
+          }, 1000);
+          setTimeout(function(){
+
+            $("#learnmoreoverlay").addClass('animated bounceInRight');
+            lmol.style.display = "block";
+          }, 1000);
+        });
         $("#signupanim").click(function() {
           $("#signupoverlay").removeClass('animated bounceOutLeft');
           $("#accountoverlay").removeClass('animated bounceInUp');
@@ -386,11 +446,24 @@ require 'header.php';
       <script>
       var sol = document.getElementById('signupoverlay');
       var aol = document.getElementById('accountoverlay');
+      var lmol = document.getElementById('learnmoreoverlay');
         $("#returnanim").click(function(){
           $("#signupoverlay").removeClass('animated bounceInRight');
           $("#signupoverlay").addClass('animated bounceOutLeft');
           setTimeout(function(){
             sol.style.display = "none";
+          }, 1000);
+          setTimeout(function(){
+            $("#accountoverlay").removeClass('animated bounceOutLeft');
+            $("#accountoverlay").addClass('animated bounceInRight');
+            aol.style.display = "block";
+          }, 1000);
+        });
+        $("#returnanim2").click(function(){
+          $("#learnmoreoverlay").removeClass('animated bounceInRight');
+          $("#learnmoreoverlay").addClass('animated bounceOutLeft');
+          setTimeout(function(){
+            lmol.style.display = "none";
           }, 1000);
           setTimeout(function(){
             $("#accountoverlay").removeClass('animated bounceOutLeft');
