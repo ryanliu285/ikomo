@@ -391,16 +391,16 @@ require 'header.php';
               <center>
                 <h2>More About iKOMO!</h2>
                 <br>
-                <img height = "50px" src = ""/> <a href = "about.php" class = "learnmore">About Page</a>
+                <img height = "50px" src = ""/> <a href = "about.php" class = "learnmore">  About Page</a>
                 <br>
                 <br>
-                <img height = "50px" src = ""/><a href = "" class = "learnmore">Facebook</a>
+                <img height = "50px" src = "./img/fb.png"/><a href = "https://www.facebook.com/IKOMO-VEI-999053610286250/" class = "learnmore">  Facebook</a>
                 <br>
                 <br>
-                <img height = "50px" src = "./img/snap.png"/> <a href = "" class = "learnmore">Snapchat</a>
+                <img height = "50px" src = "./img/snap.png"/> <a href = "vei-ikomo.com/img/snap.png" class = "learnmore">  Snapchat</a>
                 <br>
                 <br>
-                <img height = "50px" src = "./img/insta.png"/> <a href = "" class = "learnmore">Instagram</a>
+                <img height = "50px" src = "./img/insta.png"/> <a href = "https://www.instagram.com/ikomo.vei/" class = "learnmore">  Instagram</a>
                 <br>
                 <br>
                 <a id = "returnanim2" class = "buttonx">Return to login</a>
