@@ -91,7 +91,7 @@
           <a class = "nav" href = "index.php">Home</a>
         </div>
         <div class = "col-md-3">
-        <a class = "nav" href = "tutorial.php">Tutorials</a>
+        <a class = "nav" href = "mainInterface.php">Store</a>
       </div>
       <div class = "col-md-3">
       <a class = "nav" href = "about.php">About</a>
