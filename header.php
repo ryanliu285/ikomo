@@ -16,6 +16,9 @@
     }
     $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
     $_SESSION['userAMT'] = $result;
+    $cookie_name = "loaded";
+    $cookie_value = "hasloaded";
+    setcookie($cookie_name, $cookie_value, time() + (3600), "/");
   }
  ?>
 <!DOCTYPE html>
