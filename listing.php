@@ -1,6 +1,6 @@
 <?php
 require 'header.php';
-$_SESSION['change'] = 1;
+$_SESSION['change'] = 2;
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,15 +104,20 @@ $_SESSION['change'] = 1;
   </head>
 <body class = "marketbg">
   <div id = mainWelcomeText>
-    <h1>Marketplace</h1>
+    <h1>Your iKOMO!</h1>
   </div>
   <div id = "searchsort" class ="row">
     <div class = "col-md-6" style = "text-align:center;">
         <input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
     </div>
+    <div class = "col-md-6">
+      <!--TODO: Make a dropdown sorting-->
+    </div>
+    <br>
   </div>
   <!--TODO: Display stuff based on search bar-->
   <script>
+  var oldsession = 0;
   inputChange("");
   var x;
   function append(){
@@ -127,7 +132,7 @@ $_SESSION['change'] = 1;
       console.log(value);
       $.ajax({
         type: "POST",
-        url: "onChange.php",
+        url: "myIkomo.php",
         data: {'data': value},
         success: function(msg) {
           x = msg;
@@ -135,6 +140,9 @@ $_SESSION['change'] = 1;
           append();
         }
     });
+    }
+    function list(){
+      
     }
   </script>
   <div id = "footer">

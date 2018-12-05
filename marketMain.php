@@ -1,6 +1,6 @@
 <?php
 require 'header.php';
-$_SESSION['change'] = 1;
+$_SESSION['change'] = 2;
 ?>
 <!DOCTYPE html>
 <html>
@@ -112,11 +112,12 @@ $_SESSION['change'] = 1;
     </div>
     <div class = "col-md-6">
       <!--TODO: Make a dropdown sorting-->
-      <h1 style = "float:right; "><a style = "color:red;" href = "listing.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <h1 style = "float:right; "><a style = "color:red;" href = "marketplace.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
     </div>
   </div>
   <!--TODO: Display stuff based on search bar-->
   <script>
+  var oldsession = 2;
   inputChange("");
   var x;
   function append(){
