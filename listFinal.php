@@ -27,12 +27,28 @@ $UID = $row["UID"];
   }
 }
 
+$sql = "SELECT StringID FROM marketplace";
+$result = $conn->query($sql);
+$exists = FALSE;
+if ($result->num_rows >= 0) {
+
+  // output data of each row and check stringID
+  while($row = $result->fetch_assoc()) {
+    if($sid==($row["StringID"])){
+      echo "<script>alert('This iKOMO has already been listed!')</script>";
+      $exists = TRUE;
+      exit();
+    }
+  }
+}
+if(!$exists){
 $sql = "INSERT INTO marketplace ".
-          "(StringID, UID, Rarity, Type, Animal, Price) "."VALUES ".
-          "('$sid',$UID,$rarity,$type,'$animal',$price)";
+        "(StringID, UID, Rarity, Type, Animal, Price) "."VALUES ".
+        "('$sid',$UID,$rarity,$type,'$animal',$price)";
 $conn -> query($sql);
 
 mysqli_close($conn);
 
 echo '<script>location.reload();</script>';
+}
 ?>
