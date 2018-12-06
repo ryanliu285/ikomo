@@ -155,6 +155,9 @@ $id = $_SESSION['userID'];
             if($row["Animal"] == "Snake"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/snake.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Snake | Domestic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
+            if($row["Animal"] == "Koi"){
+              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/koi.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Koi | Aquatic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
+            }
             if($row["Animal"] == "Ferret"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/ferret.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Ferret | Domestic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
@@ -244,7 +247,7 @@ $id = $_SESSION['userID'];
               echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/llama.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Llama | Domestic</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
             }
             if($row["Animal"] == "Pomski"){
-              echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/pomski.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Pomski | Domestic</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/pomeranian.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Pomeranian | Domestic</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
             }
             if($row["Animal"] == "Great White Shark"){
               echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/shark.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Great White Shark | Aquatic</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
@@ -261,8 +264,8 @@ $id = $_SESSION['userID'];
             if($row["Animal"] == "Tiger"){
               echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/tiger.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Tiger | Wild</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
             }
-            if($row["Animal"] == "Giraffe"){
-              echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/giraffe.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Giraffe | Wild</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
+            if($row["Animal"] == "Lava Monster"){
+              echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/lavamonster.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Lava Monster | Mythic</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';
             }
             if($row["Animal"] == "Koala"){
               echo '<div class = "col-md-4"><center><img class = "epicimg" height = "300px" width = "auto" src = "./img/ikomos/koala.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Koala | Wild</p></center><center><p class = "epictxt">Epic</p></center><br><br></div>';

@@ -19,23 +19,24 @@ require './includes/dbh.inc.php';
     }
     h2 {
       font-family: "Dimbo";
-      font-size: 50px;
+      font-size: 30px;
       color: #EBCB5A;
     }
     h1 {
+      margin-top: 20px;
       font-family: "Dimbo";
-      font-size: 75px;
+      font-size: 50px;
       color: #59AEC7;
     }
     #counter {
       color: #59AEC7;
       margin-top: 5%;
-      font-size: 75px;
+      font-size: 50px;
     }
     #count {
       margin-top: 2%;
       color: #EBCB5A;
-      font-size: 75px;
+      font-size: 50px;
     }
     </style>
   </head>
