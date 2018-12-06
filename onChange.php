@@ -57,5 +57,6 @@ ob_start();
 
      }
    }
+   mysqli_close($conn);
  }
  ?>

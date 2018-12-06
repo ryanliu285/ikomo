@@ -10,6 +10,16 @@ $_SESSION['change'] = 2;
     <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
+    .overlay{
+    opacity:1;
+    background-color:#ccc;
+    position:fixed;
+    top:10%;
+    right: 10%;
+    bottom: 10%;
+    left:10%;
+    z-index:1000;
+}
     h2 {
       font-family: "Dimbo";
       font-size: 50px;
@@ -141,7 +151,19 @@ $_SESSION['change'] = 2;
         }
     });
     }
-    function list(){
+    function list(animal){
+      $.ajax({
+        type: "POST",
+        url: "listThis.php",
+        data: {'data': animal},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
+    }
+    function listFinal(){
       
     }
   </script>
