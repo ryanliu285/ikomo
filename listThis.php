@@ -18,7 +18,6 @@ if ($result->num_rows >= 0) {
 while($row = $result->fetch_assoc()){
 $animal = $row["Animal"];
 $rarity = $row["Rarity"];
-$rarity = $row["Rarity"];
 if($rarity == 1){
   $rarity = "common";
 }
@@ -38,7 +37,7 @@ echo '<script>console.log(\''.$animal.'\');</script>
 <center><p style = "color: white; font-size: 50px;">'.$animal.'</p></center>
 <center><p style = "color: white; font-size: 40px;">'.$rarity.'</p></center>
 <center><img height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
-<center><input style = "width:50%;"type = "number" placeholder = "Enter KOMOcoin Price Here"><button onClick = "listFinal">Submit</button></center>
+<center><input id = "priceInput" style = "width:50%;"type = "number" placeholder = "Enter KOMOcoin Price Here"><button onclick = "listFinal(\''.$sid.'\')">Submit</button></center>
 </div>';
 }}
 mysqli_close($conn);

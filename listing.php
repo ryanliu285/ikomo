@@ -163,8 +163,17 @@ $_SESSION['change'] = 2;
         }
     });
     }
-    function listFinal(){
-      
+    function listFinal(animal){
+      $.ajax({
+        type: "POST",
+        url: "listFinal.php",
+        data: {'data': animal, 'price': $('#priceInput').val()},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
     }
   </script>
   <div id = "footer">
