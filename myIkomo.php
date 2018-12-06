@@ -50,11 +50,13 @@ $id = $_SESSION["userID"];
          $type = 'Mythic';
        }
        $times++;
+       $sid = $row['StringID'];
        echo '<script>var oldsession = '.$oldsession.';
        var times = '.$times.'</script>
-         <div class = "col-md-4" id = "'.$_SESSION['change'].'"><a onclick = "list()"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></a></div>';
+         <div class = "col-md-4" id = "'.$_SESSION['change'].'"><a onclick = "list(\''.$sid.'\')"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></a></div>';
 
      }
    }
+   mysqli_close($conn);
  }
  ?>
