@@ -113,7 +113,7 @@ $id = $_SESSION['userID'];
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/lizard.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Lizard | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
             }
             if($row["Animal"] == "Blue Snail"){
-              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/snail.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Snail | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/bluesnail.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Blue Snail | Domestic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
             }
             if($row["Animal"] == "Shrimp"){
               echo '<div class = "col-md-4"><center><img class = "commonimg" height = "300px" width = "auto" src = "./img/ikomos/shrimp.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Shrimp | Aquatic</p></center><center><p class = "commontxt">Common</p></center><br><br></div>';
@@ -234,7 +234,7 @@ $id = $_SESSION['userID'];
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/wolf.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Wolf | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             if($row["Animal"] == "Munchkin Cat"){
-              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/muncat.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Munchkin Cat | Domestic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/munchkincat.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Munchkin Cat | Domestic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             if($row["Animal"] == "Flying Squirrel"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/flysquirrel.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Flying Squirrel | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
@@ -300,34 +300,5 @@ $id = $_SESSION['userID'];
          ?>
       </div>
     </div>
-    <div id = "footer">
-      <div class = "container-fluid">
-        <div class = "row">
-          <div class = "col-md-1">
-            <p id = "closedisclaimer">X</p>
-          </div>
-          <div class = "col-md-1">
-
-          </div>
-          <div class = col-md-8>
-            <br>
-            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
-          </div>
-          <div class = "col-md-2">
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-    var fol = document.getElementById('footer');
-
-    $("#closedisclaimer").click(function(){
-      $("#footer").addClass('animated bounceOutDown');
-      setTimeout(function(){
-        fol.style.display = "none";
-      }, 2000);
-    });
-    </script>
   </body>
 </html>

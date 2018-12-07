@@ -6,7 +6,7 @@
   <head>
     <style>
 
-    @media only screen and (width: 1600px) {
+    @media only screen and (min-width: 1600px) {
     #footer {
       position: fixed;
       left: 0;
@@ -89,7 +89,7 @@
       text-align: center;
     }
   }
-    @media only screen and (width: 1366px) {
+    @media only screen and (min-width: 1366px) {
     #footer {
       position: fixed;
       left: 0;
@@ -172,7 +172,7 @@
       text-align: center;
     }
   }
-    @media only screen and (width: 1536px) {
+    @media only screen and (min-width: 1536px) {
       #footer {
         position: fixed;
         left: 0;
@@ -255,7 +255,7 @@
         text-align: center;
       }
       }
-    @media only screen and (min-width: 1537px) {
+    @media only screen and (min-width: 1920px) {
     #footer {
       position: fixed;
       left: 0;

@@ -6,11 +6,6 @@
   <head>
     <style>
     /*macbook is 1318px */
-    @media only screen and (min-width: 768px) {
-
-
-
-    }
 
     @media only screen and (min-width: 992px) {
       #footer {
