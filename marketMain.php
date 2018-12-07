@@ -10,6 +10,16 @@ $_SESSION['change'] = 2;
     <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
+    .overlay{
+    opacity:1;
+    background-color:#ccc;
+    position:fixed;
+    top:10%;
+    right: 10%;
+    bottom: 10%;
+    left:10%;
+    z-index:1000;
+}
     h2 {
       font-family: "Dimbo";
       font-size: 50px;
@@ -108,11 +118,11 @@ $_SESSION['change'] = 2;
   </div>
   <div id = "searchsort" class ="row">
     <div class = "col-md-6" style = "text-align:center;">
-        <input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+        <!--<input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">-->
     </div>
     <div class = "col-md-6">
       <!--TODO: Make a dropdown sorting-->
-      <h1 style = "float:right; "><a style = "color:red;" href = "marketplace.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <h1 style = "float:right; "><a style = "color:red;" href = "listing.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
     </div>
   </div>
   <!--TODO: Display stuff based on search bar-->
@@ -140,6 +150,30 @@ $_SESSION['change'] = 2;
           append();
         }
     });
+    }
+    function buyScreen(animal){
+      $.ajax({
+        type: "POST",
+        url: "buyScreen.php",
+        data: {'data': animal},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
+    }
+    function buyFinal(animal){
+      $.ajax({
+        type: "POST",
+        url: "buyFinal.php",
+        data: {'data': animal},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+      });
     }
   </script>
   <div id = "footer">

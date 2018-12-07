@@ -118,7 +118,7 @@ $_SESSION['change'] = 2;
   </div>
   <div id = "searchsort" class ="row">
     <div class = "col-md-6" style = "text-align:center;">
-        <input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+        <!--<input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">-->
     </div>
     <div class = "col-md-6">
       <!--TODO: Make a dropdown sorting-->

@@ -28,6 +28,7 @@ ob_start();
    $animal = strtolower(preg_replace('/\s+/', '', $animal));
    $value = strtolower(preg_replace('/\s+/', '', $value));
      if(!is_bool(strpos($animal, $value)) || $value === ""){
+       $sid = $row["StringID"];
        $rarity = $row["Rarity"];
        if($rarity == 1){
          $rarity = "common";
@@ -53,7 +54,7 @@ ob_start();
        $times++;
        echo '<script>var oldsession = '.$oldsession.';
        var times = '.$times.'</script>
-         <div class = "col-md-4" id = "'.$_SESSION['change'].'"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p id = "price">'.$row['Price'].'</p></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></div>';
+         <div class = "col-md-4" id = "'.$_SESSION['change'].'"><a onclick = "buyScreen(\''.$sid.'\')"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p id = "price">'.$row['Price'].'</p></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center></a><br><br></div>';
 
      }
    }

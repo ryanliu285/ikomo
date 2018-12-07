@@ -49,6 +49,7 @@ $conn -> query($sql);
 
 mysqli_close($conn);
 
-echo '<script>location.reload();</script>';
+echo '<script>if(alert("Listing Successful!")){ window.location.reload();}
+else  {window.location.reload();} </script>';
 }
 ?>
