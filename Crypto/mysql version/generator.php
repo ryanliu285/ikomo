@@ -136,7 +136,7 @@ session_start();
             $Animal = "Clownfish";
           } else if ($x == 16){
             $Type = 2;
-            $Animal = "Phytoplankton";
+            $Animal = "Koi";
           }
           else if($x == 17){
             $Type = 3;
@@ -168,7 +168,7 @@ session_start();
             $Animal = "Zebra";
           } else if ($x == 26){
             $Type = 3;
-            $Animal = "Wolf";
+            $Animal = "Road Runner";
           } else if ($x == 27){
             $Type = 1;
             $Animal = "Munchkin Cat";
