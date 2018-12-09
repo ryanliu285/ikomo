@@ -186,7 +186,7 @@ session_start();
              $Animal = "Llama";
            } else if($x == 3){
              $Type = 1;
-             $Animal = "Pomski";
+             $Animal = "Pomeranian";
            }
             else if($x == 4){
               $Type = 2;
@@ -206,7 +206,7 @@ session_start();
               $Animal = "Tiger";
             } else if ($x == 9){
               $Type = 3;
-              $Animal = "Giraffe";
+              $Animal = "Lava Monster";
             }
             else if($x == 10){
               $Type = 3;
