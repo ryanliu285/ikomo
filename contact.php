@@ -61,7 +61,7 @@ if(isset($_POST['mail-submit'])) {
       padding: 0;
       padding-left: 5px;
       padding-top: 5px;
-      width: 90vh;
+      width: 70vh;
     }
     .message2{
       height: 25vh;
@@ -69,10 +69,10 @@ if(isset($_POST['mail-submit'])) {
       padding: 0;
       padding-left: 5px;
       padding-top: 5px;
-      width: 90vh;
+      width: 70vh;
     }
     .input {
-      width: 90vh;
+      width: 70vh;
     }
     .inputx {
       background-color: rgba(0,0,0,0);

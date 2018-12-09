@@ -35,6 +35,9 @@
         color: #EBCB5A;
         margin-top: 10%;
       }
+      #subtract {
+        margin-top: 
+      }
     </style>
   </head>
 
@@ -98,7 +101,7 @@
             </center>
         </div>
         <div class = "col-md-3">
-
+          <p id = "subtract">-100 KOMOcoins...</p>
         </div>
       </div>
     </div>

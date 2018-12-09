@@ -200,17 +200,11 @@ $id = $_SESSION['userID'];
             if($row["Animal"] == "Clownfish"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/clownfish.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Clownfish | Aquatic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
-            if($row["Animal"] == "Phytoplankton"){
-              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/phytoplankton.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Phytoplankton | Aquatic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
-            }
             if($row["Animal"] == "Brown Bear"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/brownbear.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Brown Bear | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             if($row["Animal"] == "Porcupine"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/porcupine.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Porcupine | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
-            }
-            if($row["Animal"] == "Skunk"){
-              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/skunk.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Skunk | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             if($row["Animal"] == "Fox"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/fox.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Fox | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
@@ -230,14 +224,12 @@ $id = $_SESSION['userID'];
             if($row["Animal"] == "Zebra"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/zebra.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Zebra | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
-            if($row["Animal"] == "Wolf"){
-              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/wolf.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Wolf | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
-            }
+
             if($row["Animal"] == "Munchkin Cat"){
               echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/munchkincat.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Munchkin Cat | Domestic</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             if($row["Animal"] == "Flying Squirrel"){
-              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/flysquirrel.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Flying Squirrel | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
+              echo '<div class = "col-md-4"><center><img class = "rareimg" height = "300px" width = "auto" src = "./img/ikomos/flyingsquirrel.png" alt = "Sorry, iKOMO coming soon!"></center><center><br><p>Flying Squirrel | Wild</p></center><center><p class = "raretxt">Rare</p></center><br><br></div>';
             }
             /* EPIC iKOMOs*/
             if($row["Animal"] == "Husky"){
