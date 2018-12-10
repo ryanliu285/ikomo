@@ -18,7 +18,7 @@
     $_SESSION['userAMT'] = $result;
     $cookie_name = "loaded";
     $cookie_value = "hasloaded";
-    setcookie($cookie_name, $cookie_value, time() + (3600), "/");
+    setcookie($cookie_name, $cookie_value, time() + (3600), "/", '.vei-ikomo.com', isset($_SERVER["HTTPS"]), true);
   }
  ?>
 <!DOCTYPE html>
@@ -28,6 +28,7 @@
   <meta name = "description" content = "Welcome to iKOMO! iKOMO promotes financial literacy by leveraging the power of fun. Through the fusion of blockchain technology and an imaginative outlet,
     iKOMO allows users to collect, trade, and interact with digital pets."/>
   <meta name = "viewport" content = "width=device-width, intial-scale=1"/>
+  <meta name = "author" content = "Created by Brandon Lee and Ryan Liu for South Pasadena High School."/>
   <link rel = "stylesheet" type = "text/css" href = "main.css">
   <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
   <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />

@@ -162,21 +162,21 @@ require 'header.php';
       }
     @media only screen and (min-width: 992px) {
       #mkp{
-        margin-top: 130%;
+        margin-top: 140%;
         float: right;
       }
       #arc{
         float: left;
-        margin-top: 130%;
+        margin-top: 140%;
       }
       #hme {
-        margin-top: 90%;
+        margin-top: 100%;
         float: left;
         position: relative;
         right: 45%;
       }
       #str{
-        margin-top: 90%;
+        margin-top: 100%;
         float: right;
         position: relative;
         left: 39%;

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['buyAMT'] = 500;
+$_SESSION['buyAMT'] = 100;
 if(isset($_SESSION ['userID'])){
   echo '<style>
     .signup {
@@ -129,7 +129,7 @@ if(isset($_SESSION ['userID'])){
                 <!--ERROR HANDLING for Sign Up -->
                 <h3>You are about to purchase 100 KOMOcoins. This is enough to purchase one iKOMO. Ensure that when buying KOMOcoins, you click the "return" button at the bottom after the checkout completes and that nothing else is in your virtual cart! Otherwise, your KOMOcoins will not be added and you must contact iKOMO support.<h3>
                 <!--TODO: Add image that shows what it looks like-->
-                <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/sack-of-komocoins500-ik500/"><button>Continue</button></a>
+                <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/pouch-of-komocoins-100-ik100/"><button>Continue</button></a>
               </div>
               <div class = "col-md-1">
               </div>
