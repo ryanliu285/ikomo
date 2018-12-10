@@ -142,7 +142,7 @@ $_SESSION['change'] = 2;
       console.log(value);
       $.ajax({
         type: "POST",
-        url: "myIkomo.php",
+        url: "./unc/myIkomo.php",
         data: {'data': value},
         success: function(msg) {
           x = msg;
