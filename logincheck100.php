@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['buyAMT'] = 100;
+$_SESSION['buyAMT'] = 500;
 if(isset($_SESSION ['userID'])){
   echo '<style>
     .signup {
@@ -99,18 +99,22 @@ if(isset($_SESSION ['userID'])){
       margin-top: 20px;
     }
     #signupoverlay {
-      margin: auto;
-      padding: auto;
       position: absolute;
-      z-index: 9999999999999;
+      margin-top: -50%;
+      z-index: 99999999999;
       background-color: rgba(235, 255, 253, 0.97);
       border-radius: 15px;
       border: solid;
-      border-width: 5px;
+      border-width: 10px;
       border-color: rgba(136, 211, 229, 0.92);
     }
     .signuperror {
       color: rgb(210, 22, 25);
+      font-family: "Dimbo";
+      font-size: 16px;
+    }
+    .signupsucc {
+      color: rgb(22, 152, 47);
       font-family: "Dimbo";
       font-size: 16px;
     }
@@ -122,9 +126,10 @@ if(isset($_SESSION ['userID'])){
               </div>
               <div class = "col-md-10 signup">
                 <center><h2>Instructions</h2></center>
-                <h3>When buying KOMOcoins, please click the "return" button at the bottom after the checkout completes!<h3>
+                <!--ERROR HANDLING for Sign Up -->
+                <h3>You are about to purchase 100 KOMOcoins. This is enough to purchase one iKOMO. Ensure that when buying KOMOcoins, you click the "return" button at the bottom after the checkout completes and that nothing else is in your virtual cart! Otherwise, your KOMOcoins will not be added and you must contact iKOMO support.<h3>
                 <!--TODO: Add image that shows what it looks like-->
-                <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/pouch-of-komocoins-100-ik100/"><button>Continue</button></a>
+                <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/sack-of-komocoins500-ik500/"><button>Continue</button></a>
               </div>
               <div class = "col-md-1">
               </div>

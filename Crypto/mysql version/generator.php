@@ -146,7 +146,7 @@ session_start();
             $Animal = "Porcupine";
           } else if ($x == 19){
             $Type = 3;
-            $Animal = "Skunk";
+            $Animal = "Porcupine";
           } else if ($x == 20){
             $Type = 3;
             $Animal = "Fox";
@@ -168,7 +168,7 @@ session_start();
             $Animal = "Zebra";
           } else if ($x == 26){
             $Type = 3;
-            $Animal = "Road Runner";
+            $Animal = "Zebra";
           } else if ($x == 27){
             $Type = 1;
             $Animal = "Munchkin Cat";
@@ -186,7 +186,7 @@ session_start();
              $Animal = "Llama";
            } else if($x == 3){
              $Type = 1;
-             $Animal = "Pomeranian";
+             $Animal = "Great White Shark";
            }
             else if($x == 4){
               $Type = 2;
@@ -205,7 +205,7 @@ session_start();
               $Type = 3;
               $Animal = "Tiger";
             } else if ($x == 9){
-              $Type = 3;
+              $Type = 4;
               $Animal = "Lava Monster";
             }
             else if($x == 10){

@@ -99,7 +99,7 @@ if(isset($_SESSION ['userID'])){
       margin-top: 20px;
     }
     #signupoverlay {
-      margin: auto;
+      margin-top: -50%;
       position: absolute;
       z-index: 999999999999;
       background-color: rgba(235, 255, 253, 0.97);
@@ -127,7 +127,7 @@ if(isset($_SESSION ['userID'])){
               <div class = "col-md-10 signup">
                 <center><h2>Instructions</h2></center>
                 <!--ERROR HANDLING for Sign Up -->
-                <h3>When buying KOMOcoins, please click the "return" button at the bottom after the checkout completes!<h3>
+                <h3>You are about to purchase 2000 KOMOcoins. This is enough to purchase twenty iKOMO. Ensure that when buying KOMOcoins, you click the "return" button at the bottom after the checkout completes and that nothing else is in your virtual cart! Otherwise, your KOMOcoins will not be added and you must contact iKOMO support.<h3>
                 <!--TODO: Add image that shows what it looks like-->
                 <a href = "https://portal.veinternational.org/buybuttons/us021804/btn/barrel-of-komocoins2000-ik2000/"><button>Continue</button></a>
               </div>

@@ -33,7 +33,7 @@ else{
 }
 echo '<script>console.log(\''.$animal.'\');</script>
 <div class = "overlay '.$rarity.'img">
-<a style = "float:right; font-size: 20px;" onclick = "$(\'.overlay\').remove()">X</a>
+<a style = "float:right; font-size: 20px; margin: 0 5px 0 0;" onclick = "$(\'.overlay\').remove()">X</a>
 <br>
 <center><p style = "color: white; font-size: 50px;">'.$animal.'</p></center>
 <center><p style = "color: white; font-size: 40px;">'.$rarity.'</p></center>

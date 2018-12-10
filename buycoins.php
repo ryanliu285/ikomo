@@ -89,7 +89,7 @@
       text-align: center;
     }
   }
-    @media only screen and (min-width: 1366px) {
+    @media only screen and (min-width: 1080px) {
     #footer {
       position: fixed;
       left: 0;
@@ -283,7 +283,7 @@
       border-bottom-color:  #daba38;
       border-bottom-width: 3px;
       border-bottom-style: solid;
-      margin-top: 40%;
+      margin-top: 50%;
     }
     .bigbt:hover {
       cursor: pointer;

@@ -208,7 +208,7 @@
       border-bottom-color:  #daba38;
       border-bottom-width: 3px;
       border-bottom-style: solid;
-      margin-top: 70%;
+      margin-top: 76%;
     }
     .bigbt:hover {
       cursor: pointer;
@@ -260,8 +260,8 @@
         <div id = "mainWelcomeText" class = "col-md-5">
           <img id = "iKOMOoverlay" src = "./img/ikomos/bunny.png"/>
           <img id = "COINoverlay" src = "./img/ikocoin.png"/>
-            <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins!</button></a>
-            <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO!</button></a>
+            <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins (Using Virtual $)</button></a>
+            <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Using KOMOcoins)</button></a>
             <script>
             var ikool = document.getElementById('iKOMOoverlay');
             var cool = document.getElementById('COINoverlay');

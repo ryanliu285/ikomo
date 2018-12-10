@@ -157,7 +157,9 @@ require 'header.php';
       #loggedin {
         display: none;
       }
+      #shibwelcome{
 
+      }
     @media only screen and (min-width: 992px) {
       #mkp{
         margin-top: 130%;
@@ -279,12 +281,23 @@ require 'header.php';
                   </div>
                   <div class = "signup col-md-6">
                       <br>
-                      <img height = "175px" width = "auto" src = "./img/shibwelcome.png">
+                      <center><img id = "shibwelcome" height = "175px" width = "auto" src = "./img/shibwelcome.png"></center>
                   </div>
               </div>
               <div class = "row">
-                  <div class = "col-md-6">
-                      <form class = "signup" action = "includes/login.inc.php" method = "post">
+                  <div class = "col-md-6">';
+                  if(isset($_GET['error'])){
+                    if($_GET['error'] == "emptyloginfields"){
+                        echo '<center><p class = "signuperror">Please fill in all fields!</p></center>';
+                    }
+                    else if ($_GET["error"] == "nouser"){
+                      echo '<center><p class = "signuperror">No such user! Please sign up.</p></center>';
+                    }
+                    else if ($_GET["error"] == "wrongpass"){
+                      echo '<center><p class = "signuperror">Wrong Password!</p></center>';
+                  }
+                }
+                  echo   '<form class = "signup" action = "includes/login.inc.php" method = "post">
                         <input class = "inputx" type = "text" name = "mailuid" placeholder = "username">
                         <br>
                         <br>

@@ -13,10 +13,11 @@ $_SESSION['change'] = 2;
     .overlay{
     opacity:1;
     background-color:#ccc;
-    position:fixed;
-    top:10%;
+    position: fixed;
+    width: auto;
+    top:5%;
     right: 10%;
-    bottom: 10%;
+    bottom: 5%;
     left:10%;
     z-index:1000;
 }
@@ -176,34 +177,4 @@ $_SESSION['change'] = 2;
       });
     }
   </script>
-  <div id = "footer">
-    <div class = "container-fluid">
-      <div class = "row">
-        <div class = "col-md-1">
-          <p id = "closedisclaimer">X</p>
-        </div>
-        <div class = "col-md-1">
-
-        </div>
-        <div class = col-md-8>
-          <br>
-          <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p></center>
-        </div>
-        <div class = "col-md-2">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-<script>
-var fol = document.getElementById('footer');
-
-$("#closedisclaimer").click(function(){
-  $("#footer").addClass('animated bounceOutDown');
-  setTimeout(function(){
-    fol.style.display = "none";
-  }, 2000);
-});
-</script>
 </html>

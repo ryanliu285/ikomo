@@ -23,6 +23,6 @@ $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
 $result = mysqli_query($conn,$sql);
 mysqli_close($conn);
 unset($_SESSION['buyAMT']);
-echo "<script>window.location.href='./buycoins.php';</script>";
+echo "<script>window.location.href='./mainInterface.php';</script>";
 exit();
 ?>

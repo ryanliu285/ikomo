@@ -102,34 +102,103 @@ require 'header.php';
 .center {
   margin: 0 auto;
 }
-
+.image {
+  margin-top: 10px;
+  border-radius: 15px;
+  border: solid;
+  border-width: 10px;
+  border-color: rgba(136, 211, 229, 0.92);
+}
+.vid {
+  margin-top: 10px;
+  border-radius: 15px;
+  border: solid;
+  border-width: 10px;
+  border-color: rgba(136, 211, 229, 0.92);
+}
+.titles {
+  margin-top: 10px;
+}
+#newsletterdownload {
+  font-size: 30px;
+}
+#abttxt {
+  font-size: 30px;
+}
   </style>
   </head>
-<body class = "aboutbg">
-  <div class= "container-fluid">
+<body>
+  <div class = "container-fluid">
     <div class = "row">
-      <div class = "col-md-3">
+      <div class = "col-md-2">
 
       </div>
-      <div id = "aboutoverlay1" class = "col-md-6">
-        <center><h2>View our Commercial!</h2> </center>
-        <video height = "70%" width = "auto" controls>
-          <source src = "./img/commercial.mp4">
-          Your browser does not support video.
-        </video>
-        <br>
-        <center><p id = "move1">---------></p></center>
+
+      <div class = "col-md-8">
+        <center><img class = "titles" width = "auto" src = "./img/abt.png"/><br>
+        <p id = "abttxt">iKOMO promotes financial literacy through the power of fun. By combining blockchain technology with an imaginative outlet, iKOMO cultivates a community by allowing users to collect, trade, and interact with digital pets. iKOMO falls under the crypto-collectibles industry, which is a subset of the collectibles industry. Crypto-collectibles are similar to baseball cards in that they can be collected and traded by the owner, but on a digital platform. Every iKOMO pet is assigned a rarity level: common, rare, epic, or legendary, each with a different probability of hatching. 
+</p>
       </div>
-      <div id = "aboutoverlay2" class = "col-md-6">
+
+      <div class = "col-md-2">
 
       </div>
-      <div id = "aboutoverlay3" class = "col-md-6">
+    </div>
+  </div>
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-2">
 
       </div>
-      <div class = "col-md-3">
+
+      <div class = "col-md-8">
+        <center><img class = "titles" width = "auto" src = "./img/team.png"/><br>
+        <img class = "image" width = "auto" src = "./img/ourteam.jpg"/><br></center>
+      </div>
+
+      <div class = "col-md-2">
+
+      </div>
+    </div>
+  </div>
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-2">
+
+      </div>
+
+      <div class = "col-md-8">
+        <center><img class = "titles" width = "auto" src = "./img/commercial.png"/><br>
+        <video class = "vid" height = "auto" controls> <source src = "./img/commercial.mp4"> Your browser does not support HTML5 video.</video><br></center>
+      </div>
+
+      <div class = "col-md-2">
+
+      </div>
+    </div>
+  </div>
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-2">
+
+      </div>
+
+      <div class = "col-md-8">
+        <center><img class = "titles" width = "auto" src = "./img/newsletter.png"/><br>
+        <img class = "image" width = "auto" src = "./img/newslettersnip.jpg"/><br>
+        <a id = "newsletterdownload" href = "./img/DECNewsletter.pdf">Click here to continue reading..</a></center>
+      </div>
+
+      <div class = "col-md-2">
 
       </div>
     </div>
   </div>
     </body>
+
+    <script>
+      $(".titles").height($(window).width()/10);
+      $(".image").height($(window).height()/1.2);
+      $(".vid").width($(window).width()/2.3);
+    </script>
 </html>
