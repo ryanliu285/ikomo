@@ -143,7 +143,7 @@ $_SESSION['change'] = 2;
       console.log(value);
       $.ajax({
         type: "POST",
-        url: "onChange.php",
+        url: "./unc/onChange.php",
         data: {'data': value},
         success: function(msg) {
           x = msg;
