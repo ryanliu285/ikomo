@@ -136,7 +136,7 @@ require 'header.php';
 
       <div class = "col-md-8">
         <center><img class = "titles" width = "auto" src = "./img/abt.png"/><br>
-        <p id = "abttxt">iKOMO promotes financial literacy through the power of fun. By combining blockchain technology with an imaginative outlet, iKOMO cultivates a community by allowing users to collect, trade, and interact with digital pets. iKOMO falls under the crypto-collectibles industry, which is a subset of the collectibles industry. Crypto-collectibles are similar to baseball cards in that they can be collected and traded by the owner, but on a digital platform. Every iKOMO pet is assigned a rarity level: common, rare, epic, or legendary, each with a different probability of hatching. 
+        <p id = "abttxt">iKOMO promotes financial literacy through the power of fun. By combining blockchain technology with an imaginative outlet, iKOMO cultivates a community by allowing users to collect, trade, and interact with digital pets. iKOMO falls under the crypto-collectibles industry, which is a subset of the collectibles industry. Crypto-collectibles are similar to baseball cards in that they can be collected and traded by the owner, but on a digital platform. Every iKOMO pet is assigned a rarity level: common, rare, epic, or legendary, each with a different probability of hatching.
 </p>
       </div>
 
@@ -185,8 +185,9 @@ require 'header.php';
 
       <div class = "col-md-8">
         <center><img class = "titles" width = "auto" src = "./img/newsletter.png"/><br>
-        <img class = "image" width = "auto" src = "./img/newslettersnip.jpg"/><br>
-        <a id = "newsletterdownload" href = "./img/DECNewsletter.pdf">Click here to continue reading..</a></center>
+        <p id = "newsletterdownload" >Current Issue: November/December 2018</p>
+        <a id = "newsletterdownload" href = "./img/DECNewsletter.pdf">Click here to continue reading..</a>
+        <img class = "image" width = "auto" src = "./img/newslettersnip.jpg"/><br></center>
       </div>
 
       <div class = "col-md-2">
