@@ -43,7 +43,6 @@ if(isset($_POST['mail-submit'])) {
     background-size: cover;
   }
     #contactoverlay{
-    height: 70vh;
     margin-top: 20px;
     background-color: rgba(255,255,255,0.9);
     border-radius: 15px;
@@ -107,6 +106,10 @@ if(isset($_POST['mail-submit'])) {
   font-size: 24px;
   font-family: ("Dimbo");
 }
+.learnmore {
+  font-size: 25px;
+  margin-right: 30px;
+}
   </style>
   </head>
 <body class = "contactbg">
@@ -118,7 +121,9 @@ if(isset($_POST['mail-submit'])) {
     <div id = "contactoverlay" class = "col-md-6">
       <center>
          <h2>Contact Us!</h2>
-         <?php if ($msg == 1){
+         <?php
+         if(isset($_POST['mail-submit'])) {
+         if ($msg == 1){
            echo '<p class = "success">Email Sent!</p>';
          } else {
            if($msg ==2){
@@ -128,6 +133,10 @@ if(isset($_POST['mail-submit'])) {
 
            }
          }
+       } else {
+         echo '<center><p>Your can also reach us through: </p><br><a href = "https://www.facebook.com/IKOMO-VEI-999053610286250/" class = "learnmore"><img height = "50px" src = "./img/fb.png"/></a>
+         <a href = "https://www.instagram.com/ikomo.vei/" class = "learnmore"><img height = "50px" src = "./img/insta.png"/></a></center><br>';
+       }
           ?>
                     <form class = "contactform" action = "contact.php" method = "post">
                     <input class = "inputx input" type = "text" name = "email" placeholder = "Email" required>
@@ -140,6 +149,7 @@ if(isset($_POST['mail-submit'])) {
                     <br>
                     <br>
                     <button class = "buttonx" type = "submit" name = "mail-submit">Send Email.</button></form>';
+
       </center>
     </div>
     <div class = "col-md-3">
@@ -148,7 +158,7 @@ if(isset($_POST['mail-submit'])) {
   </div>
 </div>
 </body>
-<?php
-
-?>
+<script>
+  $("#contactoverlay").height($(window).height()/1.2);
+</script>
 </html>
