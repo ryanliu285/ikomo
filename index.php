@@ -456,6 +456,7 @@ require 'header.php';
           }, 1000);
         });
       </script>
+      <!--This script handles animations between login and learn more page divs. -->
       <script>
       var sol = document.getElementById('signupoverlay');
       var aol = document.getElementById('accountoverlay');
@@ -536,6 +537,7 @@ require 'header.php';
       });
     </script>
   </body>
+  <!-- This function ensures that upon multiple website visits, the user does not have to load the same assets -->
   <?php
     if(!isset($_COOKIE[$cookie_name])){
         echo '<script type = "text/javascript">
@@ -588,40 +590,6 @@ require 'header.php';
       </script>';
     }
   ?>
-<script>
-/*  function progress (){
-    var ol = document.getElementById('overlay');
-    var hol = document.getElementById('hoverlay');
-    var sol = document.getElementById("accountoverlay");
-    var lol = document.getElementById('loggedin');
-    var prg = document.getElementById('progress');
-    var counter = 0;
-    var progress = 0;
-    var percent = document.getElementById('percentCount');
-    var id = setInterval(frame,50);
-    hol.style.display = "block";
-    function frame(){
-        if(progress >= 500 && counter >= 100){
-          clearInterval(id);
-          ol.style.display = "none";
-          hol.style.display = "none";
-          lol.style.display = "block";
-          $("#accountoverlay").addClass('animated bounceInUp');
-          $("#shopButton").addClass("animated bounceInUp");
-          $("#usernameanim").addClass("animated bounceInUp");
-          $("#shopanim").addClass("animated bounceInUp");
-        }
-        else{
-          progress += 10;
-          counter +=2;
-          prg.style.width = progress + 'px';
-          percent.innerHTML = counter + '%';
-        }
-      }
 
-  }
-  progress();
-*/
-</script>
 
  </html>
