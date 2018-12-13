@@ -51,7 +51,7 @@ require './includes/dbh.inc.php';
           <div id = "arcadeoverlay" class = "col-md-6">
               <center>
               <h1>iKOMO Arcade coming soon</h1>
-              <h2>Once 1000 iKOMOs are in circulation, the arcade will unlock.</h2>
+              <h2>Once 2000 iKOMOs are in circulation, the arcade will unlock.</h2>
               <p id = "counter"><?php
               $quer = "SELECT * FROM owners";
               $res = mysqli_query($conn, $quer) or die('Please return to home and sign in!');
