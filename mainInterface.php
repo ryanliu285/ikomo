@@ -262,6 +262,7 @@
           <img id = "COINoverlay" src = "./img/ikocoin.png"/>
             <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins (Using Virtual $)</button></a>
             <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Using KOMOcoins)</button></a>
+            <a onclick="window.location.href = './redeemcode.php'"><button class = "bigbt" id = "buyButton">Redeem Code</button></a>
             <script>
             var ikool = document.getElementById('iKOMOoverlay');
             var cool = document.getElementById('COINoverlay');
