@@ -27,7 +27,7 @@
   <meta charset = "utf-8">
   <meta name = "description" content = "Welcome to iKOMO! iKOMO promotes financial literacy by leveraging the power of fun. Through the fusion of blockchain technology and an imaginative outlet,
     iKOMO allows users to collect, trade, and interact with digital pets."/>
-  <meta name = "viewport" content = "width=device-width, intial-scale=1"/>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
   <meta name = "author" content = "Created by Brandon Lee and Ryan Liu for South Pasadena High School."/>
   <link rel = "stylesheet" type = "text/css" href = "main.css">
   <link rel = "stylesheet" type = "text/css" href = "animate.css"/>
@@ -35,6 +35,15 @@
   <title>VEI iKOMO</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="icon" type="image/png" href="img/favicon.png" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132043841-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132043841-1');
+  </script>
   <style>
   #hoverlay {
     width: 100%;
@@ -109,8 +118,8 @@
         <?php
           if(isset($_SESSION['userID'])){
             $hello = "Hello ";
-            $ex = "!";
-            echo '<br><p id = "usernameanim" class = "username">'.$hello.$_SESSION["userUID"].$ex;'</p>';
+            $claim = "!";
+            echo '<br><p id = "usernameanim" class = "username">'.$hello.$_SESSION["userUID"].$claim;'</p>';
 
           } else {
 
@@ -130,6 +139,7 @@
         else {
 
         }
+
       ?>
     </div>
       <div class = "col-md-1">

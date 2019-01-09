@@ -5,8 +5,6 @@
  <html>
   <head>
     <style>
-    /*macbook is 1318px */
-
     @media only screen and (min-width: 992px) {
       #footer {
         position: fixed;
@@ -83,7 +81,7 @@
       }
       .bigbt{
         background-color: #F7E188;
-        font-size: 24px;
+        font-size: 20px;
         font-family: "Dimbo";
         text-decoration: none;
         text-align: center;
@@ -200,7 +198,7 @@
     }
     .bigbt{
       background-color: #F7E188;
-      font-size: 24px;
+      font-size: 20px;
       font-family: "Dimbo";
       text-decoration: none;
       text-align: center;
@@ -261,7 +259,7 @@
           <img id = "iKOMOoverlay" src = "./img/ikomos/bunny.png"/>
           <img id = "COINoverlay" src = "./img/ikocoin.png"/>
             <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins (Using Virtual $)</button></a>
-            <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Using KOMOcoins)</button></a>
+            <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Uses 100 KOMOcoins)</button></a>
             <script>
             var ikool = document.getElementById('iKOMOoverlay');
             var cool = document.getElementById('COINoverlay');

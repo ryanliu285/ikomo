@@ -32,11 +32,25 @@
         border-bottom-style: solid;
         display: none;
         font-size: 40px;
-        color: #EBCB5A;
-        margin-top: 10%;
+        color: white;
+        margin-top: 2%;
+      }
+      #shoptxt {
+        background-color: rgba(106, 196, 206, 0.92);
+        font-family: "Dimbo";
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-bottom-color: rgba(89, 154, 165, 0.92);
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        display: none;
+        font-size: 40px;
+        color: white;
+        margin-top: 2%;
       }
       #subtract {
-        margin-top: 
+        margin-top:
       }
     </style>
   </head>
@@ -50,7 +64,8 @@
         <div class = "col-md-6">
           <center>
             <p id = "opentxt">Click the egg to reveal your iKOMO!</p>
-            <a href = "profile.php" id = "returntxt">Click to return to your collection.</a>
+            <a href = "profile.php" id = "returntxt">Click to visit your collection.</a>
+            <a href = "mainInterface.php" id = "shoptxt">Click to buy another iKOMO.</a>
             <br>
             <div id = "display"><?php
             session_start();
@@ -101,7 +116,6 @@
             </center>
         </div>
         <div class = "col-md-3">
-          <p id = "subtract">-100 KOMOcoins...</p>
         </div>
       </div>
     </div>
@@ -110,13 +124,16 @@
   var eol = document.getElementById('display');
   var clol = document.getElementById('opentxt');
   var rol = document.getElementById('returntxt');
+  var r2ol = document.getElementById('shoptxt');
     $("#open").click(function(){
       $('#open').css("background-image", "url(./img/openegg.gif)");
       $("#opentxt").addClass("animated fadeOut");
       setTimeout(function(){
         clol.style.display = "none";
         rol.style.display = "block";
+        r2ol.style.display = "block";
         $("#returntxt").addClass("animated fadeIn");
+        $("#shoptxt").addClass("animated fadeIn");
       }, 1000);
       setTimeout(function(){
         $("#display").addClass('animated fadeIn');

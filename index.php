@@ -10,6 +10,9 @@ require 'header.php';
     <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <style>
+    #disclaimtxt{
+      color: white;
+    }
       .signup {
         text-align: center;
       }
@@ -147,7 +150,7 @@ require 'header.php';
       #closedisclaimer:hover{
         cursor: pointer;
       }
-      #disclaimtxt{
+      #{
         color: white;
         padding-top: 5px;
       }
@@ -521,7 +524,7 @@ require 'header.php';
 
           </div>
           <div class = col-md-8>
-            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO). <br/> This site also uses cookies to ensure the best experience on our website.</p></center>
+            <center><p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO). <br/> We also use cookies to ensure the best experience on this website. </p></center>
           </div>
           <div class = "col-md-2">
             <img id = "disclaimerimg" height = "70px" width = "auto" src = "./img/VE_mark_type.png"/>
@@ -576,7 +579,7 @@ require 'header.php';
     } else {
       echo '<script type = text/javascript>
       var ol = document.getElementById(\'overlay\');
-      var hol = document.getElementById(\'hoverlay\');
+      var hol = document.getElementById(\'hoverlay\')
       var sol = document.getElementById(\'accountoverlay\');
       var lol = document.getElementById(\'loggedin\');
       var prg = document.getElementById(\'progress\');
