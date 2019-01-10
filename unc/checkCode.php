@@ -16,7 +16,7 @@ session_start();
  $result = $conn->query($sql);
    $times = 0;
 
- if ($result->num_rows >= 0) {
+ if ($result->num_rows > 0) {
    $row = $result->fetch_assoc();
       if(!($row["used"])){ //if not used
         $eggsTemp = $row["eggs"];
@@ -29,7 +29,8 @@ session_start();
         }else{
           $eggs = 50;
         }
-        echo 'var eggs = '.$eggs.';
+        echo '<script>
+        var eggs = '.$eggs.';
         $.ajax({
           type: "POST",
           url: "./Crypto/mysql version/generatorMult.php",
@@ -39,7 +40,8 @@ session_start();
             console.log("Check ended");
             append();
           }
-        });';
+        });
+        </script>';
       }else{//if used
         echo '<p style = "color:red;"> ERROR: Code already used </p>';
       }
