@@ -171,12 +171,7 @@ require 'header.php';
     </div>
     <script>
     function append(){
-      $("#searchsort").append(x);
-      for(i=0; i<=oldsession; i++){
-        if($('#' + oldsession).remove()){
-          console.log("removed");
-        }
-      }
+      $("#redeem").append(x);
     }
       function startRedemption(){
           var value = $('#redeem').val();
