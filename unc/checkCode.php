@@ -45,6 +45,8 @@ session_start();
       }else{//if used
         echo '<p style = "color:red;"> ERROR: Code already used </p>';
       }
+   }else{
+     echo '<p style = "color:red;"> ERROR: Code does not exist </p>';
    }
    mysqli_close($conn);
  ?>
