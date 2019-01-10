@@ -166,7 +166,7 @@ require 'header.php';
     </div>
     <div class = "row">
       <p class = "col-sd-3">Please Enter Your Code Here:</p>
-      <input class = "col-sd-6" type="text" placeholder = "Code"></input>
+      <input name = "data" id = "input"class = "col-sd-6" type="text" placeholder = "Code"></input>
       <button id = "redeem" onclick = "startRedemption()">Redeem</button>
     </div>
     <script>
@@ -174,7 +174,7 @@ require 'header.php';
       $(document).append(x);
     }
       function startRedemption(){
-          var value = $('#redeem').val();
+          var value = $('#input').val();
           $.ajax({
             type: "POST",
             url: "./unc/checkCode.php",
