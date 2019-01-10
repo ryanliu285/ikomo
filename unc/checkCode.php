@@ -17,8 +17,9 @@ session_start();
    $times = 0;
 
  if ($result->num_rows >= 0) {
-      if(!($result["used"])){ //if not used
-        $eggsTemp = $result["eggs"];
+   $row = $result->fetch_assoc()
+      if(!($row["used"])){ //if not used
+        $eggsTemp = $row["eggs"];
         if($eggsTemp == 'five'){
           $eggs = 5;
         }else if ($eggsTemp == 'ten'){
