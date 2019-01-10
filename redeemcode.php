@@ -171,7 +171,7 @@ require 'header.php';
     </div>
     <script>
     function append(){
-      $("#redeem").append(x);
+      $(document).append(x);
     }
       function startRedemption(){
           var value = $('#redeem').val();

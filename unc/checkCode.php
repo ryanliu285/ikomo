@@ -12,7 +12,7 @@ session_start();
    die("Connection failed: ".mysqli_connect_error());
  }
 
- $sql = "SELECT * FROM Codes WHERE code = '.$value.'";
+ $sql = "SELECT * FROM Codes WHERE code = \''.$value.'\'";
  $result = $conn->query($sql);
    $times = 0;
 
@@ -24,7 +24,7 @@ session_start();
           $eggs = 5;
         }else if ($eggsTemp == 'ten'){
           $eggs = 10;
-        }else if ($eggsTemp == 'Twenty'){
+        }else if ($eggsTemp == 'twenty'){
           $eggs = 20;
         }else{
           $eggs = 50;
