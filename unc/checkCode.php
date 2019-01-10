@@ -11,8 +11,7 @@ session_start();
  if(!$conn){
    die("Connection failed: ".mysqli_connect_error());
  }
-echo '<script>console.log('.$value.')</script>';
- $sql = "SELECT * FROM Codes WHERE code = \''.$value.'\'";
+ $sql = "SELECT * FROM Codes WHERE code == \''.$value.'\'";
  $result = $conn->query($sql);
    $times = 0;
 

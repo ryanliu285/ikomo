@@ -175,6 +175,7 @@ require 'header.php';
     }
       function startRedemption(){
           var value = $('#input').val();
+          console.log(value);
           $.ajax({
             type: "POST",
             url: "./unc/checkCode.php",
