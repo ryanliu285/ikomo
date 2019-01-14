@@ -5,7 +5,6 @@ session_start();
  $dBUsername = "dbo759106289";
  $dBPassword = "SPdidsway1st";
  $dbName = "db759106289";
- require 'header.php';
  $connection = mysqli_connect($servername, $dBUsername, $dBPassword, $dbName);
 
  if(!$connection){
@@ -17,7 +16,7 @@ session_start();
  if (mysqli_num_rows($result) > 0) {
    echo '<p style = "color:green;"> A code has been found </p>';
    $row = $result->fetch_assoc();
-      if((!$row["used"])){ //if not used
+      if(($row["used"])=='FALSE'){ //if not used
         $eggsTemp = $row["eggs"];
         if($eggsTemp == 'five'){
           $eggs = 5;
@@ -41,6 +40,9 @@ session_start();
           }
         });
         </script>';
+
+         $sql = "UPDATE Codes SET used = 'TRUE' WHERE code = '$value'";
+         $result = mysqli_query($connection, $sql) or die('Please try again');
       }else{//if used
       echo '<p style = "color:red;"> ERROR: Code already used </p>';
       }

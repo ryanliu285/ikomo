@@ -76,22 +76,22 @@
             $rarity = $_SESSION["rarity'.$eggNumber.'"];
             $animal = $_SESSION["animal'.$eggNumber.'"];
             $rarity = preg_replace('/\s+/', '', $rarity);
-            echo "<div class = 'col-md-2'>You got a " . $rarity . " " . $animal . "!";
+            echo "<div style = 'font-size:23px;' class = 'col-md-2'>You got a " . $rarity . " " . $animal . "!";
             $animal = preg_replace('/\s+/', '', $animal);
             $url = strtolower($animal) . ".png";
             if($rarity === "rare"){
             echo "<br><img style = 'background-color: rgb(68, 181, 200);
-            height: 300px;
+            height: 175px;
             width: auto;
             border-radius: 15px;
             border-color: rgb(38, 152, 171);
             border-width: 10px;
-            border-style: solid;' src = './img/ikomos/$url' alt = 'Sorry! iKOMO images coming soon!'></div>";
+            border-style: solid;' src = './img/ikomos/$url' alt = 'Sorry! iKOMO images coming soon!'>";
             }
             if($rarity === "common"){
               echo "<br><img style = 'background-color: rgb(193, 200, 161);
               border-radius: 15px;
-              height: 300px;
+              height: 175px;
               width: auto;
               border-color: rgb(171, 185, 110);
               border-width: 10px;
@@ -100,7 +100,7 @@
             if($rarity === "epic"){
               echo "<br><img style = 'background-color: rgb(211, 146, 224);
               border-radius: 15px;
-              height: 300px;
+              height: 175px;
               width: auto;
               border-color: rgb(191, 60, 217);
               border-width: 10px;
@@ -109,7 +109,7 @@
             if($rarity === "legendary"){
               echo "<br><img style = 'background-color: rgb(215, 189, 74);
               border-radius: 15px;
-              height: 300px;
+              height: 175px;
               width: auto;
               border-color: rgb(198, 164, 18);
               border-width: 10px;
@@ -121,7 +121,7 @@
           }
           $y++;
           echo "<div class = 'col-md-1'>
-          </div>";
+          </div></div>";
         }
               ?>
             </div>
