@@ -249,12 +249,6 @@ session_start();
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());
      }
-     $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$UID.'';
-     $coins = 0;
-     $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
-     $coins = $result-=100;
-     $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$UID.'';
-     $result = mysqli_query($conn,$sql);
 
      $sql = "SELECT StringID FROM owners";
      $result = $conn->query($sql);
@@ -305,8 +299,6 @@ session_start();
      }
      $eggNumber++;
    }
-
-     $conn->close();
 
      echo "<script> window.location.href = '../../resultMult.php'</script>";
      exit();

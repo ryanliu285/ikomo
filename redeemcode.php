@@ -164,21 +164,21 @@ require 'header.php';
     <div>
       <h1>Redeem Code</h1>
     </div>
-    <div class = "row">
+    <div id = "appendThis" class = "row">
       <p class = "col-sd-3">Please Enter Your Code Here:</p>
       <input name = "data" id = "input"class = "col-sd-6" type="text" placeholder = "Code"></input>
       <button id = "redeem" onclick = "startRedemption()">Redeem</button>
     </div>
     <script>
     function append(){
-      $('#redeem').append(x);
+      $('#appendThis').append(x);
     }
       function startRedemption(){
           var value = $('#input').val();
           console.log(value);
           $.ajax({
             type: "POST",
-            url: "./unc/checkCode.php",
+            url: "./checkCode.php",
             data: {'data': value},
             success: function(msg) {
               x = msg;
