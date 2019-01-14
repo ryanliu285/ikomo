@@ -10,15 +10,15 @@ session_start();
    <body>
      <?php
      //Traits of Ikomo: String, owner(userID), rarity, type, health
-		 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		 $charactersLength = strlen($characters);
-		 $randomString = '';
-		 for ($i = 0; $i < 64; $i++) {
+		 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; //Characters used in generating stringID
+		 $charactersLength = strlen($characters); //Check length of $characters
+		 $randomString = ''; //initialize the stringID
+		 for ($i = 0; $i < 64; $i++) { //loop through and add random characters from $characters to $randomString to turn $randomString into a randomly generated 64 character string
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		 }
-     $UID = $_SESSION['userID'];
-     echo "<script>console.log( {$_SESSION['userID']} );</script>";
-     $x = rand(1,100);
+     $UID = $_SESSION['userID']; //Set $UID to the id of the logged in user
+     echo "<script>console.log( {$_SESSION['userID']} );</script>"; //Testing purposes
+     $x = rand(1,100);//$x is used to find rarity out of 100
      echo "<script>console.log( $x );</script>";
      if($x<=32){
        $Rarity = 1;
@@ -79,7 +79,7 @@ session_start();
             $Type = 2;
             $Animal = "Goldfish";
           } else if ($x == 15){
-            $Type = 1;
+            $Type = 2;
             $Animal = "Turkey";
           } else{
             $Type = 4;
@@ -89,7 +89,7 @@ session_start();
      else if ($Rarity == 2){
        $x = rand(1,28);
          if($x == 1){
-           $Type = 1;
+           $Type = 2;
            $Animal = "Snake";
          } else if ($x == 2){
            $Type = 1;
