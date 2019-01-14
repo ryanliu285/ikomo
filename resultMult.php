@@ -69,7 +69,8 @@
             $y = 0;
             while($y<$eggs/5){
             echo '<div class = row>
-            <div class = col-md-1>';
+            <div class = col-md-1>
+            </div>';
             $x = 0;//every 5
             while($x<5){
             $rarity = $_SESSION["rarity'.$eggNumber.'"];
@@ -120,7 +121,6 @@
           }
           $y++;
           echo "<div class = 'col-md-1'>
-          </div>
           </div>";
         }
               ?>
