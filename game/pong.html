@@ -1,6 +1,13 @@
 <!DOCTYPE html>
+<head>
+  <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
 <html>
-    <canvas id = "gameCanvas" width = "800" height = "600"></canvas>
+  <div class = "row">
+    <div class = "col-md-2">
+    </div>
+    <div class = "col-md-8">
+    <canvas id = "gameCanvas" width = "800" height = "450"></canvas>
     <img style = "display:none;" src = '../img/tenniscourt.png' id = "image">
     <script>
         var canvas;
@@ -40,18 +47,17 @@
             })
         }
         function ballReset(){
-            ballSpeedX = 10;
+            ballSpeedX = 4;
             ballSpeedX = -ballSpeedX;
             ballX = canvas.width/2;
             ballY = canvas.height/2;
         }
         function computerMovement()  {
             if(paddle2Y < ballY){
-                paddle2Y= paddle2Y +7.5;
-
+                paddle2Y= paddle2Y + 7.2;
             } else
                 {
-                    paddle2Y = paddle2Y-7.5;
+                    paddle2Y= paddle2Y - 7.2;
                 }
 
         }
@@ -90,7 +96,7 @@
             var ctx = c.getContext("2d");
             var img = document.getElementById("image")
             ctx.drawImage(img,0,0);
-            colorCircle(ballX, ballY, 10, 'red');
+            colorCircle(ballX, ballY, 10, 'LightGreen');
             colorRect(0, paddle1Y, 10, PADDLE_HEIGHT, 'white');
             colorRect(790, paddle2Y,10,PADDLE_HEIGHT, 'white');
         }
@@ -106,4 +112,8 @@
             canvasContext.fill();
         }
     </script>
+  </div>
+  <div class = "col-md-2">
+  </div>
+  </div>
 </html>
