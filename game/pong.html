@@ -3,22 +3,23 @@
   <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 </head>
 <html>
-  <div class = "row">
-    <div class = "col-md-2">
-    </div>
-    <div class = "col-md-8">
-    <canvas id = "gameCanvas" width = "800" height = "450"></canvas>
+      <center>
+      <img id = "playerimg" style = "display:none;" width = "75" height = "auto"src = "./chickTennis.png">
+    <canvas id = "gameCanvas" width = "800" height = "450">
+    </canvas>
     <img style = "display:none;" src = '../img/tenniscourt.png' id = "image">
     <script>
         var canvas;
         var canvasContext;
-        var ballX = 400;
+        var ballX = -400;
         var ballSpeedX = 10;
         var ballY = 300;
         var ballSpeedY = 7;
         var paddle1Y = 250;
         var paddle2Y = 250;
         const PADDLE_HEIGHT = 125;
+        var mousePos;
+        var mousePos = 250;
 
         function calculateMousePos(evt){
             var rect = canvas.getBoundingClientRect();
@@ -42,40 +43,40 @@
             }, 1000/framesPerSecond);
 
             canvas.addEventListener('mousemove', function(evt){
-                var mousePos = calculateMousePos(evt);
+                mousePos = calculateMousePos(evt);
                 paddle1Y = mousePos.y - (PADDLE_HEIGHT/2);
             })
         }
         function ballReset(){
+          setTimeout(function () {
             ballSpeedX = 4;
             ballSpeedX = -ballSpeedX;
             ballX = canvas.width/2;
             ballY = canvas.height/2;
+          }, 2000);
         }
         function computerMovement()  {
             if(paddle2Y < ballY){
-                paddle2Y= paddle2Y + 7.2;
+                paddle2Y= paddle2Y + 7;
             } else
                 {
-                    paddle2Y= paddle2Y - 7.2;
+                    paddle2Y= paddle2Y - 7;
                 }
-
         }
         function moveEverything(){
             computerMovement();
             ballX = ballX + ballSpeedX;
             ballY = ballY + ballSpeedY;
-            if(ballX < 0){
-                if(ballY > paddle1Y && ballY < paddle1Y+PADDLE_HEIGHT){
+            if(ballX < 120){
+                if(ballY > mousePos.y && ballY < mousePos.y+80){
                     ballSpeedX-=3;
                     ballSpeedX = -ballSpeedX;
                 } else {
                     ballReset();
                 }
             }
-            if(ballX>canvas.width)
+            else if(ballX>canvas.width)
                 {
-
                 if(ballY > paddle2Y && ballY < paddle2Y+PADDLE_HEIGHT){
                     ballSpeedX+=3;
                     ballSpeedX = -ballSpeedX;
@@ -92,13 +93,17 @@
             }
         }
         function drawEverything(){
+            var player = new Image();
+            var ai = new Image();
+            player.src = "./chickTennis.png";
+            ai.src = "./slimeTennis.png";
             var c = document.getElementById("gameCanvas");
             var ctx = c.getContext("2d");
-            var img = document.getElementById("image")
+            var img = document.getElementById("image");
             ctx.drawImage(img,0,0);
             colorCircle(ballX, ballY, 10, 'LightGreen');
-            colorRect(0, paddle1Y, 10, PADDLE_HEIGHT, 'white');
-            colorRect(790, paddle2Y,10,PADDLE_HEIGHT, 'white');
+            ctx.drawImage(player, 0, mousePos.y);
+            ctx.drawImage(ai,700,paddle2Y);
         }
         function colorRect(leftX, topY, width, height, drawColor){
             canvasContext.fillStyle = drawColor;
@@ -112,8 +117,5 @@
             canvasContext.fill();
         }
     </script>
-  </div>
-  <div class = "col-md-2">
-  </div>
-  </div>
+  </center>
 </html>
