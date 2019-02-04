@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 </head>
 <html>
@@ -87,6 +88,9 @@ h1{
                     paddle2Y= paddle2Y - 7;
                 }
         }
+        function append(x){
+          $("#gameCanvas").append(x);
+        }
         function moveEverything(){
             computerMovement();
             ballX = ballX + ballSpeedX;
@@ -103,7 +107,9 @@ h1{
                       life.style.display = "none";
                       lives--;
                       if(lives==0){
-                        window.location.href = "./gameover.php";
+                        $.post("logScore.php", {data: score}, function(data,status){
+                        append(data);
+                        });
                       }
                     ballReset();
                 }
