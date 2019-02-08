@@ -167,7 +167,7 @@
     }
     #arcadeoverlay{
       margin-top: 20px;
-      height: 500px;
+      height: auto;
       width: 500px;
       background-color: rgba(255, 255, 255, 0.98);
     }
@@ -243,7 +243,7 @@ $res =  $conn -> query($sql);
 while($now =$res->fetch_assoc()){
   if($result+240000 < $now["NOW()+1"]){//240000
     echo '<script>console.log("'.$now["NOW()+1"].'")</script>';
-    $sql = 'UPDATE * SET date= '.$now["NOW()+1"].'';
+    $sql = 'UPDATE date SET date= '.$now["NOW()+1"].'';
     $result = $conn -> query($sql);
     $sql = 'UPDATE iKOMODB SET played = 0';
     $result = $conn -> query($sql);
