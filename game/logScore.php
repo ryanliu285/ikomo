@@ -1,6 +1,7 @@
 <?php
 session_start();
 $score =  $_POST['data'];
+$_SESSION['scoreTennis'] = $score;
 $user = $_SESSION ['userUID'];
 $servername = "db759106289.hosting-data.io";
 $dBUsername = "dbo759106289";

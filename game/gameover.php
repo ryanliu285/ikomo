@@ -215,6 +215,8 @@
 </html>
 
 <?php
+$dayofweek = date('w', strtotime(date("Y-m-d H:i:s")));
+$id = $_SESSION["userID"];
 $servername = "db759106289.hosting-data.io";
 $dBUsername = "dbo759106289";
 $dBPassword = "SPdidsway1st";
@@ -232,6 +234,21 @@ $scoreName2 = 'NONE';
 $scoreName3 = 'NONE';
 $scoreName4 = 'NONE';
 $scoreName5 = 'NONE';
+$uid = $_SESSION["userUID"];
+
+$sql = 'SELECT * FROM date';
+$result = $conn -> query($sql)->fetch_object()->date;
+$sql = 'SELECT NOW()+1';
+$res =  $conn -> query($sql);
+while($now =$res->fetch_assoc()){
+  if($result+240000 < $now["NOW()+1"]){//240000
+    echo '<script>console.log("'.$now["NOW()+1"].'")</script>';
+    $sql = 'UPDATE * SET date= '.$now["NOW()+1"].'';
+    $result = $conn -> query($sql);
+    $sql = 'UPDATE iKOMODB SET played = 0';
+    $result = $conn -> query($sql);
+
+}}
 
 $sql = 'SELECT * FROM TennisScore ORDER BY score DESC LIMIT 5';
 
@@ -256,11 +273,37 @@ if ($result->num_rows >= 0) {
     }else if ($x == 4){
       $score4 = $row["score"];
       $scoreName4 = $row["user"];
+      $x = 5;
     }else{
       $score5 = $row["score"];
       $scoreName5 = $row["user"];
     }
   }
+
+$sql = 'SELECT played FROM iKOMODB WHERE uidUsers = "'.$uid.'"';
+$result = $conn -> query($sql);
+$result = $result -> fetch_object()->played;
+  if($result==0){
+  $played = FALSE;
+  $earnings = $_SESSION['scoreTennis']/10*25;
+  if($earnings < 25){
+    $played = TRUE;
+  }else{
+    $sql = 'SELECT KOMOcoins FROM iKOMODB WHERE idUsers = '.$id.'';
+    $coins = 0;
+    if(!(mysqli_query($conn, $sql))){
+      echo "Failed, please send a screenshot of this error to ikomo.vei@gmail.com";
+    }
+    $result = mysqli_query($conn, $sql)->fetch_object()->KOMOcoins;
+    $coins = $result+=$earnings;
+    $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
+    $result = mysqli_query($conn,$sql);
+    $sql = 'UPDATE iKOMODB SET played = 1 WHERE uidUsers = '.$uid.'';
+    $result = $conn -> query($sql);
+  }
+}else{
+  $played = TRUE;
+}
 
 mysqli_close($conn);
 
@@ -270,8 +313,12 @@ echo '<div id = "scoreBoard">
 <center><h1>3rd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName3.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score3.' points</h1></center>
 <center><h1>4th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName4.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score4.' points</h1></center>
 <center><h1>5th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName5.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score5.' points</h1></center>
+<center><h1 id = "daily">YOU EARNED YOUR DAILY '.$earnings.' KOMO KOINS FOR ACHIEVING '.$_SESSION['scoreTennis'].' points</h1></center>
 </div>
 <script>var overlay = document.getElementById(\'arcadeoverlay\');
 overlay.appendChild(document.getElementById(\'scoreBoard\'));</script>';
+if($played){
+  echo "<script>$('#daily').remove();</script>";
+}
 }
 ?>
