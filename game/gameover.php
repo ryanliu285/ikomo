@@ -298,7 +298,7 @@ $result = $result -> fetch_object()->played;
     $coins = $result+=$earnings;
     $sql = 'UPDATE iKOMODB SET KOMOcoins = '.$coins.' WHERE idUsers = '.$id.'';
     $result = mysqli_query($conn,$sql);
-    $sql = 'UPDATE iKOMODB SET played = 1 WHERE uidUsers = '.$uid.'';
+    $sql = 'UPDATE iKOMODB SET played = 1 WHERE idUsers = '.$id.'';
     $result = $conn -> query($sql);
   }
 }else{
