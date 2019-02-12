@@ -2,8 +2,8 @@
 session_start();
 $game = $_SESSION['game'];
 if($game = 'tennis'){
-echo 'window.location.href = "./game/pong.html";';
+echo '<script type="text/javascript">window.location.href = "./game/pong.html";</script>';
 }else if($game = 'heights'){
-echo 'window.location.href = "./iKOMOheights/index.php";';
+echo '<script type="text/javascript">window.location.href = "./iKOMOheights/index.php";</script>';
 }
  ?>

@@ -371,7 +371,7 @@ $id = $_SESSION['userID'];
             success: function(msg) {
               x = msg;
               console.log("Check ended");
-              document.getElementById("choosethis").append(x);
+              $("#iKOMOdisplay").append(x);
             }
           });
         }, 1000);
