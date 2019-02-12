@@ -364,7 +364,16 @@ $id = $_SESSION['userID'];
       function createCookie(){
         Cookies.set('ArcadeAnimalx', clickedid, {expires: 7});
         setTimeout(function(){
-          window.location.href = "./iKOMOheights/index.php";
+          $.ajax({
+            type: "POST",
+            url: "./getGame.php",
+            data: {},
+            success: function(msg) {
+              x = msg;
+              console.log("Check ended");
+              document.getElementById("choosethis").append(x);
+            }
+          });
         }, 1000);
       }
     </script>
