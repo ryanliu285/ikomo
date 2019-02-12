@@ -35,10 +35,10 @@ h1{
     <canvas id = "gameCanvas" width = "1200" height = "670">
     </canvas>
     <script>
-      var x = Cookies.get('ArcadeAnimalx');
-      x+="Tennis.png";
-      console.log(x);
-      $("#playerimg").attr("src", x);
+      var playerChoose = Cookies.get('ArcadeAnimalx');
+      playerChoose+="Tennis.png";
+      console.log(playerChoose);
+      $("#playerimg").attr("src", playerChoose);
         var score = 0;
         var lives = 3;
         var canvas;
@@ -148,8 +148,8 @@ h1{
         function drawEverything(){
             var player = new Image();
             var ai = new Image();
-            player.src = "./chickTennis.png";
-            ai.src = "./slimeTennis.png";
+            player.src = playerChoose;
+            ai.src = "./slimeAi.png";
             var c = document.getElementById("gameCanvas");
             var ctx = c.getContext("2d");
             var img = document.getElementById("image");
