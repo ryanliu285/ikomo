@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src = "/assets/js/js.cookie.js"></script>
   <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 </head>
 <html>
@@ -27,12 +29,15 @@ h1{
 </div>
 </div>
       <center>
-      <img id = "playerimg" style = "display:none;" width = "75" height = "auto"src = "./chickTennis.png">
-      <img id = "aiimg" style = "display:none;" width = "55" height = "auto"src = "./slimeTennis.png">
+      <img id = "playerimg" style = "display:none;" width = "75" height = "auto">
+      <img id = "aiimg" style = "display:none;" width = "55" height = "auto"src = "./slimeAi.png">
       <img id = "image" style = "display:none;" width = "800" height = "auto" src = '../img/tenniscourt.png'>
     <canvas id = "gameCanvas" width = "1200" height = "670">
     </canvas>
     <script>
+      var playerChoose = Cookies.get('ArcadeAnimalx');
+      playerChoose+="Tennis.png";
+      $("#playerimg").attr("src", playerChoose);
         var score = 0;
         var lives = 3;
         var canvas;
@@ -44,7 +49,6 @@ h1{
         var paddle1Y = 250;
         var paddle2Y = 250;
         const PADDLE_HEIGHT = 125;
-        var mousePos;
         var mousePos = 250;
 
         function calculateMousePos(evt){
@@ -87,6 +91,9 @@ h1{
                     paddle2Y= paddle2Y - 7;
                 }
         }
+        function append(x){
+          $("#gameCanvas").append(x);
+        }
         function moveEverything(){
             computerMovement();
             ballX = ballX + ballSpeedX;
@@ -103,7 +110,9 @@ h1{
                       life.style.display = "none";
                       lives--;
                       if(lives==0){
-                        window.location.href = "./gameover.php";
+                        $.post("logScore.php", {data: score}, function(data,status){
+                        append(data);
+                        });
                       }
                     ballReset();
                 }
@@ -137,8 +146,8 @@ h1{
         function drawEverything(){
             var player = new Image();
             var ai = new Image();
-            player.src = "./chickTennis.png";
-            ai.src = "./slimeTennis.png";
+            player.src = playerChoose;
+            ai.src = "./slimeAi.png";
             var c = document.getElementById("gameCanvas");
             var ctx = c.getContext("2d");
             var img = document.getElementById("image");
