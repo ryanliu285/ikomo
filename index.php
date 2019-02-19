@@ -268,7 +268,7 @@ require 'header.php';
                             <div class = "col-md-3 test">
                             <div id = "topblocker1 test">
                             </div>
-                              <a href = "arcade.php" id = "arc" class = "buttonx bigbt">Arcade</a>
+                              <a href = "arcadeMain.php" id = "arc" class = "buttonx bigbt">Arcade</a>
                             </div>
                           </div>
                         </div>';
