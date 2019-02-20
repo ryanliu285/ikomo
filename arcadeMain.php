@@ -1,5 +1,6 @@
 <?php
 require 'header.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -129,7 +130,7 @@ require 'header.php';
     success: function(msg) {
       x = msg;
       console.log("Check ended");
-      window.location.href = "./choosecharacter.php";
+      $('#mainWelcomeText').append(x);
     }
   });
   }
