@@ -87,9 +87,6 @@ $id = $_SESSION['userID'];
       border-bottom-style: solid;
       padding: 3px;
     }
-    #rarityChange {
-      margin-bottom: 2vh;
-    }
     body {
 
     }

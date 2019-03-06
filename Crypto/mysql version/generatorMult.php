@@ -223,7 +223,7 @@ session_start();
             }
 
          }else{
-           $x = rand(1,4);
+           $x = rand(1,5);
            if($x == 1){
              $Type = 1;
             $Animal = "Shiba Inu";
@@ -233,6 +233,9 @@ session_start();
           }else if ($x == 3){
             $Type = 3;
             $Animal = "Panda";
+          }else if($x == 4){
+            $Type = 4;
+            $Animal = "The Golden Jackalope";
           }else{
             $Type = 4;
             $Animal = "Dragon";

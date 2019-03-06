@@ -113,38 +113,21 @@ $_SESSION['change'] = 2;
 #search:active { background-image: none; text-indent: 0px;} */
     </style>
   </head>
-<body class = "marketbg">
-  <div id = mainWelcomeText>
-    <h1>Marketplace</h1>
-  </div>
-  <div id = "searchsort" class ="row">
-    <div class = "col-md-6" style = "text-align:center;">
-        <!--<input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">-->
-    </div>
-    <div class = "col-md-6">
-      <!--TODO: Make a dropdown sorting-->
-      <h1 style = "float:right; "><a style = "color:red;" href = "listing.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
-    </div>
-  </div>
   <!--TODO: Display stuff based on search bar-->
   <script>
-  var oldsession = 2;
-  inputChange("");
   var x;
   function append(){
     $("#searchsort").append(x);
-    for(i=0; i<=oldsession; i++){
-      if($('#' + oldsession).remove()){
-        console.log("removed");
-      }
-    }
   }
-    function inputChange(value){
-      console.log(value);
+    function inputChange(){
+      var rarityChange = document.getElementById('rarityChange').value;
+      var sortChange = document.getElementById('sortChange').value;
+      console.log($(".ikomoAnimal"));
+      $(".ikomoAnimal").remove();
       $.ajax({
         type: "POST",
-        url: "./unc/onChange.php",
-        data: {'data': value},
+        url: "./onChange.php",
+        data: {'rarityChange': rarityChange, 'sortChange': sortChange},
         success: function(msg) {
           x = msg;
           console.log("Check ended");
@@ -176,5 +159,32 @@ $_SESSION['change'] = 2;
         }
       });
     }
+  </script>
+<body class = "marketbg">
+  <div id = mainWelcomeText>
+    <h1>Marketplace</h1>
+  </div>
+  <div id = "searchsort" class ="row">
+    <div class = "col-md-6" style = "text-align:center;">
+      <select id = "sortChange" onchange="inputChange()">
+        <!--<option value="dla">Date Listed (Ascending)</option>
+        <option value="dld">Date Listed (Descending)</option>-->
+        <option value="phl">Price (High to Low)</option>
+        <option value="plh">Price (Low to High)</option>
+      </select>
+      <select id = "rarityChange" onchange = "inputChange()">
+        <option value="all">All Rarities</option>
+        <option value="common">Common</option>
+        <option value="rare">Rare</option>
+        <option value="epic">Epic</option>
+        <option value="legendary">Legendary</option>
+      </select>
+    </div>
+    <div class = "col-md-6">
+      <h1 style = "float:right; "><a style = "color:red;" href = "listing.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    </div>
+  </div>
+  <script>
+  inputChange();
   </script>
 </html>
