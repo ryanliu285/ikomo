@@ -313,7 +313,7 @@ echo '<div id = "scoreBoard">
 <center><h1>3rd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName3.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score3.' points</h1></center>
 <center><h1>4th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName4.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score4.' points</h1></center>
 <center><h1>5th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$scoreName5.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$score5.' points</h1></center>
-<center><h1 id = "daily">YOU EARNED YOUR DAILY '.$earnings.' KOMO KOINS FOR ACHIEVING '.$_SESSION['scoreTennis'].' points</h1></center>
+<center><h1 id = "daily">YOU EARNED YOUR DAILY '.$earnings.' KOMOCOINS FOR ACHIEVING '.$_SESSION['scoreTennis'].' points</h1></center>
 </div>
 <script>var overlay = document.getElementById(\'arcadeoverlay\');
 overlay.appendChild(document.getElementById(\'scoreBoard\'));</script>';

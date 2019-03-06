@@ -1,6 +1,3 @@
-<?php
- require "header.php";
- ?>
 <!DOCTYPE html>
  <html>
   <head>
@@ -383,18 +380,112 @@
       margin-left: 82%;
     }
   }
-  }
-
+  }    #disclaimtxt{
+        color: white;
+      }
+        .signup {
+          text-align: center;
+        }
+        #overlay {
+          width: 100%;
+          height: 200%;
+          background-color: #F9F4D2;
+          position: fixed;
+          z-index: 101;
+        }
+        .percent-count {
+          width: 450px;
+          height: 50px;
+          margin: 10px auto;
+          font-size: 40px;
+          text-align: center;
+          color: #71DDE2;
+        }
+        .progress-bar {
+          width: 506px;
+          height: 26px;
+          background-color: #71DDE2;
+          border-radius: 13px;
+          margin: 10px auto;
+        }
+        .progress {
+          width: 25px;
+          height: 20px;
+          border-radius: 10px;
+          background-color: #34ABB7;
+        }
+        #loading {
+          height: 200px;
+          width: 100%;
+        }
+        #loadimage {
+          display: block;
+          margin: 10px auto;
+        }
     </style>
     <link rel = "stylesheet" type = "text/css" href = "main.css"/>
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "./animate.css"/>
     <title>VEI iKOMO</title>
   </head>
-  <br>
-  <br>
-  <br>
   <body class = "bgstore">
+      <div id = "tut">
+        <div id = "tutorialText">
+          <div class = "row">
+            <div class = "col-md-2"><img src = "./img/ikomos/mantaray.png" width="auto" height="200px"></div>
+            <div class = "col-md-9"class = "animated BounceInRight" id = "textBack" onclick = "next()">
+              <p id = "1.1"><br>Once at the store, there are three options to choose from: Using virtual currency to purchase KOMOcoins, redeeming codes from trade fairs, or buying iKOMO using KOMOcoins. (Click to continue!)</p>
+              <p id = "2.1" class = "step"><br>First, I'll show you how to get KOMOcoins! (Click to continue!)</p>
+              <p id = "3.1" class = "step"><br>Click on the “Buy KOMOcoins (Using Virtual $)” Button.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+    var current = 1;
+      function next(){
+        if(current == 2){
+          $("#buyCoins").attr("onclick","window.location.href = './schoolCoins.php'");
+          $("#buyButton").addClass('animated heartBeat');
+          $("#textBack").attr("onclick","");
+        }
+        setTimeout(function(){
+          $("#textBack").removeClass('animated bounceInRight');
+          $("#textBack").addClass('animated bounceOutRight');
+          // var temp = document.getElementById(current+".2");
+          // temp.style.display = 'none';
+        }, 50);
+        var temp = document.getElementById(current+".1");
+        temp.style.display = 'none';
+        current++;
+        setTimeout(function(){
+        $("#textBack").removeClass('animated bounceOutRight');
+        $("#textBack").addClass('animated bounceInRight');
+        var temp = document.getElementById(current+".1");
+        temp.style.display = 'block';
+        // var temp = document.getElementById(current+".2");
+        // temp.style.display = 'block';
+        }, 50);
+      }
+    </script>
+    <style>
+      #textBack{
+        border-radius: 15px;
+        background-color: rgba(136, 211, 229, 0.92);
+        cursor:pointer;
+        border-color: black;
+      }
+      #tutorialText{
+        float:bottom;
+      }
+      #bootText{
+        word-wrap: break-word;
+      }
+      .step{
+        display:none;
+      }
+    </style>
     <div class = "container-fluid">
       <div class = "row">
         <div class = "col-md-3">
@@ -403,9 +494,9 @@
           <img id = "iKOMOoverlay" src = "./img/ikomos/bunny.png"/>
           <img id = "COINoverlay" src = "./img/ikocoin.png"/>
           <img id = "REDEEMoverlay" src = "./img/chickanim.gif"/>
-            <a onclick="window.location.href = './buycoins.php'"><button class = "bigbt" id = "buyButton">Buy KOMOcoins (Using Virtual $)</button></a>
-            <a onclick="window.location.href = './redeemcode.php'"><button class = "bigbt" id = "buyButton3">Redeem Code</button></a>
-            <a onclick="balancecheck()"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Using 100 KOMOcoins)</button></a>
+            <a id = "buyCoins"><button class = "bigbt" id = "buyButton">Buy KOMOcoins (Using Virtual $)</button></a>
+            <a id = "redeemCode"><button class = "bigbt" id = "buyButton3">Redeem Code</button></a>
+            <a id = "buyIkomo"><button class = "bigbt" id = "buyButton2">Buy iKOMO! (Using 100 KOMOcoins)</button></a>
             <script>
             var ikool = document.getElementById('iKOMOoverlay');
             var reol = document.getElementById('REDEEMoverlay');
@@ -477,4 +568,40 @@
   });
   </script>
   </body>
+  <?php
+        echo '<script type = "text/javascript">
+        function progress (){
+            var ol = document.getElementById(\'overlay\');
+            var hol = document.getElementById(\'hoverlay\');
+            var sol = document.getElementById(\'accountoverlay\');
+            var lol = document.getElementById(\'loggedin\');
+            var prg = document.getElementById(\'progress\');
+            var counter = 0;
+            var progress = 0;
+            var percent = document.getElementById(\'percentCount\');
+            var id = setInterval(frame,50);
+            hol.style.display = "block";
+            function frame(){
+                if(progress >= 500 && counter >= 100){
+                  clearInterval(id);
+                  ol.style.display = "none";
+                  hol.style.display = "none";
+                  lol.style.display = "block";
+                  $("#accountoverlay").addClass(\'animated bounceInUp\');
+                  $("#shopButton").addClass(\'animated bounceInUp\');
+                  $("#usernameanim").addClass(\'animated bounceInUp\');
+                  $("#shopanim").addClass(\'animated bounceInUp\');
+                }
+                else{
+                  progress += 10;
+                  counter +=2;
+                  prg.style.width = progress + \'px\';
+                  percent.innerHTML = counter + \'%\';
+                }
+              }
+
+          }
+          progress();</script>
+          ';
+  ?>
  </html>
