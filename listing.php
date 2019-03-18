@@ -175,6 +175,18 @@ $_SESSION['change'] = 2;
         }
     });
     }
+    function quickSell(animal){
+      $.ajax({
+        type: "POST",
+        url: "quickFinal.php",
+        data: {'data': animal, 'price': $('#priceInput').val()},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
+    }
   </script>
 
 </html>
