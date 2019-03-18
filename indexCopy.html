@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to iKOMO! iKOMO promotes financial literacy by leveraging the power of fun. Through the fusion of blockchain technology and an imaginative outlet,
+      iKOMO allows users to collect, trade, and interact with digital pets." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Created by Brandon Lee and Ryan Liu for South Pasadena High School." />
+  <link rel="stylesheet" type="text/css" href="animate.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <title>VEI iKOMO</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <style>
+  .commontxt {
+    color: rgb(193, 200, 161);
+  }
+
+  .raretxt {
+    color: rgb(61, 79, 186);
+  }
+  .epictxt {
+    color: rgb(211, 146, 224);
+  }
+  .legendarytxt {
+    color: rgb(215, 189, 74);
+  }
+  @font-face {
+      font-family: "Dimbo";
+      src: url(./Font/Dimbo.ttf);
+  }
+  * {
+    font-family: "Dimbo";
+  }
+    div {
+      border: 0.1px solid white;
+    }
+    #banner {
+      height: 70px;
+      padding-top: 20px;
+      background-color: #FFF5DC;
+      border: 1px solid #FFF5DC;
+    }
+    .colorcover {
+      border: 1px solid #FFF5DC;
+
+    }
+    #landing {
+      height: 75vh;
+    }
+    #landing-content-main {
+      padding-top: 5vh;
+    }
+    #explain {
+      height: 100vh;
+      opacity: 0.8;
+      background-image: url("./img/tempbg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #logo {
+      content:url("./img/ikomo.png");
+    }
+    #logo:hover {
+      content:url("./img/ikologohover.png");
+    }
+    #explain-content {
+      height: 60%;
+      margin-top: 20vh;
+      margin-left: 20%;
+      width: 60%;
+      background-color: rgba(235, 255, 253, 0.92);
+      display: block;
+      border-radius: 15px;
+      border: solid;
+      border-width: 10px;
+      border-color: rgba(136, 211, 229, 0.92);
+    }
+    .buttonx{
+      background-color: rgba(106, 196, 206, 0.92);
+      font-size: 18px;
+      font-family: "Dimbo";
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      color: black;
+      border-bottom-color: rgba(89, 154, 165, 0.92);
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+    }
+    .buttonx:hover {
+      color: black;
+    }
+    #xssds{
+      color: rgb(0, 0, 0);
+      font-family: "Dimbo";
+    }
+    .centered {
+      margin: auto;
+    }
+    #golden {
+      color: rgb(198, 164, 18);
+    }
+    #golden:hover {
+      color: rgb(215, 189, 74);
+    }
+    #headercls {
+      margin-top: 30px;
+    }
+    #button-index {
+      margin-top: 20vh;
+      color: #75c4d1;
+      font-family: "Dimbo";
+      padding-left: 4vw;
+    }
+    .commonimg {
+      background-color: rgb(193, 200, 161);
+      border-radius: 15px;
+      border-color: rgb(171, 185, 110);
+      border-width: 10px;
+      border-style: solid;
+    }
+
+    .rareimg {
+      background-color: rgb(68, 181, 200);
+      border-radius: 15px;
+      border-color: rgb(38, 152, 171);
+      border-width: 10px;
+      border-style: solid;
+    }
+
+    .epicimg {
+      background-color: rgb(211, 146, 224);
+      border-radius: 15px;
+      border-color: rgb(191, 60, 217);
+      border-width: 10px;
+      border-style: solid;
+    }
+
+    .legendaryimg {
+      background-color: rgb(215, 189, 74);
+      border-radius: 15px;
+      border-color: rgb(198, 164, 18);
+      border-width: 10px;
+      border-style: solid;
+    }
+    #bunny {
+      display: none;
+      margin-top: 15vh;
+    }
+    #duck {
+      display: none;
+      margin-top: 15vh;
+    }
+    #mouse {
+      display: none;
+      margin-top: 15vh;
+    }
+    #lizard {
+      display: none;
+      margin-top: 15vh;
+    }
+    #snail {
+      display: none;
+      margin-top: 15vh;
+    }
+    #shrimp {
+      display: none;
+      margin-top: 15vh;
+    }
+    #squid {
+      display: none;
+      margin-top: 15vh;
+    }
+    #seaurchin {
+      display: none;
+      margin-top: 15vh;
+    }
+    #jellyfish {
+      display: none;
+      margin-top: 15vh;
+    }
+    #frog {
+      display: none;
+      margin-top: 15vh;
+    }
+    #deer {
+      display: none;
+      margin-top: 15vh;
+    }
+    #pigeon {
+      display: none;
+      margin-top: 15vh;
+    }
+    #slime {
+      display: none;
+      margin-top: 15vh;
+    }
+    #goldfish {
+      display: none;
+      margin-top: 15vh;
+    }
+    #turkey {
+      display: none;
+      margin-top: 15vh;
+    }
+    #jackalope {
+      display: none;
+      margin-top: 15vh;
+    }
+    #snake {
+      display: none;
+      margin-top: 15vh;
+    }
+    #koi {
+      display: none;
+      margin-top: 15vh;
+    }
+    #ferret {
+      display: none;
+      margin-top: 15vh;
+    }
+    #parrot {
+      display: none;
+      margin-top: 15vh;
+    }
+    #cow {
+      display: none;
+      margin-top: 15vh;
+    }
+    #sheep {
+      display: none;
+      margin-top: 15vh;
+    }
+    #pig {
+      display: none;
+      margin-top: 15vh;
+    }
+    #calicocat {
+      display: none;
+      margin-top: 15vh;
+    }
+    #chick {
+      display: none;
+      margin-top: 15vh;
+    }
+    #crab {
+      display: none;
+      margin-top: 15vh;
+    }
+    #turtle {
+      display: none;
+      margin-top: 15vh;
+    }
+    #mantaray {
+      display: none;
+      margin-top: 15vh;
+    }
+    #seahorse {
+      display: none;
+      margin-top: 15vh;
+    }
+    #otter {
+      display: none;
+      margin-top: 15vh;
+    }
+    #starfish {
+      display: none;
+      margin-top: 15vh;
+    }
+    #clownfish {
+      display: none;
+      margin-top: 15vh;
+    }
+    #brownbear {
+      display: none;
+      margin-top: 15vh;
+    }
+    #porcupine {
+      display: none;
+      margin-top: 15vh;
+    }
+    #fox {
+      display: none;
+      margin-top: 15vh;
+    }
+    #elephant {
+      display: none;
+      margin-top: 15vh;
+    }
+    #bull {
+      display: none;
+      margin-top: 15vh;
+    }
+    #monkey {
+      display: none;
+      margin-top: 15vh;
+    }
+    #moose {
+      display: none;
+      margin-top: 15vh;
+    }
+    #zebra {
+      display: none;
+      margin-top: 15vh;
+    }
+    #munchkincat {
+      display: none;
+      margin-top: 15vh;
+    }
+    #flyingsquirrel {
+      display: none;
+      margin-top: 15vh;
+    }
+    #husky {
+      display: none;
+      margin-top: 15vh;
+    }
+    #llama {
+      display: none;
+      margin-top: 15vh;
+    }
+    #shark {
+      display: none;
+      margin-top: 15vh;
+    }
+    #octopus {
+      display: none;
+      margin-top: 15vh;
+    }
+    #penguin {
+      display: none;
+      margin-top: 15vh;
+    }
+    #lion {
+      display: none;
+      margin-top: 15vh;
+    }
+    #tiger {
+      display: none;
+      margin-top: 15vh;
+    }
+    #lavamonster {
+      display: none;
+      margin-top: 15vh;
+    }
+    #koala {
+      display: none;
+      margin-top: 15vh;
+    }
+    #phoenix {
+      display: none;
+      margin-top: 15vh;
+    }
+    #unicorn {
+      display: none;
+      margin-top: 15vh;
+    }
+    #shiba {
+      display: none;
+      margin-top: 15vh;
+    }
+    #orca {
+      display: none;
+      margin-top: 15vh;
+    }
+    #panda {
+      display: none;
+      margin-top: 15vh;
+    }
+    #dragon {
+      display: none;
+      margin-top: 15vh;
+    }
+    .slidingImage{
+      display: none;
+      margin-top: 15vh;
+    }
+    #school {
+      padding-top: 10vh;
+      height: 70vh;
+      background-color: #EFFEFA;
+      border-color: #EFFEFA;
+      border-width: 10px;
+      border-style: solid;
+    }
+    #animchick {
+      height: 400px;
+      width: auto;
+    }
+    #footer {
+      padding-top: 15vh;
+    }
+    #shibwelcome {
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="banner">
+    <div class="colorcover container">
+      <div class="colorcover row">
+        <div class="colorcover col-md-2">
+
+        </div>
+        <div class="colorcover col-md-8">
+          <center><h6> <strong>Special Event: </strong>
+          <a href = "#" id = "golden">The Golden Dolphin </a>
+          is available to hatch for a limited time!</h6></center>
+        </div>
+        <div class = "colorcover col-md-2">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <header id = "headercls">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-md-8">
+        </div>
+        <div class = "col-md-1">
+          <button class = "centered buttonx"><a id = "xssds" href = "about.php">About iKOMO</a></button>
+        </div>
+        <div class = "col-md-1">
+          <button class = "centered buttonx"><a id = "xssds" href = "generation1.html">Generation 1</a></button>
+        </div>
+        <div class = "col-md-1">
+          <button class = "centered buttonx"><a id = "xssds" href = "generation2.html">Generation 2</a></button>
+        </div>
+        <div class = "col-md-1">
+          <button class = "centered buttonx"><a id = "xssds" href = "index.php">Enter iKOMO!</a></button>
+        </div>
+        <div class = "col-md-1">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="landing" class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+
+      <div id = "landing-content-main" class="col-md-6">
+        <img id = "logo" height = "35%" width = "auto" src = "./img/ikomo.png">
+        <br>
+        <br>
+        <br>
+
+        <h1><a id = "button-index" href = "index.php">Start Creating Your Cryptokingdom!</a>
+        <br>
+        <br>
+        <h3>Welcome to iKOMO, where your virtual kingdom comes to life!</h3> <!-- NEEDS EDITS -->
+      </div>
+      <div id = "landing-content-flex" class = "col-md-4">
+        <div id  ="bunny">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/bunny.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Bunny | Domestic</p>
+          </center>
+        </div>
+          <div id = "mouse">
+            <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/mouseIK.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Mouse | Domestic</p>
+            </center>
+          </div>
+
+          <div id = "lizard">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/lizard.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Lizard | Domestic</p>
+            </center>
+          </div>
+          <div id = "snail">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/bluesnail.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Blue Snail | Domestic</p>
+            </center>
+          </div>
+          <div id = "shrimp">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/shrimp.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Shrimp | Aquatic</p>
+            </center>
+          </div>
+          <div id = "squid">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/squid.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Squid | Aquatic</p>
+            </center>
+          </div>
+          <div id = "seaurchin">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/seaurchin.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Sea Urchin | Aquatic</p>
+            </center>
+          </div>
+          <div id = "jellyfish">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/jellyfish.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Jellyfish | Aquatic</p>
+            </center>
+          </div>
+          <div id = "frog">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/frog.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Frog | Wild</p>
+            </center>
+          </div>
+          <div id = "duck">
+              <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/duck.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Duck | Wild</p>
+            </center>
+          </div>
+          <div id = "deer">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/deer.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Deer | Wild</p>
+            </center>
+
+          </div>
+          <div id = "pigeon">
+                        <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/pigeon.png" alt="Sorry, iKOMO coming soon!"></center>
+            <center><br>
+              <p>Pigeon | Wild</p>
+            </center>
+          </div>
+          <div id = "slime">
+                    <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/slime.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Slime | Mythic</p>
+          </center>
+        </div>
+        <div id = "goldfish">
+                    <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/goldfish.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Goldfish | Aquatic</p>
+          </center>
+        </div>
+        <div id = "turkey">
+                    <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/turkey.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Turkey | Domestic</p>
+          </center>
+        </div>
+        <div id = "jackalope">
+                    <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/jackalope.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Jackalope | Mythic</p>
+          </center>
+        </div>
+        <div id = "snake">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/snake.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Snake | Domestic</p>
+          </center>
+        </div>
+        <div id = "koi">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/koi.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Koi | Aquatic</p>
+          </center>
+        </div>
+        <div id = "ferret">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/ferret.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Ferret | Domestic</p>
+          </center>
+        </div>
+        <div id = "parrot">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/parrot.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Parrot | Domestic</p>
+          </center>
+        </div>
+        <div id = "cow">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/cow.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Cow | Domestic</p>
+          </center>
+        </div>
+        <div id = "sheep">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/sheep.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Sheep | Domestic</p>
+          </center>
+        </div>
+        <div id = "pig">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/pig.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Pig | Domestic</p>
+          </center>
+        </div>
+        <div id = "calicocat">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/calcat.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Calico Cat | Domestic</p>
+          </center>
+        </div>
+        <div id = "chick">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/chick.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Chick | Domestic</p>
+          </center>
+        </div>
+        <div id = "crab">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/crab.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Crab | Aquatic</p>
+          </center>
+        </div>
+        <div id = "turtle">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/turtle.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Turtle | Aquatic</p>
+          </center>
+        </div>
+        <div id = "mantaray">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/mantaray.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Manta Ray | Aquatic</p>
+          </center>
+        </div>
+        <div id = "seahorse">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/seahorse.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Sea Horse | Aquatic</p>
+          </center>
+        </div>
+        <div id = "otter">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/otter.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Otter | Aquatic</p>
+          </center>
+        </div>
+        <div id = "starfish">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/starfish.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Starfish | Aquatic</p>
+          </center>
+        </div>
+        <div id = "clownfish">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/clownfish.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Clownfish | Aquatic</p>
+          </center>
+        </div>
+        <div id = "brownbear">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/brownbear.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Brown Bear | Wild</p>
+          </center>
+        </div>
+        <div id = "porcupine">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/porcupine.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Porcupine | Wild</p>
+          </center>
+          <center>
+            <p class="raretxt">Rare</p>
+          </center><br><br>
+        </div>
+        <div id = "fox">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/fox.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Fox | Wild</p>
+          </center>
+        </div>
+        <div id = "elephant">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/elephant.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Elephant | Wild</p>
+          </center>
+        </div>
+        <div id = "bull">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/bull.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Bull | Wild</p>
+          </center>
+        </div>
+        <div id = "monkey">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/monkey.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Monkey | Wild</p>
+          </center>
+        </div>
+        <div id = "moose">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/moose.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Moose | Wild</p>
+          </center>
+        </div>
+        <div id = "zebra">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/zebra.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Zebra | Wild</p>
+          </center>
+        </div>
+        <div id = "munchkincat">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/munchkincat.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Munchkin Cat | Domestic</p>
+          </center>
+        </div>
+        <div id = "flyingsquirrel">
+                    <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/flyingsquirrel.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Flying Squirrel | Wild</p>
+          </center>
+        </div>
+        <div id = "husky">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/husky.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Husky | Domestic</p>
+          </center>
+        </div>
+        <div id = "llama">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/llama.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Llama | Domestic</p>
+          </center>
+        </div>
+        <div id = "shark">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/shark.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Great White Shark | Aquatic</p>
+          </center>
+        </div>
+        <div id = "octopus">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/octopus.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Octopus | Aquatic</p>
+          </center>
+        </div>
+        <div id = "penguin">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/penguin.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Penguin | Aquatic</p>
+          </center>
+        </div>
+        <div id = "lion">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/lion.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Lion | Wild</p>
+          </center>
+        </div>
+        <div id = "tiger">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/tiger.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Tiger | Wild</p>
+          </center>
+        </div>
+        <div id = "lavamonster">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/lavamonster.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Lava Monster | Mythic</p>
+          </center>
+        </div>
+        <div id = "koala">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/koala.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Koala | Wild</p>
+          </center>
+        </div>
+        <div id = "phoenix">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/phoenix.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Phoenix | Mythic</p>
+          </center>
+        </div>
+        <div id = "unicorn">
+                    <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/unicorn.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Unicorn | Mythic</p>
+          </center>
+        </div>
+        <div id = "shiba">
+                    <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/shiba.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Shiba Inu | Domestic</p>
+          </center>
+        </div>
+        <div id = "orca">
+                    <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/orca.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Orca | Aquatic</p>
+          </center>
+        </div>
+        <div id = "panda">
+                    <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/panda.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Panda | Wild</p>
+          </center>
+        </div>
+        <div id=  "dragon">
+                    <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/dragon.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Dragon | Mythic</p>
+          </center>
+        </div>
+        <div class = "slidingImage"id = "Pink Snail">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Pink Snail.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Pink Snail | Wild</p>
+          </center>
+        </div>
+
+        <div class = "slidingImage"id="Potted Cactus">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Potted Cactus.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Potted Cactus | Domestic</p>
+          </center>
+        </div>
+
+        <div class = "slidingImage"id="Ladybug">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Ladybug.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Ladybug | Wild</p>
+          </center>
+        </div>
+        <div class = "slidingImage"id="Blue Slime">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Blue Slime.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Blue Slime | Wild</p>
+          </center>
+        </div>
+
+        <div class = "slidingImage"id="Golden Mantella">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Golden Mantella.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Golden Mantella | Wild</p>
+          </center>
+        </div>
+
+        <div class = "slidingImage"id="Bat">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Bat.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Bat | Wild</p>
+          </center>
+        </div>
+        <div class = "slidingImage"id="Puffin">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Puffin.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Puffin | Wild</p>
+          </center>
+        </div>
+
+        <div class = "slidingImage"id="Goat">
+          <center><img class="commonimg" height="300px" width="auto" src="./img/ikomos/Goat.png" alt="Sorry, iKOMO coming soon!"></center>
+          <center><br>
+            <p>Goat | Domestic</p>
+          </center>
+        </div>
+
+      <div class = "slidingImage"id="Owl">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Owl.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Owl | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Blobfish">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Blobfish.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Blobfish | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Bee">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Bee.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Bee | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Beaver">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Beaver.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Beaver | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Pufferfish">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Pufferfish.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Pufferfish | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Chinchilla">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Chinchilla.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Chinchilla | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Dodo Bird">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Dodo Bird.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Dodo Bird | Mythic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Dolphin">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Dolphin.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Dolphin | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Dart Frog">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Dart Frog.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Dart Frog | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Saint Bernard">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Saint Bernard.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Saint Bernard | Domestic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Toucan">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Toucan.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Toucan | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Seal Pup">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Seal Pup.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Seal Pup | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Alligator">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Alligator.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Alligator | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Bobcat">
+        <center><img class="rareimg" height="300px" width="auto" src="./img/ikomos/Bobcat.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Bobcat | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Siberian Tiger">
+        <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/Siberian Tiger.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Siberian Tiger | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Griffin">
+        <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/Griffin.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Griffin | Mythic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage" id="Mammoth">
+        <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/Mammoth.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Mammoth | Mythic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Hammerhead Shark">
+        <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/Hammerhead Shark.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Hammerhead Shark | Aquatic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Bald Eagle">
+        <center><img class="epicimg" height="300px" width="auto" src="./img/ikomos/Bald Eagle.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Bald Eagle | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Red Panda">
+        <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/Red Panda.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Red Panda | Wild</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="T-Rex">
+        <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/T-Rex.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>T-Rex | Mythic</p>
+        </center>
+      </div>
+
+      <div class = "slidingImage"id="Large Chungy">
+        <center><img class="legendaryimg" height="300px" width="auto" src="./img/ikomos/Large Chungy.png" alt="Sorry, iKOMO coming soon!"></center>
+        <center><br>
+          <p>Large Chungy | Mythic</p>
+        </center>
+      </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+    </div>
+  </div>
+  <div id="explain">
+    <div id = "explain-content">
+      <center>
+        <img id = "shibwelcome" height = "200px" width = "auto" src = "./img/shibwelcome.png"/>
+        <br>
+        <br>
+        <h3>iKOMO is a fun and interactive game that allows you to invest in digital collectible pets! Through blockchain technology, you can hatch, buy, and sell your own unique companion. Each creature hatched has an identification tag that enables you to interact with the iKOMO universe. You can play games with your pet in the iKOMO Arcade, buy new pets in the marketplace, or find your own way to play!</h3>
+      </center>
+    </div>
+  </div>
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-1">
+
+      </div>
+
+      <div id = "school" class = "col-md-10">
+        <center><h2>Still confused? Experience how it works by attending iKOMO school!</h2>
+        <br>
+        <h4>Enter our tutorial to learn more about what iKOMO is and how it works.</h4>
+        <br>
+        <a href = "school.php" class = "buttonx">Enter iKOMO school!</a>
+        <br>
+        <img id = "animchick" src = "./img/chickanim.gif"/></center>
+      </div>
+
+      <div class = "col-md-1">
+
+      </div>
+    </div>
+  </div>
+  <div id = "footer" class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-3">
+        <img id = "disclaimerimg" height = "70px" width = "auto" src = "./img/VE_mark_type.png"/>
+        <br>
+        <p id = "disclaimtxt">Disclaimer: This Virtual Enterprise online store is for educational purposes only (2018-2019 iKOMO).</p>
+      </div>
+
+      <div class = "col-md-3">
+        <a href = "index.php">Home</a>
+        <br>
+        <a href = "mainInterface.php">Store</a>
+        <br>
+        <a href = "marketMain.php">Marketplace</a>
+        <br>
+        <a href = "arcadeMain.php">Arcade</a>
+        <br>
+      </div>
+
+      <div class = "col-md-3">
+        <a href = "contact.php">Contact Us</a>
+        <br>
+        <a href = "about.php">About Us</a>
+        <br>
+      </div>
+      <div class = "col-md-3">
+        <p id = "disclaimtxt">We use cookies to ensure the best experience on this website. </p>
+      </div>
+    </div>
+  </div>
+</body>
+  <script>
+    var iKOMOarray1 = ["bunny", "mouse", "lizard", "snail", "shrimp", "squid", "seaurchin", "jellyfish", "frog", "deer", "pigeon", "slime", "goldfish", "turkey", "jackalope", "snake", "cow", "koi", "ferret"];
+    var iKOMOarray2 = ["parrot", "sheep", "pig", "calicocat", "chick", "crab", "turtle", "mantaray", "seahorse", "otter", "starfish", "clownfish", "brownbear", "porcupine", "fox", "elephant", "bull", "monkey", "moose"];
+    var iKOMOarray3 = ["zebra", "munchkincat", "flyingsquirrel", "husky", "llama", "shark", "octopus", "penguin", "lion", "tiger", "lavamonster", "koala", "phoenix", "unicorn", "shiba", "orca", "panda", "dragon",  "duck",
+    "Pink Snail","Potted Cactus","Ladybug","Blue Slime","Golden Mantella","Bat","Puffin","Goat","Owl","Blobfish","Bee","Beaver","Pufferfish","Chinchilla",
+    "Dodo Bird","Dolphin","Dart Frog","Saint Bernard","Toucan","Seal Pup","Alligator","Bobcat","Siberian Tiger","Griffin","Mammoth",
+    "Hammerhead Shark","Bald Eagle","Red Panda","T-Rex","Large Chungy"];
+    var randomize1 = iKOMOarray1[Math.floor(Math.random()*iKOMOarray1.length)];
+    var randomize2 = iKOMOarray2[Math.floor(Math.random()*iKOMOarray2.length)];
+    var randomize3 = iKOMOarray3[Math.floor(Math.random()*iKOMOarray3.length)];
+    var arrayRandom = [randomize1, randomize2, randomize3];
+    var finalRandom = arrayRandom[Math.floor(Math.random()*arrayRandom.length)];
+    var finalRandomID = "#";
+    finalRandomID += finalRandom;
+    console.log(finalRandomID);
+    var kol = document.getElementById(finalRandom);
+    kol.style.display = "block";
+    console.log(kol);
+    function changeiKOMO(){
+      $(finalRandomID).removeClass('animated bounceInRight');
+      $(finalRandomID).addClass('animated bounceOutLeft');
+      setTimeout(function(){
+        kol.style.display = "none";
+        randomize1 = iKOMOarray1[Math.floor(Math.random()*iKOMOarray1.length)];
+        randomize2 = iKOMOarray2[Math.floor(Math.random()*iKOMOarray2.length)];
+        randomize3 = iKOMOarray3[Math.floor(Math.random()*iKOMOarray3.length)];
+        arrayRandom = [randomize1, randomize2, randomize3];
+        finalRandom = arrayRandom[Math.floor(Math.random()*arrayRandom.length)];
+        finalRandomID = "#";
+        finalRandomID += finalRandom;
+        kol = document.getElementById(finalRandom);
+        console.log(finalRandomID);
+        console.log(kol);
+      }, 500);
+      setTimeout(function(){
+        $(finalRandomID).removeClass('animated bounceOutLeft');
+        $(finalRandomID).addClass('animated bounceInRight');
+      }, 1000);
+      setTimeout(function(){
+        kol.style.display = "block";
+      }, 1500);
+    }
+    window.setInterval(function(){
+        changeiKOMO();
+    }, 5000);
+  </script>
+</html>
