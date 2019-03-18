@@ -118,32 +118,44 @@ $_SESSION['change'] = 2;
   </div>
   <div id = "searchsort" class ="row">
     <div class = "col-md-6" style = "text-align:center;">
-        <!--<input type="text" onkeyup = "inputChange(this.value)"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">-->
+        <input type="text" onkeyup = "inputChange()"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
     </div>
     <div class = "col-md-6">
-      <!--TODO: Make a dropdown sorting-->
+      <select id = "sortChange" onchange="inputChange()">
+        <!--<option value="dla">Date Listed (Ascending)</option>
+        <option value="dld">Date Listed (Descending)</option>-->
+        <option value="ul">Unlisted</option>
+        <option value="l">Listed</option>
+      </select>
+      <select id = "rarityChange" onchange = "inputChange()">
+        <option value="all">All Rarities</option>
+        <option value="common">Common</option>
+        <option value="rare">Rare</option>
+        <option value="epic">Epic</option>
+        <option value="legendary">Legendary</option>
+      </select>
     </div>
-    <br>
   </div>
-  <!--TODO: Display stuff based on search bar-->
+  <br>
+  <br>
+  <div id = "appendTarget" class ="row">
+  </div>
+    <!--TODO: Display stuff based on search bar-->
   <script>
   var oldsession = 0;
-  inputChange("");
   var x;
   function append(){
-    $("#searchsort").append(x);
-    for(i=0; i<=oldsession; i++){
-      if($('#' + oldsession).remove()){
-        console.log("removed");
-      }
-    }
+    $("#appendTarget").append(x);
   }
-    function inputChange(value){
-      console.log(value);
+    function inputChange(){
+      var rarityChange = document.getElementById('rarityChange').value;
+      var sortChange = document.getElementById('sortChange').value;
+      var search = document.getElementById('search').value;
+      $(".ikomoAnimal").remove();
       $.ajax({
         type: "POST",
         url: "./unc/myIkomo.php",
-        data: {'data': value},
+        data: {'rarityChange': rarityChange, 'sortChange': sortChange, 'search': search},
         success: function(msg) {
           x = msg;
           console.log("Check ended");
@@ -155,6 +167,30 @@ $_SESSION['change'] = 2;
       $.ajax({
         type: "POST",
         url: "listThis.php",
+        data: {'data': animal},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
+    }
+    function unlist(animal){
+      $.ajax({
+        type: "POST",
+        url: "unlistThis.php",
+        data: {'data': animal},
+        success: function(msg) {
+          x = msg;
+          console.log("Check ended");
+          append();
+        }
+    });
+    }
+    function unlistFinal(animal){
+      $.ajax({
+        type: "POST",
+        url: "unlistFinal.php",
         data: {'data': animal},
         success: function(msg) {
           x = msg;
@@ -187,6 +223,9 @@ $_SESSION['change'] = 2;
         }
     });
     }
+  </script>
+  <script>
+  inputChange();
   </script>
 
 </html>
