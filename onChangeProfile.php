@@ -2,6 +2,7 @@
 session_start();
 $id = $_SESSION['userID'];
  $rarityChange = $_POST['rarityChange'];
+ $value = $_POST['search'];
  $servername = "db759106289.hosting-data.io";
  $dBUsername = "dbo759106289";
  $dBPassword = "SPdidsway1st";
@@ -30,6 +31,11 @@ if($rarityChange == 'legendary'){
  if ($result->num_rows >= 0) {
    // output data of each row and check stringID
    while($row = $result->fetch_assoc()) {
+     $animal = $row["Animal"];
+     $origname = $animal;
+     $animal = strtolower(preg_replace('/\s+/', '', $animal));
+     $value = strtolower(preg_replace('/\s+/', '', $value));
+       if($value === ""||!is_bool(strpos($animal, $value))){
    $animal = $row["Animal"];
        $sid = $row["StringID"];
        $rarity = $row["Rarity"];
@@ -59,7 +65,7 @@ if($rarityChange == 'legendary'){
          $type = 'Mythic';
        }
        echo '<div class = "col-md-4 ikomoAnimal"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><center><p>'.$animal.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarityU.'</p></center><br><br></div>';
-     }
+     }}
    mysqli_close($conn);
  }
  ?>
