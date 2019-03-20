@@ -151,12 +151,12 @@ $_SESSION['change'] = 2;
       var rarityChange = document.getElementById('rarityChange').value;
       var sortChange = document.getElementById('sortChange').value;
       var search = document.getElementById('search').value;
-      $(".ikomoAnimal").remove();
       $.ajax({
         type: "POST",
         url: "./unc/myIkomo.php",
         data: {'rarityChange': rarityChange, 'sortChange': sortChange, 'search': search},
         success: function(msg) {
+        $(".ikomoAnimal").remove();
           x = msg;
           console.log("Check ended");
           append();

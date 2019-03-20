@@ -124,12 +124,12 @@ $_SESSION['change'] = 2;
       var rarityChange = document.getElementById('rarityChange').value;
       var sortChange = document.getElementById('sortChange').value;
       console.log($(".ikomoAnimal"));
-      $(".ikomoAnimal").remove();
       $.ajax({
         type: "POST",
         url: "./onChange.php",
         data: {'rarityChange': rarityChange, 'sortChange': sortChange, 'search': search},
         success: function(msg) {
+        $(".ikomoAnimal").remove();
           x = msg;
           console.log("Check ended");
           append();
