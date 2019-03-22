@@ -88,8 +88,8 @@ session_start();
       font-size: 30px;
     }
     .buttonx {
-      background-color: rgba(106, 196, 206, 0.92);
-      font-size: 18px;
+      /*background-color: rgba(106, 196, 206, 0.92); */
+      font-size: 25px;
       font-family: "Dimbo";
       text-decoration: none;
       text-align: center;
@@ -105,6 +105,62 @@ session_start();
       width: 75px;
       background-size:75px;
     }
+    #arcadebg {
+      background-image: url('./img/arcadechoose-min.png');
+      background-position: 0px 125px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #iKOMOlifebt {
+        float: right;
+        margin-top: 78%;
+        margin-right: 4%;
+        background-color: #F7E188;
+        opacity: 0.92;
+    }
+    #heightsbt {
+        margin-top: 78%;
+        margin-left: 4%;
+        float: left;
+        background-color: #C3F2FF;
+        opacity: 0.92;
+    }
+
+    #tennisbt {
+        margin-top: 78%;
+        background-color: #4F8735;
+        opacity: 0.92;
+    }
+    #makehover2 {
+        color: #F4E194;
+    }
+    #makehover2:hover {
+        color: rgb(196, 181, 119);
+    }
+    #makehover1 {
+        color: #6E9D54;
+    }
+    #makehover1:hover {
+        color: rgb(94, 134, 72);
+    }
+    #makehover3 {
+        color: #E68686;
+    }
+    #makehover3:hover {
+        color: rgb(167, 101, 101);
+    }
+    #imgintrooverlay{
+      height: 500px;
+      margin-top: 2%;
+      width: auto;
+    }
+    #introoverlay {
+      display: block;
+    }
+    #buttonoverlay {
+      display: none;
+    }
+
     /* #search {TODO: search icon
     background-image: url('./img/search.png');
     background-repeat: no-repeat;
@@ -113,14 +169,54 @@ session_start();
 #search:active { background-image: none; text-indent: 0px;} */
     </style>
   </head>
-<body class = "marketbg">
+<body id = "arcadebg">
   <div id = mainWelcomeText>
-    <h1>Arcade</h1>
   </div>
-  <div>
-    <button onclick="logGame('tennis','game','./choosecharacter.php')">Tennis</button>
-    <button onclick="logGame('heights','game','./choosecharacter.php')">iKOMOheights</button>
+  <div id = "introoverlay" class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-1">
+
+      </div>
+
+      <div class = "col-md-10">
+        <center><img class = "animated fadeInDown" id = "imgintrooverlay" src = "./img/how2arcade.png"/></center>
+      </div>
+
+      <div class = "col-md-1">
+
+      </div>
+    </div>
   </div>
+  <div id = "buttonoverlay" class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-4">
+        <button id = "iKOMOlifebt" class = "buttonx" onclick="alert('Sorry, iKOMO Life coming soon! For now, please enjoy iKOMO tennis and iKOMO Heights.')"><a id = "makehover1" href = "#" onclick = "return false;">Enter..</a></button>
+      </div>
+      <div class = "col-md-4">
+        <center>
+          <button id = "tennisbt" class = "buttonx" onclick="logGame('tennis','game','./choosecharacter.php')"><a id = "makehover2" href = "#" onclick = "return false;">Enter..</a></button></center>
+      </div>
+      <div class = "col-md-4">
+        <button id = "heightsbt" class = "buttonx" onclick="logGame('heights','game','./choosecharacter.php')"><a id = "makehover3" href = "#" onclick = "return false;">Enter..</a></button>
+      </div>
+  </div>
+</div>
+<script>
+  var aol = document.getElementById('introoverlay');
+  var bol = document.getElementById('buttonoverlay');
+  $("#arcadebg").click(function(){
+    $("#imgintrooverlay").removeClass('animated fadeInDown');
+    $("#imgintrooverlay").addClass('animated fadeOutUp');
+    setTimeout(function(){
+      aol.style.display = "none";
+
+    }, 1000);
+    setTimeout(function(){
+      $("#buttonoverlay").addClass('animated bounceInUp');
+      bol.style.display = "block";
+    }, 1000);
+  });
+</script>
   <script>
   function logGame(value,name,redir){
   $.ajax({
