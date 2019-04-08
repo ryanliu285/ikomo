@@ -81,6 +81,12 @@
     bottom: 0;
     left: 0;
   }
+  .navbutton {
+    color: rgb(0, 0, 0);
+  }
+  #signupa {
+    color: rgb(0, 0, 0);
+  }
   </style>
 </head>
 
@@ -92,22 +98,22 @@
       <div class = "row">
         <div class = "col-md-2">
           <a href = "#">
-            <img id = "headimg" src = "./img/ikologo.png" alt = "logo" width = "150px" height= "auto" onClick = "window.location.href = 'index.php'">
+            <img id = "headimg" src = "./img/ikologo.png" alt = "logo" width = "175px" height= "auto" onClick = "window.location.href = 'index.php'">
           </a>
         </div>
       <div class = "col-md-3">
         <div class = "row navdiv">
           <div class = "col-md-3">
-          <a class = "nav" href = "index.php">Home</a>
+          <a class = "nav navbutton" href = "index.php">Home</a>
         </div>
         <div class = "col-md-3">
-        <a class = "nav" href = "mainInterface.php">Store</a>
+        <a class = "nav navbutton" href = "mainInterface.php">Store</a>
       </div>
       <div class = "col-md-3">
-      <a class = "nav" href = "about.php">About</a>
+      <a class = "nav navbutton" href = "about.php">About</a>
     </div>
     <div class = "col-md-3">
-    <a class = "nav" href = "contact.php">Contact</a>
+    <a class = "nav navbutton" href = "contact.php">Contact</a>
   </div>
   </div>
       </div>
@@ -122,7 +128,6 @@
             echo '<br><p id = "usernameanim" class = "username">'.$hello.$_SESSION["userUID"].$claim;'</p>';
 
           } else {
-
           }
         ?>
       </div>
@@ -138,6 +143,7 @@
         }
         else {
 
+
         }
 
       ?>
@@ -148,7 +154,7 @@
           echo '<br><form class = "navl" action = "includes/logout.inc.php" method = "post"><button class = "buttonx" type = "submit" name = "logout-submit">Logout</button></form>';
         }
         else {
-
+          echo '<br><button class = "buttonx"><a id = "signupa" href = "signup1.php">Sign up for iKOMO!</a></button>';
         }
         ?>
       </div>

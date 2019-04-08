@@ -444,7 +444,7 @@
     function next(){
       if(current == 2){
         $("#yeet").attr("onclick","komo100()");
-        $("#buyButton100").addClass('animated heartBeat');
+        $("#buyButton100").addClass('animated heartBeat infinite');
         $("#textBack").attr("onclick","");
       }else if (current == 3){
         $("#textBack").attr("onclick","window.location.href = 'schoolStore2.php'");

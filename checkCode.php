@@ -49,4 +49,5 @@ session_start();
    }else{
      echo '<p style = "color:red;"> ERROR: Code does not exist </p>';
    }
+   mysqli_close($conn);
  ?>

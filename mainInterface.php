@@ -351,9 +351,11 @@
     }
     #buyButton {
       float:left;
+      font-size: 12px;
     }
     #buyButton2 {
       float:right;
+      font-size: 10px;
     }
     #iKOMOoverlay{
       display: none;

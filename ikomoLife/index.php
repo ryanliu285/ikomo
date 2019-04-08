@@ -265,9 +265,9 @@
         }
         $("#ikomo").css("left",i+"px");
         if(behind){
-          i-=25;
+          i-=15;
         }else{
-          i+=25;
+          i+=15;
         }
       }, 25);
 

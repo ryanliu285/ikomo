@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: Dimbo;
+    src: url(./Font/Dimbo Regular.ttf);
+}
+body, html {
+  height: 100%;
+  font-family: Dimbo;
+}
+.nav {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+}
+.navform {
+  position: absolute;
+  top: 42%;
+  right: 0;
+}
+.navdiv {
+  margin-top: 14%;
+}
+.abt {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+}
+.navs {
+  position: absolute;
+  bottom: 20%;
+}
+.navl {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+}
+.xD {
+  position: absolute;
+  left: 10%;
+  top: 47%;
+}
+.bg {
+  background-image: url("img/sign-min.jpg");
+  height: 10%;
+  width auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.titleText{
+  font-size: 70px;
+}
+#mainWelcomeText{
+  text-align: center;
+}

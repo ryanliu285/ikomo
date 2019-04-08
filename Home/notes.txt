@@ -1,0 +1,21 @@
+Brandon Jobs:
+
+- Fix alignment
+- Loading screen
+- Update logo colors
+- Start implementing Shay designs
+- Apply Dimbo font
+
+Ral Jobs:
+
+- New HTML page for draw owned iKOMOS
+- Buy button
+- Verification with VEI 
+- Set up currency 
+- Ethereum based KOMOcoins
+- Game
+
+AFTER: 
+
+- Setup marketplace
+

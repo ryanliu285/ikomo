@@ -258,7 +258,7 @@
       function next(){
         if(current == 2){
           $("#hme").attr("href","./schoolStore.php")
-          $("#hme").addClass('animated heartBeat');
+          $("#hme").addClass('animated heartBeat infinite');
           $("#textBack").attr("onclick","");
         }
         setTimeout(function(){
