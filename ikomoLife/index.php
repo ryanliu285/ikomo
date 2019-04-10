@@ -237,14 +237,18 @@
   </head>
   <body class = "bg">
     <div class = "row">
-      <div class = "col-sm-6">
-        <video class = "vid" height = "auto" controls> <source src = "./iKOMO Crypto Video.mp4"> Your browser does not support HTML5 video.</video>
+      <div class = "col-sm-1"></div>
+      <div class = "col-sm-5">
+        <video id = "crypto"class = "vid" height = "100%" width = "100%" controls> <source src = "./iKOMO Crypto Video.mp4"> Your browser does not support HTML5 video.</video>
       </div>
-      <div class = "col-sm-6">
-        <video class = "vid" height = "auto" controls> <source src = "./financial literacy vid.mov"> Your browser does not support HTML5 video.</video>
+      <div class = "col-sm-5">
+        <video class = "vid" id = "financial" height = "100%" width = "100%" controls> <source src = "./financial literacy vid.mov"> Your browser does not support HTML5 video.</video>
       </div>
+      <div class = "col-sm-1"></div>
+      <script>
+      </script>
     </div>
-    <center><a>Click here if you are done watching!</a></center>
+    <center><a style = "color:red" href = "./quiz">Click here if you are done watching!</a></center>
     <img id = "ikomo" src = "../img/ikomos/duck.png">
     <script>
     var action = false;
@@ -281,11 +285,6 @@
       }, 25);
 
     }
-    </script>
-    <script>
-      $(".titles").height($(window).width()/10);
-      $(".image").height($(window).height()/1.2);
-      $(".vid").width($(window).width()/2.3);
     </script>
   </body>
 
