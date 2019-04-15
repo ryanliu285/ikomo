@@ -281,6 +281,8 @@
     <div id = "score">
       <center><h1 style = "color:#55AFC9; text-shadow:2px 2px #EDCD4F">You got a score of:</h1></center>
       <center><h1 id = "scoreText" style = "font-size:200px; color:#55AFC9; text-shadow:2px 2px #EDCD4F;"></h1></center>
+      <center id = "failQuiz"><button class = "myButton2"onclick = "restartQuiz()"><h1 style = "font-size:40px;">Try again!</h1></button></center>
+      <center id = "successQuiz"><button class = "myButton2"onclick = "successQuiz()"><h1 style = "font-size:40px;">Claim Points!</h1></button></center>
     </div>
     <br>
     <br>
@@ -309,6 +311,8 @@
       var answer = "a";
       $("#answers").css("display","none");
       $("#question").css("display","none");
+      $("#failQuiz").css("display","none");
+      $("#successQuiz").css("display","none");
       $("#continue").css("display","none");
       $("#score").css("display","none");
       function startQuiz(){
@@ -326,6 +330,14 @@
           $("#title").css("font-size",size+"px");
         }, 50);
         revealNew();
+      }
+      function restartQuiz(){
+        question = 1;
+        score = 5;
+        revealNew();
+      }
+      function suceessQuiz(){
+
       }
       function revealNew(){
         if(question == 1){
@@ -379,8 +391,13 @@
           $("#question").css("display","none");
           $("#score").css("display","block");
           $("#continue").css("display","none");
-          document.getElementById("score").innerHTML = score+"/5";
-          document.getElementById("score").css.style = "font-size:200px; color:#55AFC9; text-shadow:2px 2px #EDCD4F;";
+          document.getElementById("scoreText").innerHTML = score+"/5";
+          document.getElementById("scoreText").css.style = "font-size:200px; color:#55AFC9; text-shadow:2px 2px #EDCD4F;";
+          if(score >=3){
+            $("#successQuiz").css("display","block");
+          }else{
+            $("#failQuiz").css("display","block");
+          }
         }
       }
       function answers(guess){
