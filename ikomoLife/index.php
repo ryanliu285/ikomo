@@ -248,7 +248,7 @@
       <script>
       </script>
     </div>
-    <center><a style = "color:red" href = "./quiz">Click here if you are done watching!</a></center>
+    <center><a style = "color:red" href = "./quiz.php">Click here if you are finished watching!</a></center>
     <img id = "ikomo" src = "../img/ikomos/duck.png">
     <script>
     var action = false;
