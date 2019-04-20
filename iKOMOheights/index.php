@@ -1,5 +1,6 @@
 <!--<?php
-  /* session_start();
+session_start();
+  /*
   $gameAnimalx = $_COOKIE[$cookie_name];
   echo '<script type="text/javascript">
   var x = document.cookie;
@@ -45,8 +46,15 @@
       <div id="gameOverMenu">
         <h1>game over!</h1>
         <h3 id="go_score">you scored 0 points</h3>
-
-        <a class="button" href="javascript:reset()">Restart</a>
+        <a class="button" onClick = "logScore()">Go to End Screen</a>
+        <script>function logScore(){
+          $.post("logScore.php", {data: score}, function(data,status){
+          append(data);
+          });
+          function append(x){
+            $("#gameOverMenu").append(x);
+          }
+        }</script>
       </div>
 
       <!-- Preloading image ;) -->

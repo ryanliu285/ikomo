@@ -447,7 +447,7 @@
       function next(){
         if(current == 2){
           $("#buyIkomo").attr("onclick","window.location.href = './schoolResult.php'");
-          $("#buyButton2").addClass('animated heartBeat');
+          $("#buyButton2").addClass('animated heartBeat infinite');
           $("#textBack").attr("onclick","");
         }
         setTimeout(function(){

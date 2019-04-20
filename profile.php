@@ -104,14 +104,15 @@ $id = $_SESSION['userID'];
       $("#appendTarget").append(x);
     }
       function inputChange(){
+        var search = document.getElementById('search').value;
         var rarityChange = document.getElementById('rarityChange').value;
         console.log($(".ikomoAnimal"));
-        $(".ikomoAnimal").remove();
         $.ajax({
           type: "POST",
           url: "./onChangeProfile.php",
-          data: {'rarityChange': rarityChange},
+          data: {'rarityChange': rarityChange, 'search': search},
           success: function(msg) {
+          $(".ikomoAnimal").remove();
             x = msg;
             console.log("Check ended");
             append();
@@ -120,6 +121,11 @@ $id = $_SESSION['userID'];
       }
     </script>
     <div class = "container-fluid">
+    <div class = "row">
+      <div class = "col-md-6">
+        <input type="text" onkeyup = "inputChange()"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+  </div>
+      <div class = "col-md-6">
     <select id = "rarityChange" onchange = "inputChange()">
       <option value="all">All Rarities</option>
       <option value="common">Common</option>
@@ -127,6 +133,8 @@ $id = $_SESSION['userID'];
       <option value="epic">Epic</option>
       <option value="legendary">Legendary</option>
     </select>
+  </div>
+  </div>
       <div id = "appendTarget" class = "row">
       </div>
     </div>

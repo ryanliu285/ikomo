@@ -447,7 +447,7 @@
       function next(){
         if(current == 2){
           $("#buyCoins").attr("onclick","window.location.href = './schoolCoins.php'");
-          $("#buyButton").addClass('animated heartBeat');
+          $("#buyButton").addClass('animated heartBeat infinite');
           $("#textBack").attr("onclick","");
         }
         setTimeout(function(){

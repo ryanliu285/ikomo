@@ -28,7 +28,7 @@ require './includes/dbh.inc.php';
       font-size: 50px;
       color: #59AEC7;
     }
-    #counter {
+    .counter {
       color: #59AEC7;
       margin-top: 5%;
       font-size: 50px;
@@ -51,15 +51,9 @@ require './includes/dbh.inc.php';
           <div id = "arcadeoverlay" class = "col-md-6">
               <center>
               <h1>iKOMO Arcade coming soon</h1>
-              <h2>Once 2000 iKOMOs are in circulation, the arcade will unlock.</h2>
-              <p id = "counter"><?php
-              $quer = "SELECT * FROM owners";
-              $res = mysqli_query($conn, $quer) or die('Please return to home and sign in!');
-              $row_cnt = $res -> num_rows;
-                echo "Current Total: ";
-              ?></p>
-              <p id = "count"><?php echo $row_cnt;?></p>
-
+              <h2>Thank you for supporting iKOMO. With your help, we've been able to fund the arcade and launch our first private beta. Check your emails as we hand out access codes in the coming weeks!</h2>
+              <h2>Estimated public release date: 2/19/19</h2>
+              <p class = "counter"></p>
             </center>
           </div>
 

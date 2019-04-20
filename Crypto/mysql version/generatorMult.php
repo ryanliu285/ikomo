@@ -129,7 +129,11 @@ session_start();
               $Animal = "Bald Eagle";
             }
          }else{
+<<<<<<< HEAD
            $x = rand(1,4);
+=======
+           $x = rand(1,3);
+>>>>>>> 5dfc71b2bbe92cb2aac8fc67ed263f9c27f2527b
            if($x == 1){
              $Type = 4;
             $Animal = "T-Rex";

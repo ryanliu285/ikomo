@@ -1,6 +1,9 @@
 <?php
 session_start();
- $value = $_POST['data'];
+$id = $_SESSION['userID'];
+ $value = $_POST['search'];
+ $rarityChange = $_POST['rarityChange'];
+ $sortChange = $_POST['sortChange'];
  $servername = "db759106289.hosting-data.io";
  $dBUsername = "dbo759106289";
  $dBPassword = "SPdidsway1st";
@@ -11,16 +14,26 @@ session_start();
  if(!$conn){
    die("Connection failed: ".mysqli_connect_error());
  }
-$id = $_SESSION["userID"];
- $sql = 'SELECT * FROM owners WHERE UID = '.$id.'';
+ if($sortChange == 'ul'){
+   $sql = "SELECT * FROM owners ";
+ }else{
+   $sql = "SELECT * FROM marketplace ";
+ }
+ if($rarityChange == 'legendary'){
+   $sql .= "WHERE Rarity = 4 AND UID = '$id'";
+ }else if ($rarityChange == 'epic'){
+   $sql .= "WHERE Rarity = 3 AND UID = '$id'";
+ }else if ($rarityChange == 'rare'){
+   $sql .= "WHERE Rarity = 2 AND UID = '$id'";
+ }else if ($rarityChange == 'common'){
+   $sql .= "WHERE Rarity = 1 AND UID = '$id'";
+ }else{
+   $sql .= "WHERE UID = '$id'";
+ }
  $result = $conn->query($sql);
-   $times = 0;
 
  if ($result->num_rows >= 0) {
-
    // output data of each row and check stringID
-   $oldsession = $_SESSION['change'];
-   $_SESSION['change'] = $_SESSION['change'] + 1;
    while($row = $result->fetch_assoc()) {
    $animal = $row["Animal"];
    $origname = $animal;
@@ -49,12 +62,20 @@ $id = $_SESSION["userID"];
        }else{
          $type = 'Mythic';
        }
-       $times++;
        $sid = $row['StringID'];
-       echo '<script>var oldsession = '.$oldsession.';
-       var times = '.$times.'</script>
-         <div class = "col-md-4" id = "'.$_SESSION['change'].'"><a onclick = "list(\''.$sid.'\')"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></a></div>';
 
+       $newSql = "SELECT * FROM marketplace WHERE StringID = '$sid'";
+       $newResult = $conn->query($newSql);
+
+       if ($newResult->num_rows > 0) {
+       if($sortChange == "l"){
+         echo '<div class = "col-md-4 ikomoAnimal" id = "'.$_SESSION['change'].'"><a onclick = "unlist(\''.$sid.'\')"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></a></div>';
+        }
+       }else{
+         if($sortChange == "ul"){
+        echo '<div class = "col-md-4 ikomoAnimal" id = "'.$_SESSION['change'].'"><a onclick = "list(\''.$sid.'\')"><center><img class = "'.$rarity.'img" height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center><center><p>'.$origname.' | '.$type.'</p></center><center><p class = "'.$rarity.'txt">'.$rarity.'</p></center><br><br></a></div>';
+      }
+      }
      }
    }
    mysqli_close($conn);

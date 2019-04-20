@@ -120,15 +120,16 @@ $_SESSION['change'] = 2;
     $("#searchsort").append(x);
   }
     function inputChange(){
+      var search = document.getElementById('search').value;
       var rarityChange = document.getElementById('rarityChange').value;
       var sortChange = document.getElementById('sortChange').value;
       console.log($(".ikomoAnimal"));
-      $(".ikomoAnimal").remove();
       $.ajax({
         type: "POST",
         url: "./onChange.php",
-        data: {'rarityChange': rarityChange, 'sortChange': sortChange},
+        data: {'rarityChange': rarityChange, 'sortChange': sortChange, 'search': search},
         success: function(msg) {
+        $(".ikomoAnimal").remove();
           x = msg;
           console.log("Check ended");
           append();
@@ -166,6 +167,9 @@ $_SESSION['change'] = 2;
   </div>
   <div id = "searchsort" class ="row">
     <div class = "col-md-6" style = "text-align:center;">
+      <input type="text" onkeyup = "inputChange()"id = "search" style = "border:0; background:none; border-bottom:2px solid grey; width: 90%;" placeholder="Search..">
+    </div>
+    <div class = "col-md-3">
       <select id = "sortChange" onchange="inputChange()">
         <!--<option value="dla">Date Listed (Ascending)</option>
         <option value="dld">Date Listed (Descending)</option>-->
@@ -180,7 +184,7 @@ $_SESSION['change'] = 2;
         <option value="legendary">Legendary</option>
       </select>
     </div>
-    <div class = "col-md-6">
+    <div class = "col-md-3">
       <h1 style = "float:right; "><a style = "color:red;" href = "listing.php">+ Create Listing</a> &nbsp;&nbsp;&nbsp;&nbsp;</h1>
     </div>
   </div>
