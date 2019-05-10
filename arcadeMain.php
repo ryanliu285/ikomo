@@ -190,7 +190,7 @@ session_start();
   <div id = "buttonoverlay" class = "container-fluid">
     <div class = "row">
       <div class = "col-md-4">
-        <button id = "iKOMOlifebt" class = "buttonx" onclick="alert('Sorry, iKOMO Life coming soon! For now, please enjoy iKOMO tennis and iKOMO Heights.')"><a id = "makehover1" href = "#" onclick = "return false;">Enter..</a></button>
+        <button id = "iKOMOlifebt" class = "buttonx"><a id = "makehover1" href = "./ikomoLife/index.php">Enter..</a></button>
       </div>
       <div class = "col-md-4">
         <center>
