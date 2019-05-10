@@ -8,11 +8,14 @@
     <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <style>
     @font-face {
-        font-family: "Dimbo";
-        src: url(./Font/Dimbo.ttf);
-      }
-    * {
       font-family: "Dimbo";
+      src: url(./Font/Dimbo.ttf);
+    }
+    *{
+      font-family: "Dimbo";
+    }
+    #title {
+      color: #ca88f7;
     }
     #disclaimtxt{
       color: white;
@@ -283,7 +286,7 @@
   </head>
   <body class = "bg">
     <center><h1 id = "title" style = "font-size:200px;">Quiz!</h1></center>
-    <center><h1 id = "blurb" style = "color:#55AFC9; text-shadow:2px 2px #EDCD4F">Finish this quiz to earn 100 KOMOcoins!</h1></center>
+    <center><h1 id = "blurb" style = "color:#55AFC9; text-shadow:2px 2px #EDCD4F">Get 3/5 on this quiz to earn 100 KOMOcoins!</h1></center>
     <center><h1 id = "question" style = "color:#55AFC9; text-shadow:2px 2px #EDCD4F">Question</h1></center>
     <div id = "score">
       <center><h1 style = "color:#55AFC9; text-shadow:2px 2px #EDCD4F">You got a score of:</h1></center>
@@ -341,10 +344,24 @@
       function restartQuiz(){
         question = 1;
         score = 5;
+        $("#answers").css("display","none");
+        $("#question").css("display","none");
+        $("#failQuiz").css("display","none");
+        $("#successQuiz").css("display","none");
+        $("#continue").css("display","none");
+        $("#score").css("display","none");
         revealNew();
       }
-      function suceessQuiz(){
-
+      function successQuiz(){
+        var data = 100;
+        $.ajax({
+          type: "POST",
+          url: "./ajaxPoints.php",
+          data: {},
+          success: function(msg) {
+              $("#appendTarget").append(msg);
+          }
+      });
       }
       function revealNew(){
         if(question == 1){
@@ -399,7 +416,6 @@
           $("#score").css("display","block");
           $("#continue").css("display","none");
           document.getElementById("scoreText").innerHTML = score+"/5";
-          document.getElementById("scoreText").css.style = "font-size:200px; color:#55AFC9; text-shadow:2px 2px #EDCD4F;";
           if(score >=3){
             $("#successQuiz").css("display","block");
           }else{
@@ -528,6 +544,8 @@
 
     }
     </script>
+    <div id = appendTarget>
+    </div>
   </body>
 
 

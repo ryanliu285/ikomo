@@ -193,8 +193,8 @@ require 'header.php';
 
       <div class = "col-md-8">
         <center><img class = "titles" width = "auto" src = "./img/newsletter.png"/><br>
-        <p id = "newsletterdownload" >Current Issue: March 2019</p>
-        <a id = "newsletterdownload" href = "./img/MarNewsletter.pdf">Click here to continue reading..</a>
+        <p id = "newsletterdownload" >Current Issue: April 2019</p>
+        <a id = "newsletterdownload" href = "./img/AprNewsletter.pdf">Click here to continue reading..</a>
         <img class = "image" width = "auto" src = "./img/newslettersnip.jpg"/><br></center>
       </div>
 
