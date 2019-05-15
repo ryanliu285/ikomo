@@ -151,10 +151,10 @@ session_start();
 
 
      //Connect to database
-     $dbhost = 'db759106289.hosting-data.io';
-     $dbuser = 'dbo759106289';
+     $dbhost = 'db5000072625.hosting-data.io';
+     $dbuser = 'dbu230478';
      $dbpass = 'SPdidsway1st';
-     $dbname = 'db759106289';
+     $dbname = 'dbs67209';
      $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());

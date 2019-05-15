@@ -2,10 +2,10 @@
     session_start();
     if(isset($_SESSION['userID'])){
     $id = $_SESSION["userID"];
-    $dbhost = 'db759106289.hosting-data.io';
-    $dbuser = 'dbo759106289';
+    $dbhost = 'db5000072625.hosting-data.io';
+    $dbuser = 'dbu230478';
     $dbpass = 'SPdidsway1st';
-    $dbname = 'db759106289';
+    $dbname = 'dbs67209';
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     if(! $conn ) {
        die('Could not connect: ' . mysql_error());
@@ -217,10 +217,10 @@
 <?php
 $dayofweek = date('w', strtotime(date("Y-m-d H:i:s")));
 $id = $_SESSION["userID"];
-$servername = "db759106289.hosting-data.io";
-$dBUsername = "dbo759106289";
+$servername = "db5000072625.hosting-data.io";
+$dBUsername = "dbu230478";
 $dBPassword = "SPdidsway1st";
-$dbName = "db759106289";
+$dbName = "dbs67209";
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dbName);
 
 $score1 = 0;

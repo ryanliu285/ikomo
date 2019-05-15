@@ -3,10 +3,10 @@ session_start();
 $score =  $_POST['data'];
 $_SESSION['scoreTennis'] = $score;
 $user = $_SESSION ['userUID'];
-$servername = "db759106289.hosting-data.io";
-$dBUsername = "dbo759106289";
+$servername = "db5000072625.hosting-data.io";
+$dBUsername = "dbu230478";
 $dBPassword = "SPdidsway1st";
-$dbName = "db759106289";
+$dbName = "dbs67209";
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dbName);
 
 if(!$conn){
