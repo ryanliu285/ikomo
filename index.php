@@ -260,7 +260,7 @@ require 'header.php';
                                 </div>
                                   <div class = "col-md-6 test">
 
-                                    <a href = "mainInterface.php" id = "hme" class = "bigbt buttonx topb">Store</a>
+                                    <a href = "oopsie.html" id = "hme" class = "bigbt buttonx topb">Store</a>
                                   </div>
                               </div>
                             </div>
