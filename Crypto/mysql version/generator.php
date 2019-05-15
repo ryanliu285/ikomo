@@ -135,7 +135,7 @@ session_start();
             $Animal = "Fried iKOMO Egg";
           }else{
             $Type = 1;
-            $Animal = "German Shepard";
+            $Animal = "Mika";
           }
            }
 

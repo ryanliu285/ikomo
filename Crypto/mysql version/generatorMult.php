@@ -129,11 +129,7 @@ session_start();
               $Animal = "Bald Eagle";
             }
          }else{
-<<<<<<< HEAD
            $x = rand(1,4);
-=======
-           $x = rand(1,3);
->>>>>>> 5dfc71b2bbe92cb2aac8fc67ed263f9c27f2527b
            if($x == 1){
              $Type = 4;
             $Animal = "T-Rex";
@@ -151,10 +147,10 @@ session_start();
 
 
      //Connect to database
-     $dbhost = 'db5000072625.hosting-data.io';
-     $dbuser = 'dbu230478';
+     $dbhost = 'db759106289.hosting-data.io';
+     $dbuser = 'dbo759106289';
      $dbpass = 'SPdidsway1st';
-     $dbname = 'dbs67209';
+     $dbname = 'db759106289';
      $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());
