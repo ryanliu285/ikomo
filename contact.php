@@ -15,8 +15,8 @@ if(isset($_POST['mail-submit'])) {
   $mail->Port = 587; //587
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = "tls"; //TLS
-  $mail->Username = "brandonh.lee617@gmail.com"; //ikomo.vei@gmail.com
-  $mail->Password = "Brand0nl33"; //cryptokingdom19
+  $mail->Username = "ikomo.vei@gmail.com"; //
+  $mail->Password = "cryptokingdom19"; //
 
   $mail->setFrom($email);
   $mail->addAddress('ikomo.vei@gmail.com');
