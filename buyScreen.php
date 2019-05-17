@@ -36,8 +36,8 @@ echo '<script>console.log(\''.$animal.'\');</script>
 <a style = "float:right; font-size: 20px; margin: 0 5px 0 0;" onclick = "$(\'.overlay\').remove()">X</a>
 <br>
 <center><p style = "color: white; font-size: 50px;">'.$animal.'</p></center>
-<center><p style = "color: white; font-size: 40px;">'.$rarity.'</p></center>
-<center><img height = "300px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
+<center><p style = "color: white; font-size: 25px;">'.$rarity.'</p></center>
+<center><img height = "200px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
 <center><p style = "color: white; font-size: 30px;">'.$price.' KOMOcoins</p></center>
 <center><button onclick = "buyFinal(\''.$sid.'\')">Buy</button></center>
 </div>';

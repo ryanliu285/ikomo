@@ -35,9 +35,9 @@ echo '<script>console.log(\''.$animal.'\');</script>
 <div class = "overlay '.$rarity.'img">
 <a style = "margin: 0 5px 0 0; float:right; font-size: 20px;" onclick = "$(\'.overlay\').remove()">X</a>
 <br>
-<center><p style = "color: white; font-size: 45px;">'.$animal.'</p></center>
-<center><p style = "color: white; font-size: 35px;">'.$rarity.'</p></center>
-<center><img height = "250px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
+<center><p style = "color: white; font-size: 50px;">'.$animal.'</p></center>
+<center><p style = "color: white; font-size: 25px;">'.$rarity.'</p></center>
+<center><img height = "200px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
 <center><p style = "color: white; font-size: 35px;">This iKOMO is on sale in the marketplace for '.$price.' KOMOcoins</p></center>
 <center><button onclick = "unlistFinal(\''.$sid.'\')">Unlist</button></center>
 </div>';
