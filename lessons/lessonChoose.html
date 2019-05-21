@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to iKOMO! iKOMO promotes financial literacy by leveraging the power of fun. Through the fusion of blockchain technology and an imaginative outlet,
+      iKOMO allows users to collect, trade, and interact with digital pets." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Created by Brandon Lee and Ryan Liu for South Pasadena High School." />
+  <link rel="stylesheet" type="text/css" href="../animate.css" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <title>VEI iKOMO</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/redraw-map/jquery.rwdImageMaps.min.js"></script>
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+</head>
+<body id = "bg">
+  <div class = "imgbox">
+      <center><img src = "./img/bkgmain.gif" class = "responsive" usemap = "#castle-map"/></center>
+      <map name = "castle-map">
+          <area shape = "rect" coords = "520,644,690,845" href = "lesson1.html" title = "door">
+          <area shape = "rect" coords = "325,683,403,593" href = "lesson1.html" title = "window1">
+        </map>
+        </div>
+    <script>
+      $(document).ready(function(e) {
+          $('img[usemap]').rwdImageMaps();
+      });
+      </script>
+</body>

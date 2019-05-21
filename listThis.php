@@ -38,13 +38,13 @@ echo '<script>console.log(\''.$animal.'\');</script>
 <div class = "overlay '.$rarity.'img">
 <a style = "margin: 0 5px 0 0; float:right; font-size: 20px;" onclick = "$(\'.overlay\').remove()">X</a>
 <br>
-<center><p style = "color: white; font-size: 45px;">'.$animal.'</p></center>
-<center><p style = "color: white; font-size: 35px;">'.$rarity.'</p></center>
-<center><img height = "250px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
+<center><p style = "color: white; font-size: 50px;">'.$animal.'</p></center>
+<center><p style = "color: white; font-size: 25px;">'.$rarity.'</p></center>
+<center><img height = "200px" width = "auto" src = "./img/ikomos/'.$animal.'.png" alt = "Sorry, iKOMO coming soon!"></center>
 <br>
 <center><button onclick = "quickSell(\''.$sid.'\')">Quick Sell for '.$quickPrice.' KOMOcoins</button></center>
 <br>
-<center><input id = "priceInput" style = "width:50%;"type = "number" placeholder = "Enter KOMOcoin Price Here"><button onclick = "listFinal(\''.$sid.'\')">Submit</button></center>
+<center><input id = "priceInput" style = "width:50%;"type = "number" min = "0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder = "Enter KOMOcoin Price Here"><button onclick = "listFinal(\''.$sid.'\')">Submit</button></center>
 </div>';
 }}
 mysqli_close($conn);

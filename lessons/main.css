@@ -1,0 +1,21 @@
+#bg {
+  background-color: #CDFAFF;
+}
+area {
+    display: inline;
+    cursor: pointer;
+}
+.responsive {
+  height: auto;
+  max-width: 300%;
+  max-height: 100vh;
+  margin: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.imgbox {
+  display: grid;
+  height: 100%;
+}
