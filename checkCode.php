@@ -1,22 +1,22 @@
 <?php
 session_start();
  $value = $_POST['data'];
- $servername = "db5000072625.hosting-data.io";
- $dBUsername = "dbu230478";
- $dBPassword = "SPdidsway1st";
- $dbName = "dbs67209";
- $connection = mysqli_connect($servername, $dBUsername, $dBPassword, $dbName);
-
- if(!$connection){
-   die("Connection failed: ".mysqli_connect_error());
+ $dbhost = 'db5000072625.hosting-data.io';
+ $dbuser = 'dbu230478';
+ $dbpass = 'SPdidsway1st';
+ $dbname = 'dbs67209';
+ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ if(! $conn ) {
+    die('Could not connect: ' . mysql_error());
  }
 
- $quer = "SELECT * FROM Codes WHERE code = '$value'";
-  $result = mysqli_query($connection, $quer) or die('Please try again.');
+
+ $quer = "SELECT * FROM Codes WHERE code = '".$value."'";
+ $result = mysqli_query($conn, $quer) or die('Please try again.');
  if (mysqli_num_rows($result) > 0) {
-   echo '<p style = "color:green;"> A code has been found </p>';
-   $row = $result->fetch_assoc();
-      if(($row["used"])=='FALSE'){ //if not used
+      echo '<p style = "color:green;"> A code has been found </p>';
+      $row = $result->fetch_assoc();
+      if(($row["used"])=='false'){ //if not used
         $eggsTemp = $row["eggs"];
         if($eggsTemp == 'five'){
           $eggs = 5;
@@ -42,7 +42,7 @@ session_start();
         </script>';
 
          $sql = "UPDATE Codes SET used = 'TRUE' WHERE code = '$value'";
-         $result = mysqli_query($connection, $sql) or die('Please try again');
+         $result = mysqli_query($conn, $sql) or die('Please try again');
       }else{//if used
       echo '<p style = "color:red;"> ERROR: Code already used </p>';
       }

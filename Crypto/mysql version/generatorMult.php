@@ -35,122 +35,119 @@ session_start();
      $Animal = "";
      $Type = rand(1,4);
      if($Rarity == 1){
-       $x = rand(1,8);
+       $x = rand(1,6);
          if($x == 1){
-           $Type = 1;
-           $Animal = "Potted Cactus";
-         } else if ($x == 2){
            $Type = 3;
-           $Animal = "Ladybug";
+           $Animal = "Quail";
+         } else if ($x == 2){
+           $Type = 2;
+           $Animal = "Angel Fish";
          } else if ($x == 3){
-           $Type = 4;
-           $Animal = "Blue Slime";
+           $Type = 2;
+           $Animal = "Scallop";
          } else if ($x == 4){
            $Type = 3;
-           $Animal = "Pink Snail";
+           $Animal = "Warthog";
          }
           else if($x == 5){
-            $Type = 3;
-            $Animal = "Golden Mantella";
+            $Type = 2;
+            $Animal = "Rockhopper Penguin";
           } else if ($x == 6){
             $Type = 3;
-            $Animal = "Bat";
-          } else if ($x == 7){
-            $Type = 2;
-            $Animal = "Puffin";
-          } else{
-            $Type = 1;
-            $Animal = "Goat";
+            $Animal = "Hummingbird";
           }
         }
      else if ($Rarity == 2){
        $x = rand(1,14);
          if($x == 1){
            $Type = 3;
-           $Animal = "Owl";
+           $Animal = "Wolf";
          } else if ($x == 2){
            $Type = 3;
-           $Animal = "Bee";
+           $Animal = "King Snake";
          } else if ($x == 3){
-           $Type = 2;
-           $Animal = "Blobfish";
+           $Type = 3;
+           $Animal = "Black Panther";
          } else if ($x == 4){
-           $Type = 2;
-           $Animal = "Beaver";
+           $Type = 1;
+           $Animal = "Camel";
          }else if($x == 5){
            $Type = 2;
-           $Animal = "Pufferfish";
+           $Animal = "Walrus";
          } else if ($x == 6){
            $Type = 3;
-           $Animal = "Chinchilla";
+           $Animal = "Lemur";
          } else if ($x == 7){
-           $Type = 4;
-           $Animal = "Dodo Bird";
+           $Type = 3;
+           $Animal = "Capybara";
          } else if ($x == 8){
-           $Type = 2;
-           $Animal = "Dolphin";
+           $Type = 3;
+           $Animal = "Platypus";
          }
           else if($x == 9){
             $Type = 3;
-            $Animal = "Dart Frog";
+            $Animal = "Armadillo";
           } else if ($x == 10){
-            $Type = 1;
-            $Animal = "Saint Bernard";
+            $Type = 3;
+            $Animal = "Scorpion";
           } else if ($x == 11){
             $Type = 3;
-            $Animal = "Toucan";
+            $Animal = "Polar Bear";
           } else if ($x == 12){
-            $Type = 2;
-            $Animal = "Seal Pup";
+            $Type = 3;
+            $Animal = "Desert Fox";
           }else if($x == 13){
             $Type = 2;
-            $Animal = "Alligator";
+            $Animal = "Moray Eel";
           } else{
-            $Type = 3;
-            $Animal = "Bobcat";
+            $Type = 2;
+            $Animal = "Axolotl";
           }
       }else if ($Rarity == 3){
-         $x = rand(1,5);
+         $x = rand(1,6);
            if($x == 1){
-             $Type = 3;
-             $Animal = "Siberian Tiger";
+             $Type = 4;
+             $Animal = "Brontosaurus";
            } else if ($x == 2){
-             $Type = 4;
-             $Animal = "Griffin";
+             $Type = 2;
+             $Animal = "Swordsfish";
            } else if($x == 3){
-             $Type = 4;
-             $Animal = "Mammoth";
+             $Type = 3;
+             $Animal = "Giraffe";
            }
             else if($x == 4){
+              $Type = 4;
+              $Animal = "Pegasus";
+            } else if ($x==5){
               $Type = 2;
-              $Animal = "Hammerhead Shark";
-            } else{
-              $Type = 3;
-              $Animal = "Bald Eagle";
+              $Animal = "Narwhal";
+            }else{
+              $Type = 4;
+              $Animal = "Flying Pig";
             }
          }else{
            $x = rand(1,4);
            if($x == 1){
-             $Type = 4;
-            $Animal = "T-Rex";
+             $Type = 1;
+            $Animal = "Powerhouse of the Cell";
           }else if($x == 2){
-            $Type = 3;
-            $Animal = "Red Panda";
+            $Type = 4;
+            $Animal = "The Golden Jackalope";
           }else if ($x==3){
-            $Type = 2;
-            $Animal = "The Golden Dolphin";
+            $Type = 1;
+            $Animal = "Fried iKOMO Egg";
           }else{
-            $Type = 3;
-            $Animal = "Large Chungy";
+            $Type = 1;
+            $Animal = "Mika";
           }
            }
 
 
      //Connect to database
-     $dbhost = 'db759106289.hosting-data.io';
-     $dbuser = 'dbo759106289';
+     $dbhost = 'db5000072625.hosting-data.io';
+     $dbuser = 'dbu230478';
      $dbpass = 'SPdidsway1st';
-     $dbname = 'db759106289';
+     $dbname = 'dbs67209';
      $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
      if(! $conn ) {
         die('Could not connect: ' . mysql_error());

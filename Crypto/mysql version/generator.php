@@ -101,7 +101,7 @@ session_start();
             $Animal = "Axolotl";
           }
       }else if ($Rarity == 3){
-         $x = rand(1,5);
+         $x = rand(1,6);
            if($x == 1){
              $Type = 4;
              $Animal = "Brontosaurus";
@@ -126,7 +126,7 @@ session_start();
            $x = rand(1,4);
            if($x == 1){
              $Type = 1;
-            $Animal = "Mitochondria - 'Powerhouse of the Cell'";
+            $Animal = "Powerhouse of the Cell";
           }else if($x == 2){
             $Type = 4;
             $Animal = "The Golden Jackalope";

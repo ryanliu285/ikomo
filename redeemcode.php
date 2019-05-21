@@ -179,7 +179,7 @@ require 'header.php';
           $.ajax({
             type: "POST",
             url: "./checkCode.php",
-            data: {'data': value},
+            data: {data: value},
             success: function(msg) {
               x = msg;
               console.log("Check ended");
