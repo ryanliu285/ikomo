@@ -1,3 +1,29 @@
+html {
+  font-size: 2vh;
+}
+
+@font-face {
+    font-family: "Dimbo";
+    src: url(./Font/Dimbo.ttf);
+}
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./Font/Comfortaa.ttf);
+}
+* {
+  text-decoration: none;
+}
+
+.title {
+  padding-top: 1%;
+  font-family: "Dimbo";
+  text-decoration: underline;
+  text-decoration-color: #EBCB5A;
+  font-size: 3.5em;
+}
+p {
+  font-family: "Comfortaa";
+}
 #bg {
   background-color: #CDFAFF;
 }
@@ -7,7 +33,7 @@ area {
 }
 .responsive {
   height: auto;
-  max-width: 300%;
+  max-width: 800%;
   max-height: 100vh;
   margin: auto;
 }
@@ -16,6 +42,109 @@ area {
   padding: 0;
 }
 .imgbox {
-  display: grid;
   height: 100%;
+  z-index: 1;
+  display: block;
+  position: relative;
+}
+#logo {
+  float: left;
+  width: auto;
+  object-fit: cover;
+}
+#accountoverlay {
+  width: 60%;
+  height: 75%;
+  z-index: 99;
+  left: 20%;
+  top: 12.5%;
+  background-color: rgba(235, 255, 253, 0.87);
+  display: block;
+  border-radius: 15px;
+  border: solid;
+  border-width: 10px;
+  border-color: rgba(136, 211, 229, 0.92);
+  position: absolute;
+}
+.overlaytxt {
+  font-size: 2em;
+  font-weight: bold;
+}
+#moveon1button {
+  display:block;
+  font-size: 2em;
+  font-family: "Comfortaa";
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: rgba(106, 196, 206, 0.92);
+  font-family: "Dimbo";
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-bottom-color: rgba(89, 154, 165, 0.92);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 5px;
+}
+#moveon2button {
+  display: none;
+  font-size: 2em;
+  font-family: "Comfortaa";
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: rgba(106, 196, 206, 0.92);
+  font-family: "Dimbo";
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-bottom-color: rgba(89, 154, 165, 0.92);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 5px;
+}
+#moveon3button {
+  display: none;
+  font-size: 2em;
+  font-family: "Comfortaa";
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: rgba(106, 196, 206, 0.92);
+  font-family: "Dimbo";
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-bottom-color: rgba(89, 154, 165, 0.92);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 5px;
+}
+#page1 {
+  display: block;
+}
+#page2 {
+  display: none;
+}
+#page3 {
+  display: none;
+}
+@media only screen and (min-width: 1920px) {
+  #logo {
+    float: left;
+    height: 80px;
+    width: auto;
+  }
+  #accountoverlay {
+    width: 60%;
+    height: 70%;
+    z-index: 99;
+    left: 20%;
+    top: 15%;
+    background-color: rgba(235, 255, 253, 0.87);
+    display: block;
+    border-radius: 15px;
+    border: solid;
+    border-width: 10px;
+    border-color: rgba(136, 211, 229, 0.92);
+    position: absolute;
+  }
 }

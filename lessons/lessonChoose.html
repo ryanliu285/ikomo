@@ -13,6 +13,99 @@
   <link rel="icon" type="image/png" href="../img/favicon.png" />
 </head>
 <body id = "bg">
+    <center><div id = "accountoverlay" >
+      <div class =  "container-fluid">
+          <div class = "row">
+              <div class = "col-md-2">
+                  <br>
+                  <img id = "logo" height = "60px" src = "./img/ikologo.png">
+              </div>
+              <div class = "col-md-10">
+                  <br>
+                  <center><h1 class = "title"> Welcome to iKOMO Website Design! </h1></center>
+              </div>
+          </div>
+          <div class = "row" id = "page1">
+              <div class = "col-md-1">
+
+                </div>
+
+                <div class = "col-md-10">
+                    <br>
+                    <p class = "overlaytxt">Today, we will be going through three different lessons that will help you understand the fundamentals of web design! In these lessons, you will learn the basics of HTML, CSS, and Javascript and how they are used to create websites!</p>
+                  </div>
+
+                  <div class = "col-md-1">
+
+                    </div>
+            </div>
+            <div class = "row" id = "moveon1">
+                <div class = "col-md-3">
+
+                  </div>
+                  <div class = "col-md-6">
+                      <br>
+                      <button id = "moveon1button">Continue →</button>
+                    </div>
+                    <div class = "col-md-3">
+
+                      </div>
+              </div>
+
+              <div class = "row" id = "page2">
+                  <div class = "col-md-1">
+
+                    </div>
+
+                    <div class = "col-md-10">
+                        <br>
+                        <p class = "overlaytxt">When using this website please make sure to <br/> <br/> 1) be on a computer. <br/> 2) enable cookies. <br/> 3) be proactive in your learning. <br/> 4) have fun!</p>
+                      </div>
+
+                      <div class = "col-md-1">
+
+                        </div>
+                </div>
+                <div class = "row" id = "moveon2">
+                    <div class = "col-md-3">
+
+                      </div>
+                      <div class = "col-md-6">
+                          <br>
+                          <button id = "moveon2button">Continue →</button>
+                        </div>
+                        <div class = "col-md-3">
+
+                          </div>
+                  </div>
+                  <div class = "row" id = "page3">
+                      <div class = "col-md-1">
+
+                        </div>
+
+                        <div class = "col-md-10">
+                            <br>
+                            <p class = "overlaytxt">Follow the chicks to your lessons!</p>
+                          </div>
+
+                          <div class = "col-md-1">
+
+                            </div>
+                    </div>
+                    <div class = "row" id = "moveon3">
+                        <div class = "col-md-3">
+
+                          </div>
+                          <div class = "col-md-6">
+                              <br>
+                              <button id = "moveon3button">Get Started! →</button>
+                            </div>
+                            <div class = "col-md-3">
+
+                              </div>
+                      </div>
+                </div>
+              </div></center>
   <div class = "imgbox">
       <center><img src = "./img/bkgmain.gif" class = "responsive" usemap = "#castle-map"/></center>
       <map name = "castle-map">
@@ -20,6 +113,52 @@
           <area shape = "rect" coords = "325,683,403,593" href = "lesson1.html" title = "window1">
         </map>
         </div>
+        <script>
+          var p1 = document.getElementById('page1');
+          var p2 = document.getElementById('page2');
+          var p3 = document.getElementById('page3');
+          var moveon1 = document.getElementById('moveon1button');
+          var moveon2 = document.getElementById('moveon2button');
+          var moveon3 = document.getElementById('moveon3button');
+          $("#moveon1button").click(function(){
+            $("#page1").addClass('animated bounceOutLeft');
+            $("#moveon1button").addClass('animated bounceOutLeft');
+            setTimeout(function(){
+              p1.style.display = "none";
+              moveon1.style.display = "none";
+              $("#page1").removeClass('animated bounceOutLeft');
+              $("#moveon1button").removeClass('animated bounceOutLeft');
+              $("#page2").addClass('animated bounceInRight');
+              $("#moveon2").addClass('animated bounceInRight');
+              p2.style.display = "block";
+              moveon2.style.display ="block";
+            }, 1000);
+          });
+          $("#moveon2button").click(function(){
+            $("#page2").removeClass('animated bounceInRight');
+            $("#page2").addClass('animated bounceOutLeft');
+            $("#moveon2button").addClass('animated bounceOutLeft');
+            setTimeout(function(){
+              p2.style.display = "none";
+              moveon2.style.display = "none";
+              $("#page2").removeClass('animated bounceOutLeft');
+              $("#moveon2button").removeClass('animated bounceOutLeft');
+              $("#page3").addClass('animated bounceInRight');
+              $("#moveon3").addClass('animated bounceInRight');
+              p3.style.display = "block";
+              moveon3.style.display ="block";
+            }, 1000);
+          });
+          $("#moveon3button").click(function(){
+            var aol = document.getElementById('accountoverlay');
+            console.log(aol);
+            $("#accountoverlay").addClass('animated fadeOut');
+            setTimeout(function(){
+              $("#accountoverlay").removeClass('animated fadeOut');
+              aol.style.display = "none";
+            }, 1000);
+          });
+          </script>
     <script>
       $(document).ready(function(e) {
           $('img[usemap]').rwdImageMaps();
